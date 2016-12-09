@@ -28,14 +28,14 @@ class IntroPageContent
     /**
      * @var IntroPage
      *
-     * @ORM\ManyToOne(targetEntity="IntroPage", inversedBy="pages")
+     * @ORM\ManyToOne(targetEntity="IntroPage")
      */
     private $page;
 
     /**
      * @var Language
      *
-     * @ORM\ManyToOne(targetEntity="Language", inversedBy="intropagecontents")
+     * @ORM\ManyToOne(targetEntity="OCAX\Common\Entity\Language")
      */
     private $language;
 
@@ -63,7 +63,7 @@ class IntroPageContent
     /**
      * @var ArrayCollection
      *
-     * @ORM\OneToMany(targetEntity="EnquirySubscribe", mappedBy="enquiry")
+     * @ORM\OneToMany(targetEntity="OCAX\OCM\Entity\EnquirySubscribe", mappedBy="enquiry")
      */
 //    private $subscriptions;
 

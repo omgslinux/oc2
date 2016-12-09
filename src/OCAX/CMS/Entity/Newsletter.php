@@ -43,14 +43,14 @@ class Newsletter
      *
      * @var tinyint
      *
-     * @ORM\Column(type="tinyint")
+     * @ORM\Column(type="smallint")
      */
     private $sent;
 
     /**
      * @var User
      *
-     * @ORM\ManyToOne(targetEntity="User", inversedBy="newsletters")
+     * @ORM\ManyToOne(targetEntity="OCAX\Common\Entity\User", inversedBy="newsletters")
      */
     private $sender;
 
@@ -85,7 +85,7 @@ class Newsletter
     /**
      * @var ArrayCollection
      *
-     * @ORM\OneToMany(targetEntity="EnquirySubscribe", mappedBy="enquiry")
+     * @ORM\OneToMany(targetEntity="OCAX\OCM\Entity\EnquirySubscribe", mappedBy="enquiry")
      */
 //    private $subscriptions;
 

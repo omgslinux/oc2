@@ -1,0 +1,52 @@
+table.detail-view .null
+{
+	color: pink;
+}
+
+table.detail-view
+{
+	/*border-collapse: collapse;*/
+	width: 100%;
+	margin: 0;
+}
+
+table.detail-view th, table.detail-view td
+{
+	font-size: 14px;
+	border-top: 1px #B8B8B8 solid;
+	padding: 0.3em 0.6em;
+	vertical-align: top;
+}
+
+table.detail-view th, table.detail-view td
+{
+	font-size: 14px;
+	border-top: 1px #B8B8B8 solid;
+	padding: 0.3em 0.6em;
+	vertical-align: top;
+}
+
+table.detail-view th
+{
+	text-align: left;
+	width: 120px;
+}
+
+table.detail-view td:nth-child(1){
+    background-color: #ccc;
+}
+table.detail-view td:nth-child(2){
+    background-color:transparent;
+}
+
+table.detail-view tr.odd th
+{
+	color:#676767;
+	font-weight:400;
+}
+
+table.detail-view tr.even th
+{
+	color:#676767;
+	font-weight:400;
+}

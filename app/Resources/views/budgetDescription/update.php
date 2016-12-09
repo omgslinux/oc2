@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * OCAX -- Citizen driven Observatory software
+ * Copyright (C) 2014 OCAX Contributors. See AUTHORS.
+
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/* @var $this BudgetDescriptionController */
+/* @var $model BudgetDescription */
+
+$this->menu=array(
+	array('label'=>__('View description').'<i class="icon-popup-1"></i>', 'url'=>'#', 'linkOptions'=>array('onclick'=>'js:viewSavedLocalDescription();')),
+	array('label'=>__('Delete local description'), 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id), 'csrf'=>true, 'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>__('Local descriptions'), 'url'=>array('admin')),
+	array('label'=>__('Common descriptions'), 'url'=>array('budgetDescription/browseCommon')),
+	array('label'=>__('State descriptions'), 'url'=>array('budgetDescription/browseState')),
+);
+$this->inlineHelp=':manual:budgetdescription:update';
+$this->viewLog='BudgetDescription|'.$model->id;
+$this->extraText = $this->renderPartial('_legend',null,true,false);
+?>
+<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

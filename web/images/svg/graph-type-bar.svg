@@ -1,0 +1,18 @@
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="46px" height="46px" viewBox="0 0 46 46" enable-background="new 0 0 46 46" xml:space="preserve"
+	 class="svg-color-stroke svg-roll-fill">
+<g>
+	
+		<line fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="5.238" y1="13.163" x2="5.238" y2="5.008"/>
+	
+		<line fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="5.238" y1="40.992" x2="5.238" y2="32.838"/>
+	
+		<line fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="5.238" y1="27.077" x2="5.238" y2="18.924"/>
+	<polygon fill="none" class="roll" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="22.156,17.002 
+		22.156,5.008 12.464,5.008 12.464,40.992 32.029,40.992 32.029,28.997 40.763,28.997 40.763,17.002 	"/>
+	<polyline fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="32.029,40.992 
+		12.464,40.992 12.464,28.997 32.029,28.997 	"/>
+	<polyline fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="12.464,17.002 
+		40.763,17.002 40.763,28.997 12.464,28.997 	"/>
+</g>
+</svg>

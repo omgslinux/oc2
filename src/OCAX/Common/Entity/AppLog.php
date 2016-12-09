@@ -25,7 +25,7 @@ class AppLog
     /**
      * @var User
      *
-     * @ORM\ManyToOne(targetEntity="User", inversedBy="logs")
+     * @ORM\ManyToOne(targetEntity="User")
      */
     private $user;
 

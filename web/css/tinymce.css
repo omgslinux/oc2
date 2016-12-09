@@ -1,0 +1,14 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400&subset=latin,latin-ext);
+@import url("./color.css");
+@import url("./sitepage.css");
+
+body
+{
+	font-size: 18px;
+	font-family: 'Source Sans Pro',Arial,Helvetica,sans-serif;
+	font-weight: normal;
+	background-color:white;
+	color:black;
+
+}
+

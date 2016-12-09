@@ -17,7 +17,7 @@ class Language
     /**
      * @var integer
      *
-     * @ORM\Column(name="Id", type="integer", nullable=false)
+     * @ORM\Column(type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
@@ -36,13 +36,6 @@ class Language
      * @ORM\Column(type="string", length=16)
      */
     private $language;
-
-    /**
-     * @var ArrayCollection
-     *
-     * @ORM\OneToMany(targetEntity="Translation", mappedBy="language")
-     */
-    private $translations;
 
 
 

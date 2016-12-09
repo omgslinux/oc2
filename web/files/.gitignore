@@ -1,0 +1,5 @@
+*
+!archive/
+!csv/
+!DatabaseDownload/
+!.gitignore

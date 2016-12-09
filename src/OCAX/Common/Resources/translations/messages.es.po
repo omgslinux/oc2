@@ -1,0 +1,3478 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ocax_es\n"
+"POT-Creation-Date: 2015-11-05 11:00+0100\n"
+"PO-Revision-Date: 2016-10-06 16:09+0100\n"
+"Last-Translator: Chris <chris@gatopelao.org>\n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-Basepath: /home/chris/projects/ocax\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SearchPath-0: protected/models\n"
+"X-Poedit-SearchPath-1: protected/views\n"
+"X-Poedit-SearchPath-2: protected/controllers\n"
+
+#: protected/models/IntroPage.php:105
+msgid "Order"
+msgstr "Orden"
+
+#: protected/models/IntroPage.php:106
+msgid "Top"
+msgstr "Archivo de documentos"
+
+#: protected/models/IntroPage.php:107
+msgid "Left"
+msgstr "Izquierda"
+
+#: protected/models/IntroPage.php:108
+msgid "Font color"
+msgstr "Color de fuente"
+
+#: protected/models/IntroPage.php:109
+msgid "Background color"
+msgstr "Color de fondo"
+
+#: protected/models/IntroPage.php:110
+msgid "Opacity"
+msgstr "Opacidad"
+
+#: protected/models/IntroPage.php:111
+msgid "Width"
+msgstr "Anchura"
+
+#: protected/models/IntroPage.php:112 protected/models/SitePage.php:107
+#: protected/models/Newsletter.php:108 protected/views/budget/admin.php:94
+msgid "Published"
+msgstr "Publicada"
+
+#: protected/models/Budget.php:138
+msgid "Parent"
+msgstr "Padre"
+
+#: protected/models/Budget.php:141
+#: protected/views/enquiry/_budgetDetails.php:80
+#: protected/views/budget/_budgetDetails.php:102
+#: protected/views/budget/_compareYears.php:25
+#: protected/controllers/BudgetController.php:323
+msgid "Year"
+msgstr "Año"
+
+#: protected/models/Budget.php:142 protected/models/BudgetDescCommon.php:102
+#: protected/models/BudgetDescLocal.php:106
+#: protected/models/BudgetCategory.php:89
+#: protected/models/BudgetDescState.php:109
+msgid "Code"
+msgstr "Código"
+
+#: protected/models/Budget.php:143 protected/models/BudgetDescCommon.php:103
+#: protected/models/BudgetDescLocal.php:107
+#: protected/models/BudgetDescState.php:110
+#: protected/views/budgetDescription/_form.php:94
+msgid "Label"
+msgstr "Etiqueta"
+
+#: protected/models/Budget.php:144 protected/models/BudgetDescCommon.php:104
+#: protected/models/BudgetDescLocal.php:108
+#: protected/models/BudgetDescState.php:111
+#: protected/views/enquiry/_changeType.php:127
+#: protected/views/budget/deleteTree.php:83
+#: protected/views/budget/featured.php:86
+#: protected/views/budgetDescription/_form.php:96
+msgid "Concept"
+msgstr "Concepto"
+
+#: protected/models/Budget.php:145
+msgid "Initial provision"
+msgstr "Previsión inicial"
+
+#: protected/models/Budget.php:146
+msgid "Actual provision"
+msgstr "Previsión actual"
+
+#: protected/models/Budget.php:147
+msgid "Trimester 1"
+msgstr "Trimestre 1"
+
+#: protected/models/Budget.php:148
+msgid "Trimester 2"
+msgstr "Trimestre 2"
+
+#: protected/models/Budget.php:149
+msgid "Trimester 3"
+msgstr "Trimestre 3"
+
+#: protected/models/Budget.php:150
+msgid "Trimester 4"
+msgstr "Trimestre 4"
+
+#: protected/models/Budget.php:151
+msgid "Featured"
+msgstr "Destacadas"
+
+#: protected/models/Budget.php:152 protected/models/SitePage.php:106
+msgid "Weight"
+msgstr "Peso"
+
+#: protected/models/Budget.php:172 protected/views/enquiry/create.php:47
+#: protected/views/budget/view.php:114
+#: protected/views/budget/_indexModified.php:75
+#: protected/controllers/BudgetController.php:88
+msgid "Budget"
+msgstr "Presupuesto"
+
+#: protected/models/Budget.php:331
+msgid "Budget table saved on the"
+msgstr "Tabla de presupuestos guardada el"
+
+#: protected/models/SitePage.php:94
+msgid "Combination already exists."
+msgstr "La combinación ya existe."
+
+#: protected/models/SitePage.php:105
+msgid "Block"
+msgstr "Bloque"
+
+#: protected/models/SitePage.php:108
+msgid "Advanced HTML"
+msgstr "HTML Avanzado"
+
+#: protected/models/SitePage.php:109
+msgid "Include title"
+msgstr "Incluir título"
+
+#: protected/models/ImportCSV.php:51
+msgid "CSV file"
+msgstr "Fichero CSV"
+
+#: protected/models/ImportCSV.php:713
+msgid "generated on the"
+msgstr "generada el"
+
+#: protected/models/User.php:129 protected/models/LoginForm.php:58
+#: protected/models/RegisterForm.php:86
+msgid "Username"
+msgstr "Nombre de usuario"
+
+#: protected/models/User.php:130 protected/models/RegisterForm.php:87
+msgid "Full name"
+msgstr "Nombre completo"
+
+#: protected/models/User.php:130 protected/models/RegisterForm.php:87
+msgid "Fullname"
+msgstr "Nombre completo"
+
+#: protected/models/User.php:131 protected/models/LoginForm.php:59
+#: protected/models/RegisterForm.php:88
+msgid "Password"
+msgstr "Contraseña"
+
+#: protected/models/User.php:132
+msgid "New password"
+msgstr "Contraseña nueva"
+
+#: protected/models/User.php:133 protected/models/RegisterForm.php:89
+msgid "Repeat password"
+msgstr "Repetir contraseña"
+
+msgid "Confirm password"
+msgstr "Confirmar contraseña"
+
+#: protected/models/User.php:134 protected/models/RegisterForm.php:90
+#: protected/views/config/email.php:48 protected/views/config/index.php:109
+#: protected/views/layouts/foot.php:29
+msgid "Email"
+msgstr "Correo electrónico"
+
+#: protected/models/User.php:135 protected/models/BudgetDescCommon.php:101
+#: protected/models/BudgetDescLocal.php:105
+#: protected/models/SitePageContent.php:108
+#: protected/models/BudgetDescState.php:108
+msgid "Language"
+msgstr "Idioma"
+
+#: protected/models/User.php:136
+msgid "Joined"
+msgstr "Fecha de alta"
+
+#: protected/models/User.php:137
+msgid "Active"
+msgstr "Activo"
+
+#: protected/models/User.php:138
+msgid "Is partner"
+msgstr "Es socio"
+
+#: protected/models/User.php:139
+msgid "Budget description editor"
+msgstr "Editor de descripciones presupuestarias"
+
+#: protected/models/User.php:141 protected/views/user/panel.php:232
+#: protected/views/user/updateRoles.php:124
+msgid "Page editor"
+msgstr "Editor de páginas"
+
+#: protected/models/User.php:192 protected/models/User.php:200
+#: protected/models/User.php:212 protected/models/Log.php:77
+#: protected/models/Vote.php:91 protected/models/Comment.php:128
+msgid "User"
+msgstr "Usuario"
+
+#: protected/models/User.php:192
+msgid "enabled"
+msgstr "hablitado"
+
+#: protected/models/User.php:200
+msgid "disabled"
+msgstr "deshabilitado"
+
+#: protected/models/User.php:212
+msgid "deleted account"
+msgstr "borrar cuenta"
+
+#: protected/models/Reply.php:97 protected/models/Email.php:106
+#: protected/views/enquiry/_reformulated.php:44
+#: protected/views/enquiry/view.php:78 protected/views/enquiry/assigned.php:89
+#: protected/views/budget/view.php:213
+#: protected/views/budget/updateYear.php:133
+#: protected/controllers/EnquiryController.php:87
+#: protected/controllers/EnquiryController.php:317
+#: protected/controllers/EnquiryController.php:417
+#: protected/controllers/EnquiryController.php:462
+#: protected/controllers/EnquiryController.php:463
+#: protected/controllers/EnquiryController.php:514
+#: protected/controllers/EnquiryController.php:521
+#: protected/controllers/EnquiryController.php:640
+#: protected/controllers/EnquiryController.php:642
+#: protected/controllers/EnquiryController.php:670
+#: protected/controllers/EnquiryController.php:683
+#: protected/controllers/EnquiryController.php:753
+#: protected/controllers/EnquiryController.php:892
+#: protected/controllers/EnquiryController.php:894
+#: protected/controllers/EnquiryController.php:920
+#: protected/controllers/ReplyController.php:106
+#: protected/controllers/ReplyController.php:134
+#: protected/controllers/CommentController.php:161
+msgid "Enquiry"
+msgstr "Consulta"
+
+#: protected/models/Reply.php:98
+msgid "Date of reply"
+msgstr "Fecha de respuesta"
+
+#: protected/models/Reply.php:100 protected/models/Newsletter.php:114
+#: protected/models/Email.php:107 protected/models/Enquiry.php:230
+#: protected/models/EmailTemplate.php:114
+#: protected/models/SitePageContent.php:111
+msgid "Body"
+msgstr "Cuerpo"
+
+#: protected/models/Newsletter.php:61
+msgid "Draft"
+msgstr "Borrador"
+
+#: protected/models/Newsletter.php:62
+msgid "Failed to send"
+msgstr "Envío fallido"
+
+#: protected/models/Newsletter.php:63
+msgid "Sent OK"
+msgstr "Enviado OK"
+
+#: protected/models/Newsletter.php:107 protected/models/Archive.php:96
+#: protected/models/Log.php:78 protected/models/Backup.php:101
+#: protected/models/Email.php:100 protected/models/Vault.php:180
+#: protected/models/Vault.php:190 protected/views/archive/_editArchive.php:100
+msgid "Created"
+msgstr "Creada"
+
+#: protected/models/Newsletter.php:109 protected/models/Backup.php:105
+#: protected/models/Enquiry.php:228 protected/models/Vault.php:182
+#: protected/models/EmailTemplate.php:113
+#: protected/views/enquiry/_reformulated.php:48
+#: protected/views/enquiry/_detailsForCitizen.php:47
+#: protected/views/enquiry/index.php:206
+#: protected/views/enquiry/_detailsForTeam.php:27
+#: protected/views/newsletter/admin.php:45 protected/views/user/panel.php:332
+#: protected/views/user/panel.php:366 protected/views/user/view.php:142
+#: protected/views/vault/admin.php:168 protected/views/vault/view.php:146
+#: protected/views/vault/view.php:189
+#: protected/views/emailTemplate/admin.php:41
+msgid "State"
+msgstr "Estado"
+
+#: protected/models/Newsletter.php:113
+msgid "Subject"
+msgstr "Asunto"
+
+#: protected/models/Archive.php:90
+#: protected/views/archive/_editArchive.php:102
+msgid "File"
+msgstr "Fichero"
+
+#: protected/models/Archive.php:91 protected/models/File.php:110
+#: protected/views/archive/index.php:265
+msgid "Name"
+msgstr "Nombre"
+
+#: protected/models/Archive.php:92 protected/models/File.php:111
+#: protected/views/archive/_editArchive.php:111
+#: protected/views/file/admin.php:69 protected/views/file/wallpaper.php:73
+msgid "Path"
+msgstr "Ruta"
+
+#: protected/models/Archive.php:94
+msgid "Author"
+msgstr "Autor"
+
+#: protected/models/Archive.php:95 protected/models/Config.php:208
+#: protected/models/BudgetDescCommon.php:105
+#: protected/models/BudgetCategory.php:90
+#: protected/views/archive/index.php:276
+#: protected/controllers/BudgetDescriptionController.php:151
+#: protected/controllers/BudgetDescriptionController.php:212
+#: protected/controllers/BudgetDescriptionController.php:263
+msgid "Description"
+msgstr "Descripción"
+
+#: protected/models/Archive.php:97
+#: protected/views/enquiry/_managerSearch.php:91
+#: protected/views/enquiry/_memberSearch.php:67
+#: protected/views/newsletter/_search.php:44
+#: protected/views/budget/index.php:246 protected/views/user/_search.php:55
+#: protected/views/archive/_search.php:46
+#: protected/views/budgetDescription/_search.php:51
+msgid "Search"
+msgstr "Busca"
+
+#: protected/models/Archive.php:141
+msgid "index"
+msgstr "Índice"
+
+#: protected/models/Config.php:90
+msgid "Please define a language"
+msgstr "Define un idioma por favor"
+
+#: protected/models/Config.php:97
+msgid "is not a valid language."
+msgstr "no es un idioma válido"
+
+#: protected/models/Config.php:105
+msgid "Missing value"
+msgstr "Falta valor"
+
+#: protected/models/Config.php:110
+msgid "Character 'n' is missing."
+msgstr "Falta el carácter 'n'"
+
+#: protected/models/Config.php:118
+msgid "Expecting a 6 digit web color"
+msgstr "Esperando una web color de 6 dígitos"
+
+#: protected/models/Config.php:206
+msgid "Parameter"
+msgstr "Parámetro"
+
+#: protected/models/Config.php:207
+msgid "Value"
+msgstr "Valor"
+
+#: protected/models/LoginForm.php:57
+msgid "Remember me"
+msgstr "Recuérdame"
+
+#: protected/models/Log.php:79 protected/models/Email.php:99
+#: protected/models/Enquiry.php:226 protected/models/Vault.php:178
+#: protected/views/enquiry/_detailsForCitizen.php:63
+#: protected/views/enquiry/_detailsForTeam.php:39
+#: protected/views/vault/admin.php:156
+msgid "Type"
+msgstr "Tipo"
+
+#: protected/models/Backup.php:99 protected/views/vault/admin.php:151
+#: protected/controllers/VaultController.php:489
+msgid "Vault"
+msgstr "Caja"
+
+#: protected/models/Backup.php:100
+msgid "Filename"
+msgstr "Nombre de fichero"
+
+#: protected/models/Backup.php:102
+msgid "Initiated"
+msgstr "Iniciado"
+
+#: protected/models/Backup.php:103
+msgid "Completed"
+msgstr "Terminado"
+
+#: protected/models/Backup.php:104 protected/views/vault/admin.php:163
+#: protected/views/vault/view.php:184
+msgid "Filesize"
+msgstr "Tamaño de fichero"
+
+#: protected/models/Backup.php:112
+msgid "Failed"
+msgstr "Fallido"
+
+#: protected/models/Backup.php:114
+msgid "Success"
+msgstr "Éxito"
+
+#: protected/models/Backup.php:115
+msgid "Not finished"
+msgstr "Sin terminar"
+
+#: protected/models/Backup.php:150
+msgid "Cannot create zip file"
+msgstr "No se puede editar el fichero zip"
+
+#: protected/models/BudgetDescCommon.php:107
+#: protected/models/BudgetDescLocal.php:111
+#: protected/models/BudgetDescState.php:114
+msgid "Modified"
+msgstr "Modificado"
+
+#: protected/models/Email.php:101 protected/models/Comment.php:127
+msgid "Sent"
+msgstr "Enviado"
+
+#: protected/models/Email.php:102 protected/models/Enquiry.php:229
+#: protected/views/introPage/admin.php:44
+msgid "Title"
+msgstr "Título"
+
+#: protected/models/Email.php:103
+msgid "Sender"
+msgstr "Remitente"
+
+#: protected/models/Email.php:104 protected/views/newsletter/_form.php:72
+msgid "Sent as"
+msgstr "Enviado como"
+
+#: protected/models/Email.php:105
+msgid "Recipients"
+msgstr "Destinatarios"
+
+#: protected/models/BudgetDescLocal.php:82
+msgid "Internal_code/Language combination already exists."
+msgstr "La combinación Internal_code/Idioma ya existe"
+
+#: protected/models/BudgetDescLocal.php:109
+#: protected/models/BudgetDescState.php:112
+msgid "Explication"
+msgstr "Explicación"
+
+#: protected/models/Enquiry.php:67
+msgid "Generic"
+msgstr "Genérica"
+
+#: protected/models/Enquiry.php:68
+msgid "Budgetary"
+msgstr "Presupuestaria"
+
+#: protected/models/Enquiry.php:98
+#, php-format
+msgid "Pending validation by the %s"
+msgstr "Esperando validación por el %s"
+
+#: protected/models/Enquiry.php:99
+msgid "Enquiry assigned to team member"
+msgstr "Consulta asignada a team member"
+
+#: protected/models/Enquiry.php:100
+#, php-format
+msgid "Enquiry rejected by the %s"
+msgstr "Consulta rechazada por el %s"
+
+#: protected/models/Enquiry.php:101
+#, php-format
+msgid "Enquiry accepted by the %s"
+msgstr "Consulta aceptada por el %s"
+
+#: protected/models/Enquiry.php:102
+msgid "Awaiting reply from the administration"
+msgstr "Esperando respuesta de la administración"
+
+#: protected/models/Enquiry.php:103
+msgid "Reply pending assessment"
+msgstr "Respuesta esperando valoración"
+
+#: protected/models/Enquiry.php:104 protected/views/enquiry/assess.php:64
+#: protected/views/enquiry/assess.php:67
+msgid "Reply considered satisfactory"
+msgstr "Respuesta considerada satisfactoria"
+
+#: protected/models/Enquiry.php:105 protected/views/enquiry/assess.php:73
+#: protected/views/enquiry/assess.php:76
+msgid "Reply considered insatisfactory"
+msgstr "Respuesta considerada no satisfactoria"
+
+#: protected/models/Enquiry.php:108
+msgid "Awaiting reply from the observatory"
+msgstr "Esperando respuesta del observatorio"
+
+#: protected/models/Enquiry.php:185
+msgid "The title cannot include the question."
+msgstr "El título no puede ser una pregunta."
+
+#: protected/models/Enquiry.php:217
+msgid "Related to"
+msgstr "Relacionada con"
+
+#: protected/models/Enquiry.php:218
+#: protected/views/enquiry/_detailsForTeam.php:31
+msgid "Formulated by"
+msgstr "Formulada por"
+
+#: protected/models/Enquiry.php:219 protected/views/enquiry/admin.php:89
+#: protected/views/enquiry/_detailsForTeam.php:35
+msgid "Assigned to"
+msgstr "Asignada a"
+
+#: protected/models/Enquiry.php:220
+msgid "Manager"
+msgstr "Manager"
+
+#: protected/models/Enquiry.php:221
+#: protected/views/enquiry/_reformulated.php:53
+#: protected/views/enquiry/_detailsForCitizen.php:30
+#: protected/views/enquiry/_detailsForCitizen.php:41
+#: protected/views/enquiry/index.php:201 protected/views/budget/view.php:218
+#: protected/views/user/panel.php:327 protected/views/user/panel.php:361
+msgid "Formulated"
+msgstr "Formulada"
+
+#: protected/models/Enquiry.php:222
+msgid "Assigned"
+msgstr "Asignada"
+
+#: protected/models/Enquiry.php:223
+#: protected/views/enquiry/_detailsForCitizen.php:57
+#: protected/views/enquiry/_detailsForTeam.php:68
+msgid "Submitted"
+msgstr "Fecha de entrega"
+
+#: protected/models/Enquiry.php:224
+#: protected/views/enquiry/_detailsForCitizen.php:54
+#: protected/views/enquiry/_detailsForTeam.php:59
+msgid "Registry number"
+msgstr "Nº de registro"
+
+#: protected/models/Enquiry.php:225 protected/views/enquiry/submit.php:138
+msgid "Documentation"
+msgstr "Documentación"
+
+#: protected/models/Enquiry.php:227
+#: protected/views/enquiry/_detailsForTeam.php:43
+msgid "Addressed to"
+msgstr "Dirigida a"
+
+#: protected/models/Enquiry.php:251 protected/models/Enquiry.php:253
+msgid "Send an email to the"
+msgstr "Enviar un correo a"
+
+#: protected/models/Enquiry.php:251
+msgid "team member"
+msgstr "team member"
+
+#: protected/models/Enquiry.php:253
+msgid "people subscribed to the Enquiry"
+msgstr "personas subscritas a la consulta"
+
+#: protected/models/Vote.php:90 protected/views/enquiry/pdf.php:160
+#: protected/views/reply/_view.php:59
+msgid "Reply"
+msgstr "Respuesta"
+
+#: protected/models/Vote.php:92 protected/views/reply/_view.php:80
+#: protected/views/reply/_view.php:87
+msgid "Vote"
+msgstr "Vota"
+
+#: protected/models/Vault.php:95
+msgid "Not a valid key"
+msgstr "No es una clave válida"
+
+#: protected/models/Vault.php:101
+msgid "Please choose at least one day"
+msgstr "Por favor, escoge por lo menos un día"
+
+#: protected/models/Vault.php:177
+msgid "Host"
+msgstr "Host"
+
+#: protected/models/Vault.php:179 protected/views/vault/view.php:151
+#: protected/views/vault/schedule.php:47
+msgid "Schedule"
+msgstr "Agenda"
+
+#: protected/models/Vault.php:181
+msgid "Count"
+msgstr "Cuenta"
+
+#: protected/models/Vault.php:183
+msgid "Key"
+msgstr "Clave"
+
+#: protected/models/Vault.php:191
+msgid "Verified"
+msgstr "Verificado"
+
+#: protected/models/Vault.php:192
+msgid "Ready"
+msgstr "Listo"
+
+#: protected/models/Vault.php:193
+msgid "Loaded"
+msgstr "Cargado"
+
+#: protected/models/Vault.php:194
+msgid "Busy"
+msgstr "Ocupado"
+
+#: protected/models/Vault.php:202
+msgid "Monday"
+msgstr "Lunes"
+
+#: protected/models/Vault.php:203
+msgid "Tuesday"
+msgstr "Martes"
+
+#: protected/models/Vault.php:204
+msgid "Wednesday"
+msgstr "Miercoles"
+
+#: protected/models/Vault.php:205
+msgid "Thursday"
+msgstr "Jueves"
+
+#: protected/models/Vault.php:206
+msgid "Friday"
+msgstr "Viernes"
+
+#: protected/models/Vault.php:207
+msgid "Saturday"
+msgstr "Sábado"
+
+#: protected/models/Vault.php:208
+msgid "Sunday"
+msgstr "Domingo"
+
+#: protected/models/Vault.php:220
+msgid "Local"
+msgstr "Local"
+
+#: protected/models/Vault.php:222
+msgid "Remote"
+msgstr "Remoto"
+
+#: protected/models/Vault.php:224
+msgid "Not defined"
+msgstr "Sin definir"
+
+#: protected/models/EmailTemplate.php:89
+msgid "User fullname will go here"
+msgstr "El nombre del usuario irá aquí"
+
+#: protected/models/SitePageContent.php:107
+#: protected/controllers/SitePageController.php:164
+#: protected/controllers/SitePageController.php:266
+#: protected/controllers/SitePageController.php:302
+msgid "Page"
+msgstr "Página"
+
+#: protected/models/SitePageContent.php:109
+msgid "Page URL"
+msgstr "URL de la página"
+
+#: protected/models/SitePageContent.php:110
+msgid "Page Title"
+msgstr "Título de la página"
+
+#: protected/models/SitePageContent.php:112
+#: protected/views/newsletter/_form.php:130
+#: protected/views/sitePage/_form.php:254
+msgid "Preview"
+msgstr "Vista preliminar"
+
+#: protected/models/Comment.php:129 protected/views/enquiry/pdf.php:146
+#: protected/views/enquiry/pdf.php:174
+msgid "Comment"
+msgstr "Comentario"
+
+#: protected/views/log/index.php:37
+msgid "Browse logs"
+msgstr "Hojear el cuaderno"
+
+#: protected/views/log/modalIndex.php:52 protected/views/user/panel.php:173
+#: protected/views/layouts/column2.php:59
+#: protected/views/archive/index.php:217
+msgid "Log"
+msgstr "Cuaderno"
+
+#: protected/views/email/create.php:27 protected/views/email/index.php:26
+#: protected/views/email/index.php:33 protected/views/enquiry/assess.php:25
+#: protected/views/enquiry/submit.php:25
+#: protected/views/enquiry/changeType.php:25 protected/views/reply/edit.php:26
+msgid "View enquiry"
+msgstr "Ver consulta"
+
+#: protected/views/email/create.php:28 protected/views/enquiry/teamView.php:34
+#: protected/views/enquiry/changeBudget.php:37
+#: protected/views/enquiry/changeType.php:26
+msgid "Edit enquiry"
+msgstr "Editar consulta"
+
+#: protected/views/email/create.php:29
+#: protected/views/enquiry/adminView.php:27
+#: protected/views/enquiry/assess.php:26
+#: protected/views/enquiry/teamView.php:25
+#: protected/views/enquiry/manage.php:25
+#: protected/views/enquiry/validate.php:26 protected/views/reply/edit.php:27
+#: protected/controllers/EmailController.php:256
+msgid "Sent emails"
+msgstr "Correos enviados"
+
+#: protected/views/email/create.php:30 protected/views/email/index.php:27
+#: protected/views/email/index.php:35 protected/views/enquiry/adminView.php:28
+#: protected/views/enquiry/assess.php:27
+#: protected/views/enquiry/teamView.php:26
+#: protected/views/enquiry/reformulate.php:28
+#: protected/views/enquiry/submit.php:26
+#: protected/views/enquiry/validate.php:27
+#: protected/views/enquiry/changeType.php:27
+#: protected/views/enquiry/teamEdit.php:28 protected/views/reply/edit.php:28
+msgid "List enquiries"
+msgstr "Listar consultas"
+
+#: protected/views/email/create.php:71
+#: protected/views/email/_contactPetition.php:71
+msgid "Send email"
+msgstr "Envía correo"
+
+#: protected/views/email/create.php:146 protected/views/enquiry/_form.php:140
+#: protected/views/site/login.php:117
+msgid "Send"
+msgstr "Enviar"
+
+#: protected/views/email/create.php:146
+#: protected/views/enquiry/_changeType.php:94
+#: protected/views/introPage/_form.php:159
+#: protected/views/budget/_formYear.php:86
+#: protected/views/user/updateRoles.php:146
+#: protected/views/user/update.php:145
+msgid "Save"
+msgstr "Guardar"
+
+#: protected/views/email/_contactPetition.php:34
+msgid "Petition to make contact via email"
+msgstr "Petición de contactar por mail"
+
+#: protected/views/email/_contactPetition.php:46
+#: protected/controllers/SiteController.php:145
+#: protected/controllers/SiteController.php:341
+msgid "Hello"
+msgstr "Hola"
+
+#: protected/views/email/_contactPetition.php:48
+#, php-format
+msgid "a user like you at the %s"
+msgstr "un usuario como tu del %s"
+
+#: protected/views/email/_contactPetition.php:49
+msgid "would like to contact you privately via email"
+msgstr "quiere contactar contigo vía email"
+
+#: protected/views/email/_contactPetition.php:50
+msgid "However, we do not share users' email addresses"
+msgstr "Sin embargo, no compartimos las direcciones de correo de los usuarios"
+
+#: protected/views/email/_contactPetition.php:51
+msgid "If you wish, you may make contact yourself with"
+msgstr "Si deseas, puedes contactar tu mismo con"
+
+#: protected/views/email/_contactPetition.php:52
+msgid ""
+"If you think this user is spamming you, you can block future petitions at "
+"this link"
+msgstr ""
+"Si piensas que este usuario te está enviando correo basura, puedes bloquear "
+"futuros peticiones con este enlace"
+
+#: protected/views/email/_contactPetition.php:54
+#: protected/controllers/SiteController.php:345
+#: protected/controllers/CommentController.php:135
+msgid "Kind regards"
+msgstr "Saludos cordiales"
+
+#: protected/views/email/_contactPetition.php:62
+msgid "says"
+msgstr "dice"
+
+#: protected/views/email/_contactPetition.php:63
+msgid "Optionally, you may attach text to this email"
+msgstr "Si decides, puedes adjuntar un texo en este correo"
+
+#: protected/views/email/_contactPetition.php:72
+#: protected/views/enquiry/_changeType.php:95
+#: protected/views/enquiry/_form.php:152 protected/views/comment/_form.php:45
+#: protected/views/user/update.php:146 protected/views/reply/_form.php:94
+#: protected/views/archive/_editArchive.php:130
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: protected/views/email/_contactPetition.php:89
+msgid "Sending email"
+msgstr "Enviando correo electrónico"
+
+#: protected/views/email/_contactPetition.php:94
+msgid "Email sent"
+msgstr "Correo electrónico enviado"
+
+#: protected/views/email/index.php:34 protected/views/enquiry/adminView.php:26
+#: protected/views/enquiry/manage.php:98
+#: protected/controllers/EnquiryController.php:566
+#: protected/controllers/EnquiryController.php:716
+msgid "Manage enquiry"
+msgstr "Gestionar consulta"
+
+#: protected/views/email/index.php:41
+msgid "Emails originated from the enquiry"
+msgstr "Emails enviados desde la consulta"
+
+#: protected/views/enquiry/workflow-horizontal.php:35
+#: protected/views/enquiry/workflow-horizontal.php:44
+#: protected/views/enquiry/workflow-horizontal.php:62
+#: protected/views/enquiry/workflow-horizontal.php:71
+msgid "enquiries"
+msgstr "consultas"
+
+#: protected/views/enquiry/admin.php:67 protected/views/enquiry/manage.php:26
+#: protected/views/user/panel.php:246
+#: protected/controllers/EnquiryController.php:731
+msgid "Manage enquiries"
+msgstr "Gestionar consultas"
+
+#: protected/views/enquiry/_megaDelete.php:25
+msgid "Delete enquiry"
+msgstr "Borrar consulta"
+
+#: protected/views/enquiry/_megaDelete.php:34
+msgid "Are you sure you want to delete it all?"
+msgstr "¿Está seguro de que quieres borrarlo todo?"
+
+#: protected/views/enquiry/_megaDelete.php:40
+msgid "Reformulated enquires"
+msgstr "Consultas reformuladas"
+
+#: protected/views/enquiry/_megaDelete.php:41
+msgid "Replies"
+msgstr "Respuestas"
+
+#: protected/views/enquiry/_megaDelete.php:42
+#: protected/views/file/adminDatabaseDownload.php:148
+msgid "Files"
+msgstr "Ficheros"
+
+#: protected/views/enquiry/_megaDelete.php:43
+msgid "Record of sent emails"
+msgstr "Lista de correos enviados"
+
+#: protected/views/enquiry/_megaDelete.php:44
+#: protected/views/comment/_showThread.php:37
+msgid "Comments"
+msgstr "Comentarios"
+
+#: protected/views/enquiry/_megaDelete.php:45
+msgid "Votes"
+msgstr "Votos"
+
+#: protected/views/enquiry/_megaDelete.php:46
+msgid "User email subscriptions"
+msgstr "Suscripciones por email"
+
+#: protected/views/enquiry/_megaDelete.php:54
+msgid "Yes, delete it all"
+msgstr "Sí, bórralo todo"
+
+#: protected/views/enquiry/_teamView.php:29
+msgid "The Enquiry"
+msgstr "La Consulta"
+
+#: protected/views/enquiry/create.php:36 protected/views/enquiry/create.php:39
+msgid "Formulate a"
+msgstr "Formular una"
+
+#: protected/views/enquiry/create.php:36
+msgid "budgetary enquiry"
+msgstr "consulta presupuestaria"
+
+#: protected/views/enquiry/create.php:39
+#: protected/controllers/EnquiryController.php:411
+#: protected/controllers/EnquiryController.php:416
+#: protected/controllers/EnquiryController.php:460
+msgid "generic enquiry"
+msgstr "consulta genérica"
+
+#: protected/views/enquiry/create.php:46
+msgid ""
+"If you wish to formulate a budgetary enquiry, you must first find the "
+"corresponding"
+msgstr ""
+"Si quieres formular una consulta presupuestaria, primero tendràs que "
+"seleccionar la partida concreta en la pestaña presupuestos"
+
+#: protected/views/enquiry/create.php:58 protected/views/enquiry/edit.php:38
+msgid "Enquiry steps"
+msgstr "Pasos de una consulta"
+
+#: protected/views/enquiry/create.php:59 protected/views/enquiry/edit.php:39
+msgid "ENQUIRIES_STEP_MSG"
+msgstr ""
+"<p>1. Haz tu consulta</p><p>2. Nosotros lo enviamos al Ayuntamiento</p><p>3. "
+"Comparte, difunde la consulta. </p><p>4. Publicaremos la respuesta del "
+"Ayuntamiento y te avisaremos.</p><p>5. Valora la respuesta.</p>"
+
+#: protected/views/enquiry/create.php:67
+#: protected/views/enquiry/reformulate.php:41
+msgid "The original enquiry"
+msgstr "La consulta original"
+
+#: protected/views/enquiry/create.php:80
+#: protected/views/enquiry/teamView.php:78
+#: protected/views/enquiry/manage.php:165
+#: protected/views/enquiry/_validationOptions.php:79
+#: protected/views/user/panel.php:435
+msgid "Yes"
+msgstr "Sí"
+
+#: protected/views/enquiry/create.php:81
+msgid "No, take me to"
+msgstr "No, llévame al"
+
+#: protected/views/enquiry/_reformulated.php:26
+#: protected/views/enquiry/pdf.php:99
+msgid "The enquiry"
+msgstr "La Consulta"
+
+#: protected/views/enquiry/_reformulated.php:26
+msgid "has been reformulated"
+msgstr "ha estado reformulada"
+
+#: protected/views/enquiry/_reformulated.php:28
+msgid "time"
+msgstr "vez"
+
+#: protected/views/enquiry/_reformulated.php:30
+msgid "times"
+msgstr "veces"
+
+#: protected/views/enquiry/_managerSearch.php:53
+#: protected/views/enquiry/_managerSearch.php:61
+#: protected/views/enquiry/_managerSearch.php:69
+#: protected/views/enquiry/_managerSearch.php:84
+#: protected/views/enquiry/_searchPublic.php:52
+#: protected/views/enquiry/_searchPublic.php:56
+#: protected/views/enquiry/_memberSearch.php:56
+#: protected/views/enquiry/_memberSearch.php:61
+#: protected/views/budget/_indexModified.php:46
+msgid "Not filtered"
+msgstr "Sin filtrar"
+
+#: protected/views/enquiry/assess.php:58
+#: protected/views/enquiry/teamView.php:58
+msgid "Assess reply"
+msgstr "Valorar respuesta"
+
+#: protected/views/enquiry/assess.php:65
+msgid "The general consensus is that the reply is satisfactory"
+msgstr "El consenso general es que la respuesta es satisfactoria"
+
+#: protected/views/enquiry/assess.php:74
+msgid "The general consensus is that the reply is not satisfactory"
+msgstr "El consenso general es que la respuesta es insatisfactoria"
+
+#: protected/views/enquiry/pdf.php:85
+msgid "PDF created on the"
+msgstr "PDF creado el día"
+
+#: protected/views/enquiry/pdf.php:87
+msgid "Source"
+msgstr "Fuente"
+
+#: protected/views/enquiry/pdf.php:91
+msgid "page"
+msgstr "página"
+
+#: protected/views/enquiry/pdf.php:116
+msgid "Relative budgetary information"
+msgstr "Información presupuestaria"
+
+#: protected/views/enquiry/pdf.php:141 protected/views/enquiry/pdf.php:169
+msgid "Citizen comments"
+msgstr "Comentarios de los ciudadanos"
+
+#: protected/views/enquiry/teamView.php:29
+#: protected/views/enquiry/submit.php:60
+#: protected/controllers/EnquiryController.php:486
+msgid "Submit enquiry"
+msgstr "Entregar la consulta"
+
+#: protected/views/enquiry/teamView.php:38
+msgid "Accept / Reject"
+msgstr "Aceptar / Rechazar"
+
+#: protected/views/enquiry/teamView.php:42 protected/views/reply/edit.php:41
+#: protected/controllers/ReplyController.php:85
+msgid "Add reply"
+msgstr "Añadir respuesta"
+
+#: protected/views/enquiry/teamView.php:47 protected/views/reply/edit.php:43
+msgid "Correct reply"
+msgstr "Corregir respuesta"
+
+#: protected/views/enquiry/teamView.php:51
+#: protected/views/enquiry/submit.php:62
+msgid "Correct submission"
+msgstr "Corregir entrega"
+
+#: protected/views/enquiry/teamView.php:62
+#: protected/controllers/EnquiryController.php:265
+msgid "Reformulate enquiry"
+msgstr "Reformular consulta"
+
+#: protected/views/enquiry/teamView.php:79
+#: protected/views/enquiry/manage.php:167
+#: protected/views/enquiry/_validationOptions.php:81
+#: protected/views/user/panel.php:436
+msgid "No"
+msgstr "No"
+
+#: protected/views/enquiry/_detailsForCitizen.php:33
+#: protected/views/enquiry/_detailsForCitizen.php:34
+#: protected/views/enquiry/_detailsForCitizen.php:43
+#: protected/views/archive/_editArchive.php:110
+msgid "by"
+msgstr "por"
+
+#: protected/views/enquiry/_detailsForCitizen.php:64
+#: protected/views/enquiry/_detailsForTeam.php:40
+msgid "reformulated"
+msgstr "reformulada"
+
+#: protected/views/enquiry/_searchPublic.php:64
+msgid "Minimum date"
+msgstr "Fecha mínima"
+
+#: protected/views/enquiry/_searchPublic.php:85
+msgid "Maximum date"
+msgstr "Fecha máxima"
+
+#: protected/views/enquiry/_searchPublic.php:105
+msgid "Text"
+msgstr "Texto"
+
+#: protected/views/enquiry/_searchPublic.php:111
+msgid "Filter"
+msgstr "Filtro"
+
+#: protected/views/enquiry/reformulate.php:27
+#: protected/views/enquiry/teamEdit.php:26
+msgid "View Enquiry"
+msgstr "Ver consulta"
+
+#: protected/views/enquiry/manage.php:107
+msgid "Please study the enquiry below before continuing"
+msgstr ""
+"Como Team manager tienes tres opciones para gestionar la consulta adjunta."
+
+#: protected/views/enquiry/manage.php:111
+#: protected/views/enquiry/validate.php:60
+#: protected/views/enquiry/_form.php:131
+msgid "Who will reply to this enquiry?"
+msgstr "¿Quién responderá a esta consulta?"
+
+#: protected/views/enquiry/manage.php:122
+msgid "Assign enquiry"
+msgstr "Asignar consulta"
+
+#: protected/views/enquiry/manage.php:125
+msgid "Not assigned"
+msgstr "No asignada"
+
+#: protected/views/enquiry/manage.php:128
+msgid "Assign"
+msgstr "Asignar"
+
+#: protected/views/enquiry/manage.php:130
+msgid "Change team member"
+msgstr "Cambiar team member"
+
+#: protected/views/enquiry/manage.php:135
+msgid "Reject the enquiry"
+msgstr "Rechaza la consulta"
+
+#: protected/views/enquiry/manage.php:135
+#: protected/views/enquiry/validate.php:79
+msgid "The enquiry is inappropriate"
+msgstr "La consulta es inapropiada"
+
+#: protected/views/enquiry/manage.php:136
+#: protected/views/enquiry/validate.php:80
+msgid "Reject"
+msgstr "Rechaza"
+
+#: protected/views/enquiry/manage.php:141
+msgid "The enquiry is spam"
+msgstr "La consulta es spam"
+
+#: protected/views/enquiry/manage.php:141
+msgid "Delete the enquiry and"
+msgstr "Eliminar la consulta y"
+
+#: protected/views/enquiry/manage.php:142
+msgid "disable the user"
+msgstr "deshabilitar el usuario"
+
+#: protected/views/enquiry/manage.php:146
+msgid "Delete"
+msgstr "Borrar"
+
+#: protected/views/enquiry/changeBudget.php:29
+#: protected/views/budget/deleteTree.php:29
+#: protected/views/budget/updateYear.php:110
+#: protected/views/budget/featured.php:29
+msgid "Edit year"
+msgstr "Editar año"
+
+#: protected/views/enquiry/changeBudget.php:30
+#: protected/views/budget/admin.php:80
+#: protected/views/budget/deleteTree.php:30
+#: protected/views/budget/updateYear.php:26
+#: protected/views/budget/featured.php:30
+#: protected/views/budget/createYear.php:22
+msgid "Manage years"
+msgstr "Gestionar años"
+
+#: protected/views/enquiry/changeBudget.php:34
+msgid "Use this when you need to make corrections to the budget database"
+msgstr ""
+"Usa esta opción cuando necesitas hacer correcciones de la base de datos "
+"presupuestaria"
+
+#: protected/views/enquiry/changeBudget.php:37
+msgid "change related budget"
+msgstr "cambiar la partida relacionada"
+
+#: protected/views/enquiry/view.php:107
+msgid "Share"
+msgstr "Compartir"
+
+#: protected/views/enquiry/view.php:118
+msgid "Export"
+msgstr "Exportar"
+
+#: protected/views/enquiry/view.php:125
+msgid "Subscribed"
+msgstr "Suscrito"
+
+#: protected/views/enquiry/view.php:135
+msgid "You can"
+msgstr "Puedes"
+
+#: protected/views/enquiry/view.php:136
+msgid "edit the enquiry"
+msgstr "editar la consulta"
+
+#: protected/views/enquiry/view.php:136
+msgid "and even"
+msgstr "e incluso"
+
+#: protected/views/enquiry/view.php:137
+msgid "delete it"
+msgstr "borrarlo"
+
+#: protected/views/enquiry/view.php:141
+#: protected/views/enquiry/_validationOptions.php:69
+#: protected/views/sitePage/_form.php:36 protected/views/sitePage/_form.php:43
+msgid "Are you sure?"
+msgstr "¿Estás seguro?"
+
+#: protected/views/enquiry/view.php:142
+msgid "until it has been accepted by the observatory."
+msgstr "hasta que haya sido aceptado por el observatorio."
+
+#: protected/views/enquiry/_budgetDetails.php:47
+#: protected/views/budget/_budgetDetails.php:50
+#: protected/views/user/panel.php:111
+#: protected/controllers/EnquiryController.php:171
+#: protected/controllers/EnquiryController.php:241
+#: protected/controllers/EnquiryController.php:316
+msgid "New enquiry"
+msgstr "Nueva consulta"
+
+#: protected/views/enquiry/_budgetDetails.php:52
+#: protected/views/enquiry/_budgetDetails.php:54
+#: protected/views/enquiry/_budgetDetails.php:69
+#: protected/views/budget/_budgetDetails.php:60
+#: protected/views/budget/_budgetDetails.php:62
+#: protected/views/budget/_budgetDetails.php:76
+msgid "1 enquiry made"
+msgstr "1 consulta hecha"
+
+#: protected/views/enquiry/_budgetDetails.php:57
+#: protected/views/enquiry/_budgetDetails.php:59
+#: protected/views/enquiry/_budgetDetails.php:62
+#: protected/views/enquiry/_budgetDetails.php:71
+#: protected/views/enquiry/_budgetDetails.php:73
+#: protected/views/budget/_budgetDetails.php:65
+#: protected/views/budget/_budgetDetails.php:67
+#: protected/views/budget/_budgetDetails.php:70
+#: protected/views/budget/_budgetDetails.php:78
+#: protected/views/budget/_budgetDetails.php:80
+msgid "enquiries made"
+msgstr "consultas hechas"
+
+#: protected/views/enquiry/_budgetDetails.php:77
+#: protected/views/budget/_budgetDetails.php:84
+#: protected/views/budget/_compareYears.php:23
+msgid "of total"
+msgstr "del total"
+
+#: protected/views/enquiry/_budgetDetails.php:80
+#: protected/views/budget/_budgetDetails.php:102
+msgid "Year / Code"
+msgstr "Año / Código"
+
+#: protected/views/enquiry/_budgetDetails.php:86
+#: protected/views/budget/_budgetDetails.php:108
+msgid "Euros per person"
+msgstr "Euros por persona"
+
+#: protected/views/enquiry/_budgetDetails.php:105
+#: protected/views/enquiry/_budgetDetails.php:119
+#: protected/views/enquiry/index.php:196
+#: protected/views/budget/_budgetDetails.php:126
+#: protected/views/budget/_budgetDetails.php:172
+#: protected/views/user/panel.php:322 protected/views/user/panel.php:356
+#: protected/views/user/view.php:136 protected/views/layouts/mainmenu.php:28
+#: protected/controllers/EnquiryController.php:100
+#: protected/controllers/EnquiryController.php:868
+msgid "Enquiries"
+msgstr "Consultas"
+
+#: protected/views/enquiry/submit.php:32
+msgid "Registry number is possibly incorrect"
+msgstr ""
+"El número registro es incorrecto, es necesario cambiarlo al número ofrecido "
+"por el Ayuntamiento"
+
+#: protected/views/enquiry/submit.php:71
+msgid "Date the Enquiry was submitted to the Administration"
+msgstr "Fecha en que la consulta se entregó a la administración"
+
+#: protected/views/enquiry/submit.php:99
+msgid "Is this information correct?"
+msgstr "¿Es esta información correcta?"
+
+#: protected/views/enquiry/submit.php:100
+msgid "Submit"
+msgstr "Entrega"
+
+#: protected/views/enquiry/submit.php:102
+msgid "Add document"
+msgstr "Añadir documento"
+
+#: protected/views/enquiry/_view.php:62
+msgid "Before participating, please confirm your email address"
+msgstr ""
+"Antes de participar por favor, confirma tu dirección de correo electrónico"
+
+#: protected/views/enquiry/_view.php:148 protected/views/enquiry/_view.php:346
+msgid "Are you sure you want to delete it?"
+msgstr "¿Estás seguro que desea eliminarlo?"
+
+#: protected/views/enquiry/_view.php:176 protected/views/enquiry/_view.php:192
+msgid "You have already voted favourably"
+msgstr "Ya has votado favorablemente"
+
+#: protected/views/enquiry/_view.php:179 protected/views/enquiry/_view.php:194
+msgid "You have already voted unfavourably"
+msgstr "Ya has votado desfavorablemente"
+
+#: protected/views/enquiry/_view.php:305 protected/views/layouts/main.php:63
+#: protected/views/site/login.php:25 protected/views/site/login.php:67
+#: protected/views/site/login.php:97
+msgid "Login"
+msgstr "Inicia sesión"
+
+#: protected/views/enquiry/_view.php:308
+msgid "Please login to participate"
+msgstr "Por favor, inicia una sesión para participar"
+
+#: protected/views/enquiry/_view.php:309
+#, php-format
+msgid "If you have an account, %s"
+msgstr "Si tienes una cuenta, %s"
+
+#: protected/views/enquiry/_view.php:310
+msgid "login"
+msgstr "iniciar sesión"
+
+#: protected/views/enquiry/_view.php:313
+#, php-format
+msgid "Are you new here? %s is just a moment"
+msgstr "¿Eres un usuario nuevo? %s es sólo un momento"
+
+#: protected/views/enquiry/_view.php:314
+msgid "Signing up"
+msgstr "Registrarse"
+
+#: protected/views/enquiry/_changeType.php:42
+msgid "Select a budget from the grid below"
+msgstr "Selecciona un presupuesto de la tabla más abajo"
+
+#: protected/views/enquiry/_changeType.php:83
+#: protected/views/enquiry/changeType.php:33
+#: protected/views/enquiry/teamEdit.php:27
+msgid "Change type"
+msgstr "Cambiar tipo"
+
+#: protected/views/enquiry/_changeType.php:138
+msgid "Choose budget"
+msgstr "Escoge presupuesto"
+
+#: protected/views/enquiry/index.php:145
+msgid "Enquiries made to date"
+msgstr "Consultas hechas hasta hoy"
+
+#: protected/views/enquiry/index.php:147
+msgid "This is a list of enquiries made by citizens like you."
+msgstr "Lista de consultas realizadas por ciudadan@s como tú"
+
+#: protected/views/enquiry/index.php:148
+msgid "Formulate a new enquiry"
+msgstr "Formula una consulta nueva"
+
+#: protected/views/enquiry/index.php:221
+msgid "No enquiries here"
+msgstr "No hay consultas aquí"
+
+#: protected/views/enquiry/index.php:229 protected/views/budget/index.php:348
+#: protected/views/archive/index.php:309
+msgid "go to top"
+msgstr "subir al principio"
+
+#: protected/views/enquiry/validate.php:56
+msgid "Validate enquiry"
+msgstr "Validar consulta"
+
+#: protected/views/enquiry/validate.php:57
+msgid "Please study the enquiry below before deciding on an option"
+msgstr "Estudia la consulta más abajo antes de decidir por una opción"
+
+#: protected/views/enquiry/validate.php:70
+#, php-format
+msgid "Tell %s you do not want to take responsibility of this enquiry"
+msgstr "Dile a %s que no quieres responsabilizarte de esta consulta"
+
+#: protected/views/enquiry/validate.php:75
+msgid "Accept the Enquiry"
+msgstr "Aceptar consulta"
+
+#: protected/views/enquiry/validate.php:75
+msgid "You accept this enquiry as valid"
+msgstr "Aceptas esta consulta como a válida"
+
+#: protected/views/enquiry/validate.php:76
+msgid "Accept"
+msgstr "Acepta"
+
+#: protected/views/enquiry/validate.php:79
+msgid "Reject the Enquiry"
+msgstr "Rechaza la consulta"
+
+#: protected/views/enquiry/_detailsForTeam.php:32
+#: protected/views/enquiry/_detailsForTeam.php:36
+msgid "on the"
+msgstr "el día"
+
+#: protected/views/enquiry/_detailsForTeam.php:47
+msgid "Subscribed users"
+msgstr "Usuarios suscritos"
+
+#: protected/views/enquiry/_detailsForTeam.php:58
+msgid "missing"
+msgstr "falta"
+
+#: protected/views/enquiry/_form.php:65
+msgid "New reformulated enquiry"
+msgstr "Nueva consulta reformulada"
+
+#: protected/views/enquiry/_form.php:67
+#: protected/controllers/EnquiryController.php:334
+msgid "Modify enquiry"
+msgstr "Modificar consulta"
+
+#: protected/views/enquiry/_form.php:140 protected/views/reply/_form.php:91
+#: protected/views/vault/_capacity.php:46
+msgid "Update"
+msgstr "Actualiza"
+
+#: protected/views/enquiry/subscribeScript.php:31
+msgid "We can notify you by email when this enquiry gets updated"
+msgstr ""
+"Te podemos notificar por correo electrónico cuando esta consultas se "
+"actualice"
+
+#: protected/views/enquiry/subscribeScript.php:33
+msgid "Please login to subscribe"
+msgstr "Por favor, inicia una sesión para participar"
+
+#: protected/views/enquiry/subscribeScript.php:38
+msgid "Yes please"
+msgstr "Sí, por favor"
+
+#: protected/views/enquiry/subscribeScript.php:42
+msgid "Not right now"
+msgstr "Ahora mismo no"
+
+#: protected/views/enquiry/subscribeScript.php:49
+msgid "Cancel my subscription"
+msgstr "Cancela mi subscripción"
+
+#: protected/views/enquiry/_validationOptions.php:71
+msgid ""
+"Are you sure that this enquiry should be replied to by the Observatory and "
+"not the Administration?"
+msgstr ""
+"¿Estás seguro que esta consulta debe ser respuesta por el Observatorio "
+"Ciudadano y no por la administración?"
+
+#: protected/views/enquiry/_validationOptions.php:76
+msgid "Find information about this at the wiki."
+msgstr "Amplía información en la wiki del proyecto."
+
+#: protected/views/enquiry/assigned.php:68 protected/views/user/panel.php:220
+#: protected/controllers/EnquiryController.php:605
+msgid "Entrusted enquiries"
+msgstr "Consultas encomendadas"
+
+#: protected/views/newsletter/admin.php:25
+#: protected/views/newsletter/adminView.php:26
+#: protected/views/newsletter/update.php:25
+msgid "Create bulk email"
+msgstr "Crear boletín"
+
+#: protected/views/newsletter/admin.php:30
+msgid "Manage Bulk Emails"
+msgstr "Gestionar boletines"
+
+#: protected/views/newsletter/adminView.php:27
+#: protected/views/newsletter/create.php:26
+#: protected/views/newsletter/update.php:27
+msgid "Manage bulk email"
+msgstr "Listar boletines"
+
+#: protected/views/newsletter/adminView.php:32
+msgid "Delete draft"
+msgstr "Borrar borrador"
+
+#: protected/views/newsletter/adminView.php:36
+#: protected/views/user/updateRoles.php:49 protected/views/user/view.php:31
+msgid "Are you sure you want to delete this item?"
+msgstr "Estás seguro que que quieres borrar este ítem?"
+
+#: protected/views/newsletter/adminView.php:107
+#: protected/views/newsletter/_form.php:78
+msgid "BCC Recipients"
+msgstr "BCC Destinatarios ocultos"
+
+#: protected/views/newsletter/adminView.php:109
+#: protected/views/newsletter/_form.php:79
+msgid "Show"
+msgstr "Mostrar"
+
+#: protected/views/newsletter/adminView.php:118
+msgid "Edit draft"
+msgstr "Editar borrador"
+
+#: protected/views/newsletter/adminView.php:119
+msgid "Publish now"
+msgstr "Publica ahora"
+
+#: protected/views/newsletter/view.php:28
+#: protected/controllers/NewsletterController.php:99
+#: protected/controllers/NewsletterController.php:233
+#: protected/controllers/NewsletterController.php:297
+msgid "Newsletter"
+msgstr "Boletín"
+
+#: protected/views/newsletter/showRecipients.php:26
+msgid "Will send to all users at"
+msgstr "Se enviará a todos los usuarios de"
+
+#: protected/views/newsletter/showRecipients.php:28
+msgid "Was sent to these users"
+msgstr "Se envió a estos usuarios"
+
+#: protected/views/newsletter/_view.php:27
+msgid "Published on the"
+msgstr "Publicado el día"
+
+#: protected/views/newsletter/index.php:27 protected/views/user/panel.php:274
+#: protected/views/layouts/main.php:85
+#: protected/controllers/NewsletterController.php:85
+msgid "Newsletters"
+msgstr "Boletines"
+
+#: protected/views/newsletter/_form.php:65
+msgid "Send bulk email"
+msgstr "Enviar boletín"
+
+#: protected/views/newsletter/update.php:26
+msgid "View bulk email"
+msgstr "Ver boletín"
+
+#: protected/views/introPage/admin.php:26
+#: protected/views/introPage/create.php:29
+#: protected/views/introPage/update.php:33
+#: protected/views/sitePage/admin.php:25
+#: protected/views/sitePage/create.php:31
+#: protected/controllers/IntroPageController.php:92
+#: protected/controllers/SitePageController.php:138
+msgid "Create page"
+msgstr "Crear página"
+
+#: protected/views/introPage/admin.php:32
+msgid "Manage Introduction pages"
+msgstr "Gestionar páginas"
+
+#: protected/views/introPage/create.php:24
+#: protected/views/introPage/view.php:84
+#: protected/views/introPage/update.php:34
+#: protected/views/sitePage/admin.php:84
+#: protected/views/sitePage/create.php:25
+#: protected/views/sitePage/update.php:31 protected/views/sitePage/show.php:66
+#: protected/controllers/IntroPageController.php:198
+#: protected/controllers/SitePageController.php:325
+msgid "Manage pages"
+msgstr "Gestionar páginas"
+
+#: protected/views/introPage/view.php:72
+msgid "You are in edit mode"
+msgstr "Estás en modo de edición"
+
+#: protected/views/introPage/view.php:78 protected/views/sitePage/show.php:63
+msgid "Edit page"
+msgstr "Editar página"
+
+#: protected/views/introPage/_form.php:73
+msgid "Text box attributes"
+msgstr "Atributos de la caja de texto"
+
+#: protected/views/introPage/_form.php:78
+msgid "Distance between top of photo and top of box"
+msgstr ""
+"Distancia entre la parte superior de la foto y la parte superior al recuadro"
+
+#: protected/views/introPage/_form.php:85
+msgid "Distance from lefthand side of photo to box"
+msgstr "Distancia entre lado izquierdo de la foto y el recuadro"
+
+#: protected/views/introPage/_form.php:92
+msgid "Width of the box"
+msgstr "Ancho del recuadro"
+
+#: protected/views/introPage/_form.php:101
+#: protected/views/introPage/_form.php:108
+msgid "Leave empty to recover default values"
+msgstr "Dejar vacío para recuperar los valores por omisión"
+
+#: protected/views/introPage/_form.php:115
+msgid "Box transparentcy"
+msgstr "Transparencia del recuadro"
+
+#: protected/views/introPage/_form.php:124
+msgid "Text box content"
+msgstr "Contenido de la caja de texto"
+
+#: protected/views/introPage/_form.php:130
+msgid "Translations"
+msgstr "Traducciones"
+
+#: protected/views/introPage/_form.php:159
+#: protected/views/budget/_formYear.php:86
+#: protected/views/sitePage/_form.php:254
+#: protected/views/archive/_createContainer.php:72
+msgid "Create"
+msgstr "Crear"
+
+#: protected/views/introPage/update.php:25
+#: protected/views/sitePage/update.php:24
+msgid "Delete this page"
+msgstr "Borrar esta página"
+
+#: protected/views/introPage/update.php:27
+#: protected/views/sitePage/update.php:26
+msgid "and translations"
+msgstr "y traducciones"
+
+#: protected/views/introPage/update.php:31
+msgid "View page"
+msgstr "Ver página"
+
+#: protected/views/introPage/update.php:32
+#: protected/views/sitePage/update.php:30
+msgid "Delete page"
+msgstr "Borrar página"
+
+#: protected/views/introPage/update.php:40
+#: protected/views/sitePage/update.php:37
+#: protected/controllers/IntroPageController.php:129
+#: protected/controllers/SitePageController.php:188
+msgid "Update page"
+msgstr "Actualizar página"
+
+#: protected/views/budget/admin.php:25
+#: protected/views/budget/createYear.php:29
+msgid "Create Year"
+msgstr "Crear año"
+
+#: protected/views/budget/admin.php:26
+msgid "Default year"
+msgstr "Año por omisión"
+
+#: protected/views/budget/admin.php:29
+msgid "Restore database"
+msgstr "Restaurar partidas"
+
+#: protected/views/budget/admin.php:61
+msgid "Restore budgets"
+msgstr "Restaurar presupuestos"
+
+#: protected/views/budget/admin.php:99 protected/views/budget/_formYear.php:54
+msgid "Population"
+msgstr "Población"
+
+#: protected/views/budget/noDescriptions.php:25
+msgid "Manage descriptions"
+msgstr "Gestionar las descripciones"
+
+#: protected/views/budget/noDescriptions.php:30
+#: protected/views/budgetDescription/admin.php:28
+msgid "Budgets without description"
+msgstr "Partidas sin descripción"
+
+#: protected/views/budget/deleteTree.php:39
+#, php-format
+msgid "Delete \\\"%s\\\" and its sub-budgets?"
+msgstr "¿Borrar \\\"%s\\\" y las sub-partidas?"
+
+#: protected/views/budget/deleteTree.php:52
+#, php-format
+msgid "Cannot delete the budget tree because it contains %s enquiries"
+msgstr ""
+"No se puede borrar el árbol de presupuestos porque contiene %s consultas"
+
+#: protected/views/budget/deleteTree.php:56
+#, php-format
+msgid "%s budgets deleted ok"
+msgstr "%s partidas borradas correctamente"
+
+#: protected/views/budget/deleteTree.php:71
+msgid "Delete budgets"
+msgstr "Borrar partidas"
+
+#: protected/views/budget/_formYear.php:47
+msgid "Only 4 digits"
+msgstr "Solo 4 dígitos"
+
+#: protected/views/budget/_formYear.php:57
+msgid "Population this year"
+msgstr "La población de este año"
+
+#: protected/views/budget/_formYear.php:62
+#: protected/views/comment/_form.php:44 protected/views/reply/_form.php:91
+msgid "Publish"
+msgstr "Publicar"
+
+#: protected/views/budget/_formYear.php:65
+msgid "Remember to update the zip file"
+msgstr "Recuerda actualizar el fichero zip"
+
+#: protected/views/budget/_formYear.php:73
+msgid "defined budgets"
+msgstr "Partidas definidas"
+
+#: protected/views/budget/_formYear.php:78
+#: protected/views/budget/index.php:279 protected/views/budget/featured.php:74
+msgid "Featured budgets"
+msgstr "Partidas destacadas"
+
+#: protected/views/budget/view.php:46
+msgid "Budget with internal code"
+msgstr "Presupuesto con Internal code"
+
+#: protected/views/budget/view.php:46
+msgid "is not defined"
+msgstr "no está definida"
+
+#: protected/views/budget/view.php:126
+msgid "Compare years"
+msgstr "Comparar años"
+
+#: protected/views/budget/view.php:128
+#, php-format
+msgid "Details for %s"
+msgstr "Detalles del %s"
+
+#: protected/views/budget/view.php:153 protected/views/budget/view.php:155
+msgid "Can you improve this description?"
+msgstr "¿Puedes mejorar esta descripción?"
+
+#: protected/views/budget/view.php:163
+msgid "Read the administration's description"
+msgstr "Leer la descripción de la administración"
+
+#: protected/views/budget/view.php:165
+msgid "Official description"
+msgstr "Descripción oficial"
+
+#: protected/views/budget/view.php:173 protected/views/budget/view.php:175
+msgid "Please consider adding a description here"
+msgstr "Considera añadiendo aquí una descripción"
+
+#: protected/views/budget/view.php:182
+msgid "No enquiries have been made about this budget yet"
+msgstr ""
+"Todavía nadie ha hecho una consulta al Ayuntamiento sobre esta partida "
+"presupuestaria"
+
+#: protected/views/budget/view.php:183
+msgid "Do you wish to make an enquiry"
+msgstr "¿Quieres ser el primero"
+
+#: protected/views/budget/view.php:196
+msgid "One enquiry has already been made about this budget"
+msgstr "Ya hay una consulta hecha sobre esta partida presupuestaria"
+
+#: protected/views/budget/view.php:198
+#, php-format
+msgid "%s enquiries have already been made about this budget"
+msgstr "Ya hay %s consultas hechas sobre esta partida presupuestaria"
+
+#: protected/views/budget/_budgetDetails.php:54
+msgid "More detail"
+msgstr "Más detalle"
+
+#: protected/views/budget/_budgetDetails.php:91
+msgid "Graph"
+msgstr "Gráfico"
+
+#: protected/views/budget/_budgetDetails.php:136
+#: protected/views/budget/_budgetDetails.php:142
+#: protected/views/budget/_indexBar.php:165
+msgid "Executed"
+msgstr "Ejecutado"
+
+#: protected/views/budget/_budgetDetails.php:144
+msgid "Unknown"
+msgstr "Desconocido"
+
+#: protected/views/budget/index.php:187 protected/views/user/panel.php:115
+#: protected/views/config/summary.php:89
+#: protected/views/layouts/mainmenu.php:27
+#: protected/controllers/BudgetController.php:541
+#: protected/controllers/BudgetController.php:598
+msgid "Budgets"
+msgstr "Presupuestos"
+
+#: protected/views/budget/index.php:211
+msgid "Available years"
+msgstr "Años disponibles"
+
+#: protected/views/budget/index.php:255
+msgid "No search results"
+msgstr "No hubo coincidencias"
+
+#: protected/views/budget/index.php:267
+msgid "Pie graph"
+msgstr "Gráfico en tarta"
+
+#: protected/views/budget/index.php:270
+msgid "Bar graph"
+msgstr "Gráfico en barras"
+
+#: protected/views/budget/index.php:275
+#: protected/views/budget/_indexModified.php:38
+msgid "Modifications"
+msgstr "Modificaciones"
+
+#: protected/views/budget/index.php:288 protected/views/budget/index.php:293
+msgid "Download data"
+msgstr "Bajar Datos"
+
+#: protected/views/budget/index.php:322
+msgid "No data available"
+msgstr "No hay datos disponibles"
+
+#: protected/views/budget/updateYear.php:25
+msgid "Import budgets"
+msgstr "Importar partidas"
+
+#: protected/views/budget/updateYear.php:30
+msgid "Selected budget delete"
+msgstr "Eliminar presupuestos seleccionados"
+
+#: protected/views/budget/updateYear.php:34
+msgid "Delete this year's budgets"
+msgstr "Borrar los presupuestos de este año"
+
+#: protected/views/budget/updateYear.php:38
+msgid "Define graphics"
+msgstr "Definir gráficos"
+
+#: protected/views/budget/updateYear.php:44
+msgid "Export budgets"
+msgstr "Exportar partidas"
+
+#: protected/views/budget/updateYear.php:47
+msgid "Delete year"
+msgstr "Borrar año"
+
+#: protected/views/budget/updateYear.php:122
+msgid "Budgetary enquiries for"
+msgstr "Consultas presupuestarias del"
+
+#: protected/views/budget/_indexBar.php:164
+msgid "Actual"
+msgstr "Actual"
+
+#: protected/views/budget/_indexModified.php:70
+msgid "Category"
+msgstr "Categoría"
+
+#: protected/views/budget/_indexModified.php:80
+msgid "initial_provision"
+msgstr "Previsión inicial"
+
+#: protected/views/budget/_indexModified.php:89
+msgid "actual_provision"
+msgstr "Previsión actual"
+
+#: protected/views/comment/_showThread.php:42
+#: protected/views/comment/_showThread.php:54
+msgid "Add comment"
+msgstr "Añadir comentario"
+
+#: protected/views/comment/_view.php:40
+msgid "comments on the"
+msgstr "comenta el día"
+
+#: protected/views/comment/_form.php:39
+msgid "comments"
+msgstr "comenta"
+
+#: protected/views/user/admin.php:66 protected/views/user/panel.php:273
+msgid "Users and roles"
+msgstr "Usuarios y roles"
+
+#: protected/views/user/panel.php:95
+msgid "Welcome"
+msgstr "Bienvenido"
+
+#: protected/views/user/panel.php:114
+msgid "ENQUIRY_NEW_MSG"
+msgstr ""
+"Pregunta lo que quieras saber a tu Ayuntamiento, desde este apartado puedes "
+"hacer una consulta abierta. Para hacer una consulta  presupuestaria ve a la "
+"pestaña %s y realiza la consulta desde allí."
+
+#: protected/views/user/panel.php:126
+msgid "My user information"
+msgstr "Mis datos de usuario"
+
+#: protected/views/user/panel.php:128
+msgid "Change your profile"
+msgstr "Cambia tu perfil"
+
+#: protected/views/user/panel.php:129
+msgid "Configure your email"
+msgstr "Configura tu email"
+
+#: protected/views/user/panel.php:130
+msgid "Change your password"
+msgstr "Cambia tu contraseña"
+
+#: protected/views/user/panel.php:155
+msgid "For your information"
+msgstr "Por tu información"
+
+#: protected/views/user/panel.php:156
+msgid "You have a task"
+msgstr "Tienes una tarea"
+
+#: protected/views/user/panel.php:157
+msgid "OCAx needs attention"
+msgstr "OCAx necesita atención"
+
+#: protected/views/user/panel.php:159
+#: protected/views/budgetDescription/_legend.php:26
+msgid "Complete"
+msgstr "Completo"
+
+#: protected/views/user/panel.php:160
+#: protected/views/budgetDescription/_legend.php:27
+msgid "Partial"
+msgstr "Parcial"
+
+#: protected/views/user/panel.php:161
+#: protected/views/budgetDescription/_legend.php:28
+msgid "Empty"
+msgstr "Vacío"
+
+#: protected/views/user/panel.php:162
+#: protected/views/budgetDescription/_legend.php:29
+msgid "Missing"
+msgstr "Falta"
+
+#: protected/views/user/panel.php:176
+msgid "Agora"
+msgstr "Ágora"
+
+#: protected/views/user/panel.php:197
+msgid "OCAx installation"
+msgstr "Instalación OCAx"
+
+#: protected/views/user/panel.php:202
+msgid "Check server requirements"
+msgstr "Comprobar requerimientos del servidor"
+
+#: protected/views/user/panel.php:225 protected/views/user/updateRoles.php:116
+msgid "Manage the enquiries you are responsable for"
+msgstr "Responde a las consultas encargadas"
+
+#: protected/views/user/panel.php:234
+msgid "Introduction pages"
+msgstr "Páginas de Introducción"
+
+#: protected/views/user/panel.php:235
+msgid "Site pages"
+msgstr "Páginas del sitio"
+
+#: protected/views/user/panel.php:238
+#: protected/controllers/FileController.php:310
+msgid "Wallpaper"
+msgstr "Wallpaper"
+
+#: protected/views/user/panel.php:250 protected/views/user/updateRoles.php:132
+msgid "Assign enquiries to team members and check status"
+msgstr "Encarga consultas a otros compañeros"
+
+#: protected/views/user/panel.php:257
+msgid "Administator's options"
+msgstr "Opciones de administrador"
+
+#: protected/views/user/panel.php:260
+msgid "Years and budgets"
+msgstr "Años y presupuestos"
+
+#: protected/views/user/panel.php:261
+#: protected/controllers/BudgetDescriptionController.php:286
+msgid "Budget descriptions"
+msgstr "Descripciones de partidas"
+
+#: protected/views/user/panel.php:263
+#: protected/controllers/FileController.php:297
+msgid "Zip file"
+msgstr "Fichero zip"
+
+#: protected/views/user/panel.php:268 protected/views/config/index.php:113
+#: protected/views/config/backups.php:26 protected/views/vault/admin.php:78
+#: protected/views/vault/view.php:162
+#: protected/controllers/VaultController.php:612
+msgid "Backups"
+msgstr "Copias de seguridad"
+
+#: protected/views/user/panel.php:270
+msgid "Manual Backup"
+msgstr "Copia de seguridad manual"
+
+#: protected/views/user/panel.php:275
+#: protected/views/emailTemplate/admin.php:28
+#: protected/controllers/EmailTemplateController.php:110
+msgid "Email text templates"
+msgstr "Plantillas de correo-e"
+
+#: protected/views/user/panel.php:276 protected/views/config/update.php:25
+msgid "Global parameters"
+msgstr "Parámetros globales"
+
+#: protected/views/user/panel.php:305
+msgid "My enquiries"
+msgstr "Mis consultas"
+
+#: protected/views/user/panel.php:343
+msgid "I am subscribed to these enquirytions"
+msgstr "Estoy subscrito a estas consultas"
+
+#: protected/views/user/panel.php:344
+msgid "You will be sent an email when these enquiries are updated"
+msgstr ""
+"Se te enviará un correo electrónico cuando estas consultas se actualicen"
+
+#: protected/views/user/panel.php:385
+msgid "Enquiries of your interest will be displayed here"
+msgstr ""
+"Las consultas que hayas realizado o a las que te hayas suscrito aparecerán "
+"aquí"
+
+#: protected/views/user/panel.php:433
+msgid "Do you want to block"
+msgstr "¿Quieres bloquear"
+
+#: protected/views/user/updateRoles.php:42
+msgid "View User"
+msgstr "Ver Usuario"
+
+#: protected/views/user/updateRoles.php:43
+msgid "Manage Users"
+msgstr "Gestionar Usuarios"
+
+#: protected/views/user/updateRoles.php:48 protected/views/user/view.php:30
+msgid "Delete user"
+msgstr "Suprimir usuario"
+
+#: protected/views/user/updateRoles.php:54 protected/views/user/view.php:36
+msgid "Enable user"
+msgstr "Habilitar usuario"
+
+#: protected/views/user/updateRoles.php:57 protected/views/user/view.php:39
+msgid "Disable user"
+msgstr "Deshabilitar usuario"
+
+#: protected/views/user/updateRoles.php:89
+msgid "Change roles"
+msgstr "Cambiar roles"
+
+#: protected/views/user/updateRoles.php:108
+msgid "Can edit budget descriptions"
+msgstr "Puedes editar descripciones presupuestarias"
+
+#: protected/views/user/view.php:24
+msgid "Change user's roles"
+msgstr "Cambiar roles de usuario"
+
+#: protected/views/user/view.php:25
+msgid "List all users"
+msgstr "Listar todos los usuarios"
+
+#: protected/views/user/view.php:100
+msgid "User details"
+msgstr "Detalles del usuario"
+
+#: protected/views/user/view.php:125
+msgid "Enquiries made by"
+msgstr "Consultas hechas por"
+
+#: protected/views/user/view.php:150
+msgid "has not made a enquiry"
+msgstr "no ha hecho ninguna consulta"
+
+#: protected/views/user/_notActiveInfo.php:23
+msgid "USER_NOT_ACTIVE_INFO"
+msgstr ""
+"<p>Para empezar a realizar consultas y suscribirte en las consultas de otros "
+"usuarios, es necesario que confirmes tu dirección de correo electrónico.</"
+"p><p>- Te hemos enviado un correo electrónico con unas sencillas "
+"instrucciones.<br />- Si no has recibido el correo, comprueba que no te haya "
+"llegado como spam.<br />- Si quieres que te enviamos el correo de nuevo a "
+"%s, haz %s.<br />- Si tu dirección de correo no es %s la puedes cambiar por "
+"otra haciendo %s.</p>"
+
+#: protected/views/user/_notActiveInfo.php:26
+#: protected/views/user/_notActiveInfo.php:28
+msgid "click here"
+msgstr "click aquí"
+
+#: protected/views/user/update.php:29
+msgid "Are you sure you want to delete your account?"
+msgstr "¿Estás seguro que quieres borrar tu cuenta?"
+
+#: protected/views/user/update.php:63
+msgid "Change your user information"
+msgstr "Cambiar tus datos de usuario"
+
+#: protected/views/user/update.php:64
+msgid "Delete my user account"
+msgstr "Borrar mi cuenta de usuario"
+
+#: protected/views/user/update.php:79
+msgid "Your information"
+msgstr "Tus datos"
+
+#: protected/views/user/update.php:98
+msgid "Change password"
+msgstr "Cambiar la contraseña"
+
+#: protected/views/user/update.php:115
+msgid "Details"
+msgstr "Detalles"
+
+#: protected/views/user/update.php:120
+msgid "Your preferred language"
+msgstr "Tu idioma preferido"
+
+#: protected/views/user/update.php:128 protected/views/site/register.php:135
+msgid "Yes, I want to be a member"
+msgstr "Sí, quiero ser un socio"
+
+#: protected/views/user/update.php:129
+msgid "What does this mean?"
+msgstr "¿Que significa esto?"
+
+#: protected/views/user/update.php:140 protected/views/site/register.php:132
+msgid "MEMBERSHIP_MSG"
+msgstr ""
+"Puedes marcar en este espacio hacerte socia a demás de usuario. Cuantos más "
+"socios tenga tu OCM más presión podréis realizar a vuestro Ayuntamiento. "
+"Piensa que cada consulta que hagáis llegar al Ayuntamiento tendrá la firma "
+"implícita de todos los socios, a demás del usuario que la haya realizado."
+
+#: protected/views/config/_title.php:22
+msgid "Configure"
+msgstr "Configurar"
+
+#: protected/views/config/postInstallCheck.php:46
+#: protected/views/config/postInstallCheck.php:50
+#: protected/views/config/postInstallCheck.php:54
+#: protected/views/config/postInstallCheck.php:58
+#: protected/views/config/postInstallCheck.php:62
+msgid "Error: Cannot write to"
+msgstr "Error: No se puede escribir a"
+
+#: protected/views/config/postInstallCheck.php:69
+msgid "Directory permissions seem Ok"
+msgstr "Permisos de directorios parecen correctos"
+
+#: protected/views/config/postInstallCheck.php:79
+msgid "Info: Native mysqldump not available. Using PHP alternative for backups"
+msgstr ""
+"Info: No se encuentra mysqldump. Usando alternativo PHP para realizar copias."
+
+#: protected/views/config/postInstallCheck.php:82
+msgid "Using native mysqldump for backups"
+msgstr "Usando mysqldump para copias"
+
+#: protected/views/config/postInstallCheck.php:90
+msgid "PHP ZipArchive lib is installed"
+msgstr "PHP ZipArchive lib está instalado"
+
+#: protected/views/config/postInstallCheck.php:92
+msgid "PHP ZipArchive ib is not installed"
+msgstr "PHP ZipArchive lib no está instalado"
+
+#: protected/views/config/image.php:72
+msgid "Observatory color and logo"
+msgstr "Color y logo del observatorio"
+
+#: protected/views/config/image.php:78
+msgid "Create a logo"
+msgstr "Crear un logo"
+
+#: protected/views/config/image.php:79
+msgid "and save it on your PC"
+msgstr "y guardarlo en tu PC"
+
+#: protected/views/config/image.php:81
+msgid "Upload the file"
+msgstr "Subir el fichero"
+
+#: protected/views/config/image.php:83
+#: protected/views/config/observatory.php:94
+msgid "Refresh the page pressing F5"
+msgstr "Refrescar la página con la tecla F5"
+
+#: protected/views/config/image.php:113
+msgid "Your site color is"
+msgstr "El color de tu sitio es"
+
+#: protected/views/config/summary.php:46
+msgid "Site summary"
+msgstr "Resumen web"
+
+#: protected/views/config/summary.php:56
+msgid "Users"
+msgstr "Usuarios"
+
+#: protected/views/config/summary.php:58
+msgid "Total users"
+msgstr "Total de usuarios"
+
+#: protected/views/config/summary.php:59
+msgid "OCM members"
+msgstr "Miembros del OCM"
+
+#: protected/views/config/summary.php:66
+msgid "OCAx version"
+msgstr "Versión de OCAx"
+
+#: protected/views/config/summary.php:74
+msgid "Disk usage (approx)"
+msgstr "Uso del disco (aprox)"
+
+#: protected/views/config/summary.php:76
+msgid "Free"
+msgstr "Libre"
+
+#: protected/views/config/summary.php:77
+msgid "Total"
+msgstr "Total"
+
+#: protected/views/config/summary.php:92
+msgid "budgets"
+msgstr "presupuestos"
+
+#: protected/views/config/misc.php:26 protected/views/config/index.php:114
+msgid "Misc"
+msgstr "Otros"
+
+#: protected/views/config/observatory.php:26
+#: protected/views/config/index.php:108
+msgid "Observatory"
+msgstr "El observatorio"
+
+#: protected/views/config/pendingConfiguration.php:27
+msgid "Admin tasks"
+msgstr "Tareas del Admin"
+
+#: protected/views/config/pendingConfiguration.php:34
+msgid "New version available"
+msgstr "Nueva versión disponible"
+
+#: protected/views/config/pendingConfiguration.php:34
+msgid "Upgrade now"
+msgstr "Actualizar ahora"
+
+#: protected/views/config/pendingConfiguration.php:40
+msgid "Installation is incomplete"
+msgstr "La instalación está incompleta"
+
+#: protected/views/config/pendingConfiguration.php:41
+msgid "Budget descriptions table is empty. Please read INSTALL"
+msgstr "La tabla de Budget descriptions está vacia. Por favor, lee INSTALL"
+
+#: protected/views/config/pendingConfiguration.php:47
+msgid "The Observatory's initials have not been configured"
+msgstr "No se han configurado las siglas del observatorio"
+
+#: protected/views/config/pendingConfiguration.php:53
+msgid "Email has not been configured"
+msgstr "No se ha configurado el correo-e"
+
+#: protected/views/config/pendingConfiguration.php:59
+msgid "The Observatory's name has not been configured"
+msgstr "No se ha configurado el nombre del observatorio"
+
+#: protected/views/config/pendingConfiguration.php:65
+msgid "Language(s) have not been configured"
+msgstr "No se han configurado el idioma(s)"
+
+#: protected/views/config/pendingConfiguration.php:71
+msgid "Administration name has not been configured"
+msgstr "No se ha configurado el nombre de la administración"
+
+#: protected/views/config/pendingConfiguration.php:80
+#, php-format
+msgid "%s email templates need to be defined"
+msgstr "%s las plantillas de correo necesitan ser definidas"
+
+#: protected/views/config/locale.php:27 protected/views/config/index.php:110
+msgid "Locale"
+msgstr "Local"
+
+#: protected/views/config/locale.php:55
+msgid "Coordinates for the map at"
+msgstr "Coordinadas para el mapa en"
+
+#: protected/views/config/locale.php:72
+msgid "Find coordinates here"
+msgstr "Encuentra coordinadas aquí"
+
+#: protected/views/config/email.php:41 protected/views/config/email.php:73
+msgid "Send as"
+msgstr "Enviar como"
+
+#: protected/views/config/email.php:71
+msgid "Send a test email"
+msgstr "Enviar correo-e de prueba"
+
+#: protected/views/config/email.php:74
+msgid "Send to"
+msgstr "Enviar a"
+
+#: protected/views/config/index.php:111 protected/views/config/social.php:26
+msgid "Social networks"
+msgstr "Redes sociales"
+
+#: protected/views/config/index.php:112
+msgid "Image"
+msgstr "Imagen"
+
+#: protected/views/config/versionSummary.php:25
+msgid "Installed"
+msgstr "Instalado"
+
+#: protected/views/config/versionSummary.php:26
+msgid "Available"
+msgstr "Disponible"
+
+#: protected/views/config/versionSummary.php:30
+msgid "Please update"
+msgstr "Por favor, actualiza"
+
+#: protected/views/config/update.php:42
+msgid "Change global parameter"
+msgstr "Cambiar parámetro globale"
+
+#: protected/views/layouts/main.php:66
+msgid "Logout"
+msgstr "Logout"
+
+#: protected/views/layouts/main.php:91 protected/views/archive/index.php:211
+#: protected/controllers/ArchiveController.php:357
+msgid "Archive"
+msgstr "Archivo"
+
+#: protected/views/layouts/main.php:98 protected/views/layouts/column2.php:41
+#: protected/views/layouts/column2.php:48
+#: protected/views/archive/index.php:218
+#: protected/controllers/UserController.php:67
+msgid "My page"
+msgstr "Mi página"
+
+#: protected/views/layouts/column2.php:44
+msgid "Options"
+msgstr "Opciones"
+
+#: protected/views/layouts/column2.php:67
+#: protected/views/archive/index.php:216
+msgid "Help"
+msgstr "Ayuda"
+
+#: protected/views/layouts/foot.php:31
+msgid "Telephone"
+msgstr "Teléfono"
+
+#: protected/views/sitePage/admin.php:26
+#: protected/views/archive/_uploadFile.php:69
+#: protected/views/file/admin.php:25 protected/views/file/wallpaper.php:25
+#: protected/views/file/_form.php:61
+msgid "Upload file"
+msgstr "Subir fichero"
+
+#: protected/views/sitePage/admin.php:27
+msgid "Show uploaded files"
+msgstr "Mostrar los ficheros ya subidos"
+
+#: protected/views/sitePage/admin.php:96
+msgid "Page name"
+msgstr "Nombre de página"
+
+#: protected/views/sitePage/_form.php:34
+msgid "We are going to reload the page"
+msgstr "Vamos a recargar la página"
+
+#: protected/views/sitePage/_form.php:35
+msgid "Any changes will be lost"
+msgstr "Se perderá cualquier cambio no guardado"
+
+#: protected/views/sitePage/_form.php:42
+msgid "Advanced HTML tags will be deleted"
+msgstr "Se borrarán los tags de HTML avanzada"
+
+#: protected/views/sitePage/_form.php:152
+msgid "Content"
+msgstr "Contenido"
+
+#: protected/views/sitePage/_form.php:170
+msgid "Warning! Advanced HTML editing. Copy/paste can create problems"
+msgstr "Aviso! Edición de HTML avanzada. Copiar/pegar puede causar problemas."
+
+#: protected/views/sitePage/show.php:60
+#: protected/views/archive/_editArchive.php:129
+#: protected/views/budgetDescription/_form.php:263
+msgid "Save changes"
+msgstr "Guardar cambios"
+
+#: protected/views/sitePage/show.php:75
+msgid "Not published"
+msgstr "No publicado"
+
+#: protected/views/reply/edit.php:34
+msgid "The body of text will be displayed together with the enquiry"
+msgstr ""
+"La respuesta que añadas se hará visible en la web debajo de la consulta "
+"ciudadana."
+
+#: protected/views/reply/edit.php:35
+msgid ""
+"After publishing this reply you will be able to attach the documentation you "
+"received from the administration"
+msgstr ""
+"Cuando hayas añadido la respuesta, tendrás la opción de adjuntar la "
+"documentación recibida del ayuntamiento."
+
+#: protected/views/reply/_view.php:94
+msgid "Add attachment"
+msgstr "Añadir adjunto"
+
+#: protected/views/reply/_form.php:40
+msgid "Date the Obseravatory replied"
+msgstr "Fecha el observatorio ha respondido"
+
+#: protected/views/reply/_form.php:42
+msgid "Date the Administration replied"
+msgstr "Fecha la administración ha respondido"
+
+#: protected/views/vault/admin.php:23 protected/views/vault/create.php:24
+#: protected/views/vault/view.php:24
+msgid "Show schedule"
+msgstr "Mostrar agenda"
+
+#: protected/views/vault/admin.php:24
+msgid "Manual backup"
+msgstr "Copia de seguridad manual"
+
+#: protected/views/vault/admin.php:25
+#: protected/controllers/VaultController.php:167
+msgid "Create vault"
+msgstr "Crear una caja"
+
+#: protected/views/vault/admin.php:78
+#: protected/views/budgetDescription/admin.php:35
+msgid "Manage"
+msgstr "Gestionar"
+
+#: protected/views/vault/admin.php:83
+msgid "Total disk space"
+msgstr "Espacio total de disco"
+
+#: protected/views/vault/admin.php:91 protected/views/vault/schedule.php:51
+msgid "Local vaults"
+msgstr "Cajas locales"
+
+#: protected/views/vault/admin.php:92 protected/views/vault/view.php:92
+msgid "They save their copies on your server"
+msgstr "Ellos guardan sus copias en tu servidor"
+
+#: protected/views/vault/admin.php:114 protected/views/vault/schedule.php:67
+msgid "Remote vaults"
+msgstr "Cajas remotas"
+
+#: protected/views/vault/admin.php:116 protected/views/vault/view.php:96
+msgid "You save your copies on their server"
+msgstr "Tu guardas tus copias en su servidor"
+
+#: protected/views/vault/admin.php:140
+msgid "All Backups"
+msgstr "Todas las copias"
+
+#: protected/views/vault/create.php:25 protected/views/vault/view.php:25
+msgid "Manage backups"
+msgstr "Gestionar copias"
+
+#: protected/views/vault/create.php:86
+msgid "Create a vault"
+msgstr "Crear una caja"
+
+#: protected/views/vault/create.php:104
+msgid "What type of vault are you creating?"
+msgstr "¿Que tipo de caja estás creando?"
+
+#: protected/views/vault/create.php:108
+msgid "I want to allow someone to save their copies on my server"
+msgstr "Quiero dejar que otro guarde sus copias en mi servidor"
+
+#: protected/views/vault/create.php:109
+msgid "I want to save my copies on another server"
+msgstr "Quiero guardar mis copias en el servidor de otro"
+
+#: protected/views/vault/create.php:124
+msgid "When can they make backups?"
+msgstr "¿Cuando pueden hacer las copias?"
+
+#: protected/views/vault/_configKey.php:40
+msgid "Verify"
+msgstr "Verificar"
+
+#: protected/views/vault/view.php:31
+msgid "You are going to delete this vault. Are you sure?"
+msgstr "Vas a borrar esta caja. ¿Estás seguro?"
+
+#: protected/views/vault/view.php:40
+msgid "The copy was saved on "
+msgstr "La copia se guardó el"
+
+#: protected/views/vault/view.php:90
+msgid "Local vault"
+msgstr "Caja local"
+
+#: protected/views/vault/view.php:94
+msgid "Remote vault"
+msgstr "Caja remota"
+
+#: protected/views/vault/view.php:104
+#, php-format
+msgid "Tell the Admin at %s that the vault has been created and the key is:"
+msgstr "Dile al Admin de %s que se ha creado la caja y la clave es:"
+
+#: protected/views/vault/view.php:109
+#, php-format
+msgid "Ask the Admin at %s to create a vault for you. Your URL is"
+msgstr "Pídele al Admin de %s que crea una caja para ti. Tu URL es"
+
+#: protected/views/vault/view.php:112
+#, php-format
+msgid "%s will send you a key"
+msgstr "%s te enviará la clave"
+
+#: protected/views/vault/view.php:117
+#, php-format
+msgid ""
+"You are waiting for the admin at %s to choose one or more of the following "
+"days"
+msgstr ""
+"Estás esperando que el Admin del %s elija uno o varios de los siguientes días"
+
+#: protected/views/vault/view.php:119
+msgid "Waiting..."
+msgstr "Esperando..."
+
+#: protected/views/vault/view.php:124
+msgid "Choose day(s) to backup"
+msgstr "Escoge dia(s) para hacer la copia"
+
+#: protected/views/vault/view.php:128
+msgid "Total copies made"
+msgstr "Total de copias hechas"
+
+#: protected/views/vault/view.php:129
+msgid "Capacity"
+msgstr "Capacidad"
+
+#: protected/views/vault/view.php:131 protected/views/vault/view.php:133
+msgid "copies"
+msgstr "copias"
+
+#: protected/views/vault/view.php:153
+msgid "Pending"
+msgstr "Pendiente"
+
+#: protected/views/vault/_capacity.php:30
+msgid "Change vault capacity"
+msgstr "Cambiar la capacidad de la caja"
+
+#: protected/views/vault/_configSchedule.php:63
+#, php-format
+msgid "The admin at %s offers you these days"
+msgstr "El Admin de %s te ofrece estos días"
+
+#: protected/views/vault/_configSchedule.php:65
+msgid "Select the day(s) you want to make the copy"
+msgstr "Selecciona los día(s) que quieres hacer la copia"
+
+#: protected/views/vault/_configSchedule.php:86
+msgid "Programme"
+msgstr "Programa"
+
+#: protected/views/archive/_createContainer.php:35
+#: protected/views/archive/index.php:108
+msgid "Name required"
+msgstr "Nombre de carpeta"
+
+#: protected/views/archive/_createContainer.php:39
+#: protected/views/archive/index.php:113
+#: protected/views/archive/_uploadFile.php:35
+msgid "Description required"
+msgstr "Falta incluir una descripción"
+
+#: protected/views/archive/_createContainer.php:56
+#: protected/views/archive/index.php:215
+msgid "Create a folder"
+msgstr "Crear carpeta"
+
+#: protected/views/archive/_createContainer.php:66
+msgid "A description of this folder"
+msgstr "Descripción de la carpeta"
+
+#: protected/views/archive/index.php:177
+msgid "Sorry, cannot edit the csv zip file"
+msgstr "Disculpa, no se puede crear fichero zip"
+
+#: protected/views/archive/index.php:186
+msgid "Delete this archive?"
+msgstr "¿Borrar este archivo?"
+
+#: protected/views/archive/index.php:214
+msgid "Upload a file"
+msgstr "Subir un fichero"
+
+#: protected/views/archive/index.php:234
+msgid "up to"
+msgstr "Subir a"
+
+#: protected/views/archive/index.php:248
+msgid "Nothing found here"
+msgstr "No hay nada aquí"
+
+#: protected/views/archive/index.php:280
+msgid "Date"
+msgstr "Fecha"
+
+#: protected/views/archive/_uploadFile.php:81
+msgid "A description of this file"
+msgstr "Una descripción de este fichero"
+
+#: protected/views/archive/_uploadFile.php:87
+#: protected/views/file/_form.php:80
+msgid "Upload"
+msgstr "Subir"
+
+#: protected/views/archive/_editArchive.php:99
+msgid "Folder"
+msgstr "Carpeta"
+
+#: protected/views/archive/_editArchive.php:103
+msgid "Uploaded"
+msgstr "Subido"
+
+#: protected/views/archive/_editArchive.php:142
+msgid "Delete this folder"
+msgstr "Borrar esta carpeta"
+
+#: protected/views/archive/_editArchive.php:144
+msgid "Delete this file"
+msgstr "Borrar éste archivo"
+
+#: protected/views/archive/_editArchive.php:149
+msgid "This folder is not empty"
+msgstr "Esta carpeta está vacía"
+
+#: protected/views/archive/_editArchive.php:157
+msgid "Move this folder to .."
+msgstr "Mover esta carpeta a ..."
+
+#: protected/views/archive/_editArchive.php:159
+msgid "Move this file to .."
+msgstr "Enviar el archivo seleccionado a ..."
+
+#: protected/views/budgetDescription/admin.php:26
+#: protected/views/budgetDescription/browseState.php:27
+#: protected/views/budgetDescription/create.php:27
+#: protected/views/budgetDescription/update.php:28
+#: protected/controllers/BudgetDescriptionController.php:299
+msgid "Common descriptions"
+msgstr "Descripciones comunes"
+
+#: protected/views/budgetDescription/admin.php:27
+#: protected/views/budgetDescription/create.php:28
+#: protected/views/budgetDescription/browseCommon.php:27
+#: protected/views/budgetDescription/update.php:29
+#: protected/controllers/BudgetDescriptionController.php:312
+msgid "State descriptions"
+msgstr "Descripciones estatales"
+
+#: protected/views/budgetDescription/admin.php:35
+msgid "budget descriptions"
+msgstr "Descripciones de partidas"
+
+#: protected/views/budgetDescription/browseState.php:26
+#: protected/views/budgetDescription/create.php:26
+#: protected/views/budgetDescription/browseCommon.php:26
+#: protected/views/budgetDescription/update.php:27
+msgid "Local descriptions"
+msgstr "Descripciones locales"
+
+#: protected/views/budgetDescription/browseState.php:33
+msgid "Browse state descriptions"
+msgstr "Hojear descripciones estatales"
+
+#: protected/views/budgetDescription/create.php:25
+#: protected/views/budgetDescription/update.php:25
+msgid "View description"
+msgstr "Ver descripción"
+
+#: protected/views/budgetDescription/browseCommon.php:33
+msgid "Browse common descriptions"
+msgstr "Hojear descripciones comunes"
+
+#: protected/views/budgetDescription/_view.php:26
+#: protected/views/budgetDescription/_form.php:91
+msgid "Budget description"
+msgstr "Descripción presupuestaria"
+
+#: protected/views/budgetDescription/_form.php:69
+msgid "Explication preview"
+msgstr "Previsualización de la explicación"
+
+#: protected/views/budgetDescription/_form.php:102
+msgid "Used where"
+msgstr "Empleada en"
+
+#: protected/views/budgetDescription/_form.php:145
+msgid "State description"
+msgstr "Descripción estatal"
+
+#: protected/views/budgetDescription/_form.php:155
+msgid "Common description"
+msgstr "Descripción común"
+
+#: protected/views/budgetDescription/_form.php:165
+msgid "Local description"
+msgstr "Descripción local"
+
+#: protected/views/budgetDescription/_form.php:182
+msgid "Using data imported with CSV files"
+msgstr "Usando datos importados con los ficheros CSV"
+
+#: protected/views/budgetDescription/_form.php:188
+#: protected/views/budgetDescription/_form.php:275
+#: protected/views/budgetDescription/_form.php:312
+msgid "Concept, Subconcept, Article"
+msgstr "Concepto, Subconcepto, Artículo"
+
+#: protected/views/budgetDescription/_form.php:198
+#: protected/views/budgetDescription/_form.php:282
+#: protected/views/budgetDescription/_form.php:319
+msgid "Concept of this budget"
+msgstr "El concepto de esta partida"
+
+#: protected/views/budgetDescription/_form.php:250
+msgid "Citizen friendly explication"
+msgstr "Una explicación cercana a la ciudadanía"
+
+#: protected/views/budgetDescription/_form.php:253
+msgid "Preview the explication"
+msgstr "Previsualizar la explicación"
+
+#: protected/views/budgetDescription/_form.php:300
+msgid "No common description in the database"
+msgstr "No hay descripción común en la base de datos"
+
+#: protected/views/budgetDescription/_form.php:337
+msgid "No state description in the database"
+msgstr "No hay descripción estatal en la base de datos"
+
+#: protected/views/budgetDescription/update.php:26
+msgid "Delete local description"
+msgstr "Borrar descripción local"
+
+#: protected/views/csv/yearsForZip.php:30
+msgid "Add CSV file to queue"
+msgstr "Añadir fichero CSV a la cola"
+
+#: protected/views/csv/importCSV.php:26
+msgid "Edit"
+msgstr "Editar"
+
+#: protected/views/csv/importCSV.php:27
+msgid "List Years"
+msgstr "Listar años"
+
+#: protected/views/csv/importCSV.php:30
+msgid "Upload CSV again"
+msgstr "Subir el CSV de nuevo"
+
+#: protected/views/csv/importCSV.php:195
+msgid "Import csv into"
+msgstr "Importar csv a"
+
+#: protected/views/site/register.php:21 protected/views/site/register.php:44
+#: protected/views/site/register.php:121
+msgid "Register"
+msgstr "Registrarse"
+
+#: protected/views/site/register.php:116
+msgid "Please enter the letters as they are shown in the image above"
+msgstr "Copia las letras tal como salen en la imagen arriba"
+
+#: protected/views/site/register.php:128
+msgid "REGISTER_MSG"
+msgstr ""
+"<p>Ser usuario te permitirá realizar consultas a tu ayuntamiento de manera "
+"pública y directa, así como compartirlas con otros ciudadanos de tu "
+"municipio.</p><p> Cuantos más ciudadanos seamos los que luchemos unidos por "
+"la transparencia, más cerca estaremos de conseguir que las decisiones en "
+"política y gestión de nuestro municipio sean tomadas desde la ciudadanía.</p>"
+
+#: protected/views/site/login.php:42
+msgid "Please enter your email address"
+msgstr "Por favor, introduce tu correo electrónico"
+
+#: protected/views/site/login.php:106
+msgid "Still haven't got an account?"
+msgstr "¿Aún no tienes una cuenta?"
+
+#: protected/views/site/login.php:108
+msgid "Sign up"
+msgstr "Apúntate"
+
+#: protected/views/site/login.php:111
+msgid "Forgotten your password?"
+msgstr "¿Has olvidado tu contraseña?"
+
+#: protected/views/site/login.php:114
+msgid "Follow these instructions"
+msgstr "Sigue estas instrucciones "
+
+#: protected/views/site/login.php:116
+msgid "Enter your email address and we will send you a link"
+msgstr "Introduce tu dirección de correo electrónico y te enviaremos un enlace"
+
+#: protected/views/site/map.php:24
+msgid "Map"
+msgstr "Mapa"
+
+#: protected/views/site/cookieAlert.php:44
+msgid ""
+"uses Twitter and Facebook cookies that collect statistics. By using this web "
+"site you accept this."
+msgstr ""
+"emplea cookies de Twitter y Facebook que recogen estadísticas. Si navegas "
+"este sitio web es porque estás de acuerdo."
+
+#: protected/views/site/cookieAlert.php:46
+msgid "Ok"
+msgstr "De acuerdo"
+
+#: protected/views/file/admin.php:58
+msgid "Document archive"
+msgstr "Archivo de documentos"
+
+#: protected/views/file/adminDatabaseDownload.php:25
+msgid "Generate the zip file"
+msgstr "Generar el fichero zip"
+
+#: protected/views/file/adminDatabaseDownload.php:26
+msgid "Add file to the queue"
+msgstr "Añadir un fichero a la cola"
+
+#: protected/views/file/adminDatabaseDownload.php:27
+msgid "Add csv to the queue"
+msgstr "Añadir un csv a la cola"
+
+#: protected/views/file/adminDatabaseDownload.php:30
+msgid "Download zip file"
+msgstr "Bajar el fichero zip"
+
+#: protected/views/file/adminDatabaseDownload.php:128
+msgid "Prepare file"
+msgstr "Prepara fichero"
+
+#: protected/views/file/adminDatabaseDownload.php:137
+msgid "Files queued and ready to include in zip"
+msgstr "Ficheros en cola y listos para incluir en el zip"
+
+#: protected/views/file/adminDatabaseDownload.php:187
+msgid "Generating CSV file"
+msgstr "Generando fichero CSV"
+
+#: protected/views/file/wallpaper.php:58
+msgid "Manage wallpaper"
+msgstr "Gestionar wallpaper"
+
+#: protected/views/file/showBudgetFiles.php:30
+msgid "Restore all budgets from a backup"
+msgstr "Restaurar todos los presupuestos desde una copia"
+
+#: protected/views/file/showBudgetFiles.php:35
+msgid "These copies are made right before a CSV file is imported"
+msgstr "Las copias se hacen justo antes de importar ficheros CSV"
+
+#: protected/views/file/showBudgetFiles.php:36
+msgid "READ ME"
+msgstr "LEEME"
+
+#: protected/views/file/showBudgetFiles.php:72
+msgid ""
+"Note: Delete some backups to save disk space. You only really need the last "
+"good copy."
+msgstr ""
+"Nota: Borra algunos backups para ahorrar espacio de disco. En realidad solo "
+"necesitas la última copia buena"
+
+#: protected/views/file/showCMSfiles.php:29
+msgid "Uploaded files"
+msgstr "Ficheros subidos"
+
+#: protected/views/file/_form.php:69
+msgid "Name used for the link"
+msgstr "Nombre que se usará para el enlace"
+
+#: protected/views/emailTemplate/view.php:25
+msgid "Edit template"
+msgstr "Editar plantilla"
+
+#: protected/views/emailTemplate/view.php:26
+#: protected/views/emailTemplate/update.php:26
+msgid "Manage templates"
+msgstr "Gestionar plantillas"
+
+#: protected/views/emailTemplate/view.php:32
+#: protected/views/emailTemplate/_form.php:33
+msgid "Template for"
+msgstr "Plantilla para"
+
+#: protected/views/emailTemplate/update.php:25
+msgid "View template"
+msgstr "Ver plantilla"
+
+#: protected/controllers/NewsletterController.php:217
+#: protected/controllers/EmailController.php:125
+#: protected/controllers/EmailController.php:227
+msgid "Email sent OK"
+msgstr "Email enviado correctamente"
+
+#: protected/controllers/NewsletterController.php:218
+msgid "Newsletter published"
+msgstr "Boletín publicada"
+
+#: protected/controllers/NewsletterController.php:222
+#: protected/controllers/SiteController.php:152
+#: protected/controllers/SiteController.php:177
+#: protected/controllers/EmailController.php:127
+#: protected/controllers/EmailController.php:230
+msgid "Error while sending email"
+msgstr "Error while sending email"
+
+#: protected/controllers/UserController.php:188
+#: protected/controllers/SitePageController.php:267
+msgid "Changes saved Ok"
+msgstr "Se han guardado los cambios correctamente"
+
+#: protected/controllers/UserController.php:215
+msgid "is blocked"
+msgstr "está bloqueado"
+
+#: protected/controllers/UserController.php:236
+msgid "User permissiones changed for"
+msgstr "Permisos de usuario cambiado por"
+
+#: protected/controllers/UserController.php:255
+msgid "User disabled"
+msgstr "Usuario deshabilitado"
+
+#: protected/controllers/UserController.php:297
+msgid "User deleted"
+msgstr "Usuario borrado"
+
+#: protected/controllers/IntroPageController.php:111
+#: protected/controllers/IntroPageController.php:160
+#: protected/controllers/IntroPageController.php:186
+msgid "introPage"
+msgstr "introPage"
+
+#: protected/controllers/IntroPageController.php:111
+#: protected/controllers/SitePageController.php:164
+#: protected/controllers/BudgetDescriptionController.php:151
+msgid "created"
+msgstr "creada"
+
+#: protected/controllers/IntroPageController.php:160
+#: protected/controllers/EmailTemplateController.php:96
+#: protected/controllers/SitePageController.php:266
+#: protected/controllers/BudgetDescriptionController.php:212
+msgid "updated"
+msgstr "actualizada"
+
+#: protected/controllers/IntroPageController.php:186
+#: protected/controllers/EnquiryController.php:892
+#: protected/controllers/SitePageController.php:302
+#: protected/controllers/BudgetDescriptionController.php:263
+msgid "deleted"
+msgstr "borrada"
+
+#: protected/controllers/VaultController.php:130
+msgid "Backup vault"
+msgstr "Caja de copias"
+
+#: protected/controllers/VaultController.php:219
+msgid "verifies the key ok"
+msgstr "la clave se verifica ok."
+
+#: protected/controllers/VaultController.php:222
+msgid "rejects the key"
+msgstr "rechaza la clave"
+
+#: protected/controllers/VaultController.php:528
+msgid "notified. Updated correctly"
+msgstr "notificado. Actualizado correctamente"
+
+#: protected/controllers/VaultController.php:532
+msgid "does not reply"
+msgstr "no contesta"
+
+#: protected/controllers/EnquiryController.php:182
+#, php-format
+msgid "This budget is from the year %s."
+msgstr "Ésta partida es del año %s"
+
+#: protected/controllers/EnquiryController.php:182
+msgid "Do you want to continue?"
+msgstr "¿Quieres continuar?"
+
+#: protected/controllers/EnquiryController.php:246
+msgid "We have sent you an email"
+msgstr "Te hemos enviado un correo electrónico"
+
+#: protected/controllers/EnquiryController.php:250
+msgid "Your enquiry has been registered correctly"
+msgstr "Se ha registrado tu consulta correctamente"
+
+#: protected/controllers/EnquiryController.php:315
+msgid "New reformulated enquiry created OK"
+msgstr "Nueva consulta reformulada correctamente"
+
+#: protected/controllers/EnquiryController.php:317
+#: protected/controllers/EnquiryController.php:683
+msgid "assigned to team member"
+msgstr "asignada al team member"
+
+#: protected/controllers/EnquiryController.php:417
+#: protected/controllers/EnquiryController.php:462
+#: protected/controllers/EnquiryController.php:463
+msgid "changed budget"
+msgstr "partida cambiada"
+
+#: protected/controllers/EnquiryController.php:500
+msgid "submitted to administration"
+msgstr "entregada a la administración"
+
+#: protected/controllers/EnquiryController.php:502
+msgid "submit corrected"
+msgstr "entrega corregida"
+
+#: protected/controllers/EnquiryController.php:640
+msgid "rejected by team member"
+msgstr "rechazado por el team member"
+
+#: protected/controllers/EnquiryController.php:642
+msgid "accepted by team member"
+msgstr "aceptado por el team member"
+
+#: protected/controllers/EnquiryController.php:670
+msgid "rejected by team manager"
+msgstr "rechazado por el team manager"
+
+#: protected/controllers/EnquiryController.php:673
+#: protected/controllers/EnquiryController.php:685
+msgid "You must assign a team member"
+msgstr "Debes asignar un team member"
+
+#: protected/controllers/EnquiryController.php:701
+msgid "New team member assigned"
+msgstr "Nuevo team member assignado"
+
+#: protected/controllers/EnquiryController.php:894
+#: protected/controllers/EnquiryController.php:920
+msgid "deleted by team manager"
+msgstr "borrado por el team manager"
+
+#: protected/controllers/EnquiryController.php:899
+#: protected/controllers/EnquiryController.php:922
+msgid "Enquiry has been deleted"
+msgstr "Se ha borrado la consulta"
+
+#: protected/controllers/SiteController.php:123
+msgid "Please click the link below to activate your account"
+msgstr "Por favor, haz click en el siguiente enlace para activar tu cuenta"
+
+#: protected/controllers/SiteController.php:144
+msgid "Activate your account"
+msgstr "Activar tu cuenta"
+
+#: protected/controllers/SiteController.php:147
+#: protected/controllers/SiteController.php:172
+msgid "Thank you"
+msgstr "Muchas gracias"
+
+#: protected/controllers/SiteController.php:150
+#: protected/controllers/SiteController.php:175
+msgid "We sent you an email"
+msgstr "Te hemos enviado un correo electrónico"
+
+#: protected/controllers/SiteController.php:167
+#: protected/controllers/SiteController.php:169
+msgid "Welcome to the"
+msgstr "Bienvenido al"
+
+#: protected/controllers/SiteController.php:170
+msgid "NEW_USER_EMAIL_MSG"
+msgstr ""
+"Acabamos de dar de alta tu usuario.<br />Desde este momento ya puedes "
+"realizar  consultas, suscribirte a consultas de otros ciudadanos, así como "
+"valorar  las respuestas de nuestro Ayuntamiento."
+
+#: protected/controllers/SiteController.php:218
+msgid "New user"
+msgstr "Usuario nuevo"
+
+#: protected/controllers/SiteController.php:242
+msgid "Your account is active"
+msgstr "Se ha activado tu cuenta"
+
+#: protected/controllers/SiteController.php:324
+msgid "Invalid email address"
+msgstr "Dirección de correo inválida"
+
+#: protected/controllers/SiteController.php:339
+msgid "New password request"
+msgstr "Petición de nueva contraseña"
+
+#: protected/controllers/SiteController.php:342
+msgid "has received a request to reset your password"
+msgstr "has recibido una petición para restablecer tu contraseña"
+
+#: protected/controllers/SiteController.php:343
+msgid "If you have not forgotten your password, please ignore this email"
+msgstr "Si no has olvidado tu contraseña por favor, ignora este correo"
+
+#: protected/controllers/SiteController.php:344
+msgid "To reset your password, follow this link"
+msgstr "Para restablecer tu contraseña, sigue este enlace"
+
+#: protected/controllers/SiteController.php:349
+msgid "We've just sent you an email"
+msgstr "Acabamos de enviarte un correo electrónico"
+
+#: protected/controllers/SiteController.php:353
+msgid "Sorry, we cannot find you on our database"
+msgstr "Disculpa, no te encontramos en la base de datos"
+
+#: protected/controllers/SiteController.php:369
+msgid "The password recovery link has expired"
+msgstr "El enlace para recuperar tu contraseña ha caducado"
+
+#: protected/controllers/SiteController.php:377
+msgid "Please change your password now"
+msgstr "Por favor, cambia tu contraseña ahora"
+
+#: protected/controllers/FileController.php:137
+#: protected/controllers/ArchiveController.php:176
+msgid "File uploaded correctly"
+msgstr "Los ficheros se han cargado correctamente"
+
+#: protected/controllers/FileController.php:251
+msgid "MSG_ZIP_DESCRIPTION"
+msgstr ""
+"Un fichero ZIP que contiene los datos de los presupuestos en formato CSV y "
+"documentación relacionada."
+
+#: protected/controllers/FileController.php:265
+msgid "Zip file updated"
+msgstr "Fichero zip actualizado"
+
+#: protected/controllers/FileController.php:267
+msgid "Error: zip file not created"
+msgstr "Error: no se ha generado el fichero zip"
+
+#: protected/controllers/EmailTemplateController.php:67
+msgid "Email template"
+msgstr "Plantilla de correo-e"
+
+#: protected/controllers/EmailTemplateController.php:80
+msgid "Update template"
+msgstr "Actualizar plantilla"
+
+#: protected/controllers/EmailTemplateController.php:96
+msgid "Template"
+msgstr "Plantilla"
+
+#: protected/controllers/EmailController.php:170
+msgid "has blocked you"
+msgstr "te ha bloqueado"
+
+#: protected/controllers/EmailController.php:182
+#, php-format
+msgid "Private email request from a user at the %s"
+msgstr "Petición de contacto privado por email de un usuario del '%s"
+
+#: protected/controllers/EmailController.php:196
+msgid "Email not sent"
+msgstr "Email no enviado"
+
+#: protected/controllers/ReplyController.php:106
+#: protected/controllers/ReplyController.php:134
+msgid "Reply added"
+msgstr "Respuesta añadida"
+
+#: protected/controllers/ArchiveController.php:174
+#, php-format
+msgid "Uploaded \"%s\" to"
+msgstr "Subido \"%s\" a "
+
+#: protected/controllers/ArchiveController.php:178
+msgid "File uploaded failed"
+msgstr "Transferencia de archivo fallada"
+
+#: protected/controllers/ArchiveController.php:204
+#: protected/controllers/ArchiveController.php:240
+#: protected/controllers/ArchiveController.php:295
+#: protected/controllers/ArchiveController.php:302
+msgid "A folder with that name already exists"
+msgstr "Ya existe una carpeta con este nombre"
+
+#: protected/controllers/ArchiveController.php:213
+msgid "Folder created"
+msgstr "Carpeta creada"
+
+#: protected/controllers/ArchiveController.php:214
+msgid "Folder created correctly"
+msgstr "Carpeta creada correctamente"
+
+#: protected/controllers/ArchiveController.php:217
+msgid "New folder failed"
+msgstr "Error al crear nueva carpeta "
+
+#: protected/controllers/ArchiveController.php:246
+msgid "Changed name to"
+msgstr "Cambiar el nombre a"
+
+#: protected/controllers/ArchiveController.php:306
+msgid "Cannot move folder into sub folder"
+msgstr "No se ha mover la carpeta a subcarpeta"
+
+#: protected/controllers/ArchiveController.php:313
+#, php-format
+msgid "Moved folder \"%s\" to"
+msgstr "Carpeta \"%s\" movido a"
+
+#: protected/controllers/ArchiveController.php:316
+#, php-format
+msgid "Moved file \"%s\" to"
+msgstr "Archivo \"%s\" movido a"
+
+#: protected/controllers/ArchiveController.php:338
+msgid "Deleted folder"
+msgstr "Eliminar carpeta"
+
+#: protected/controllers/ArchiveController.php:340
+#, php-format
+msgid "Deleted file \"%s\" from"
+msgstr "Eliminar archivo \"%s\" de"
+
+#: protected/controllers/CommentController.php:130
+msgid "New comment at"
+msgstr "Nuevo comentario en"
+
+#: protected/controllers/CommentController.php:132
+msgid "A new comment has been added to the enquiry"
+msgstr "Se ha añadido un comentario a la consulta"
+
+#: protected/controllers/CommentController.php:161
+#: protected/controllers/CommentController.php:163
+msgid "Team member deleted user comment"
+msgstr "Team member borró un comentario"
+
+#: protected/controllers/BudgetController.php:320
+msgid "unpublished"
+msgstr "No publicado"
+
+#: protected/controllers/BudgetController.php:322
+msgid "published"
+msgstr "Publicado"
+
+#: protected/controllers/BudgetController.php:505
+msgid "All budgets deleted"
+msgstr "Todos los presupuestos borrados"
+
+#: protected/controllers/BudgetController.php:525
+msgid "Year deleted"
+msgstr "Año borrado"
+
+#: protected/controllers/BudgetController.php:639
+msgid "Database restored correctly"
+msgstr "Database restaurada correctamente"
+
+#: protected/controllers/BudgetDescriptionController.php:152
+#: protected/controllers/BudgetDescriptionController.php:213
+msgid "Budget description saved Ok"
+msgstr "Descripción de partida guardada correctamente"
+
+#: protected/controllers/BudgetDescriptionController.php:154
+msgid "Do you want to share it with others observatories?"
+msgstr "¿Quieres compartirlo con otros osbservatorios? "
+
+#: protected/controllers/BudgetDescriptionController.php:215
+msgid "Do you want to share it with other observatories"
+msgstr "Quieres compartirlo con otros osbservatorios"
+
+#~ msgid "Download"
+#~ msgstr "Descarga"
+
+#~ msgid "If you wish to formulate a budgetary enquiry, you must first"
+#~ msgstr ""
+#~ "Si quiere formular una solicitud vinculada a una partida presupuestaria "
+#~ "concreta, primero debes"
+
+#~ msgid "find the corresponding budget"
+#~ msgstr "encuentra la partida correspondiente"
+
+#~ msgid "Home"
+#~ msgstr "Inicio"
+
+#~ msgid "About the Archive"
+#~ msgstr "Sobre el Archivo"
+
+#~ msgid "Who is this enquiry addressed to?"
+#~ msgstr "¿A quien está dirigida está consulta?"
+
+#~ msgid "Do you want to share it with others"
+#~ msgstr "¿Quieres compartirlo con los demás?"
+
+#~ msgid "Remember you must first"
+#~ msgstr "Recuerda que primero has de"
+
+#~ msgid "or"
+#~ msgstr " o"
+
+#~ msgid "create an account"
+#~ msgstr "crear una cuenta"
+
+#~ msgid "local budget descriptions"
+#~ msgstr "descripciones locales"
+
+#~ msgid "Update zip file"
+#~ msgstr "Actualizar el zip"
+
+#~ msgid "Add file to docs"
+#~ msgstr "Añadir un fichero a docs"
+
+#~ msgid "OCAx logs"
+#~ msgstr "Cuaderno OCAx"
+
+#~ msgid "Waiting for reply"
+#~ msgstr "Esperando respuesta"
+
+#, fuzzy
+#~ msgid "Replies not yet assessed"
+#~ msgstr "Paquetes todavía no reensamblados:\n"
+
+#, fuzzy
+#~ msgid "Assessed replies"
+#~ msgstr "Respuestas CTCP..."
+
+#~ msgid "Advanced Search"
+#~ msgstr "Búsqueda avanzada"
+
+#~ msgid "General site statistics"
+#~ msgstr "Estadísticas generales"
+
+#~ msgid "Color and Logo"
+#~ msgstr "Color y Logo"
+
+#~ msgid "Manage texts"
+#~ msgstr "Gestionar textos"
+
+#~ msgid "Manage Logs"
+#~ msgstr "Gestionar Logs"
+
+#~ msgid "Send now"
+#~ msgstr "Enviar ahora"
+
+#~ msgid "Featured budgets generate graphics"
+#~ msgstr "Partidas destacadas generan los gráficos"
+
+#~ msgid "You should do something"
+#~ msgstr "Deberías hacer algo"
+
+#~ msgid "CMS editor options"
+#~ msgstr "Opciones de editor CMS"
+
+#~ msgid "Social network"
+#~ msgstr "Red social"
+
+#~ msgid "Update the description"
+#~ msgstr "Actualizar la descripción"
+
+#~ msgid "(Re)generate CSV files to include in zip"
+#~ msgstr "(Re)generar ficheros CSV para incluir en el zip"
+
+#~ msgid "Files to include"
+#~ msgstr "Files to include"
+
+#~ msgid "Enquiry deleted"
+#~ msgstr "Consulta corrada"
+
+#~ msgid "User account activated"
+#~ msgstr "Cuenta de usuario activada"
+
+#~ msgid "activity"
+#~ msgstr "actividad"
+
+#, fuzzy
+#~ msgid "Delete budgtes"
+#~ msgstr "Borrar artículo"
+
+#~ msgid "The observatory"
+#~ msgstr "El observatorio"
+
+#~ msgid "the observatory"
+#~ msgstr "el observatorio"
+
+#~ msgid "Keep me informed via email when there are changes"
+#~ msgstr "Mantenme informado por correo cuando hayan cambios"
+
+#~ msgid "Direct link"
+#~ msgstr "Enlace"
+
+#~ msgid "disable %s here on"
+#~ msgstr "deshabilitar %s aquí en"
+
+#~ msgid "You address this enquiry to"
+#~ msgstr "Diriges esta consulta a"
+
+#~ msgid "A reminder"
+#~ msgstr "Un recordatorio"
+
+#~ msgid "ADDRESSED_TO_MSG"
+#~ msgstr ""
+#~ "Has marcado que esta consulta que estás realizando es para el equipo del "
+#~ "OCM y no para el Ayuntamiento. ¿Estás seguro? "
+
+#~ msgid "Who do you want to address the enquiry to?"
+#~ msgstr "¿A quien diriges esta consulta?"
+
+#~ msgid "List all parameters"
+#~ msgstr "Listar parámetros"
+
+#~ msgid "Contact information"
+#~ msgstr "Datos de contacto"
+
+#~ msgid "Context help"
+#~ msgstr "Ayuda contextual"
+
+#~ msgid "Description not defined"
+#~ msgstr "Falta incluir una descripción"
+
+#~ msgid "Create Vault"
+#~ msgstr "Crear Caja"
+
+#~ msgid "optional"
+#~ msgstr "opcional"
+
+#~ msgid "What are the different states of an enquiry?"
+#~ msgstr "¿Cuáles son los estados de una consulta?"
+
+#~ msgid "search options"
+#~ msgstr "opciones de búsqueda"
+
+#~ msgid "Enquiries addressed to"
+#~ msgstr "Consultas dirigidas a"

@@ -26,14 +26,14 @@ class BlockUser
     /**
      * @var User
      *
-     * @ORM\ManyToOne(targetEntity="User", inversedBy="blockingusers")
+     * @ORM\ManyToOne(targetEntity="OCAX\Common\Entity\User", inversedBy="blockingusers")
      */
-    private $user;
+    private $blockinguser;
 
     /**
      * @var User
      *
-     * @ORM\ManyToOne(targetEntity="User", inversedBy="blockedusers")
+     * @ORM\ManyToOne(targetEntity="OCAX\Common\Entity\User", inversedBy="blockedusers")
      */
     private $blockeduser;
 

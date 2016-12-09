@@ -1,0 +1,24 @@
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="55px" height="55px" viewBox="0 0 55 55" enable-background="new 0 0 55 55" xml:space="preserve"
+	 class="svg-color-stroke svg-roll-fill">
+<g>
+		<polyline class="roll" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2,2" points="
+		35.047,26.384 32.801,19.875 18.655,23.61 	"/>
+	<polyline fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" points="18.655,23.61 
+		14.535,24.699 13.432,21.5 2.914,24.282 11.858,50.204 	"/>
+	<polyline fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" points="35.047,26.384 
+		23.305,29.489 19.399,36.558 	"/>
+	<polyline fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" points="41.676,24.631 
+		52.086,21.878 40.641,42.604 	"/>
+	
+		<line fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" x1="41.676" y1="24.631" x2="35.047" y2="26.384"/>
+	
+		<line fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" x1="11.858" y1="50.204" x2="19.399" y2="36.558"/>
+	
+		<line fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" x1="11.858" y1="50.204" x2="40.641" y2="42.604"/>
+	<polyline class="roll" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" points="41.676,24.631 
+		45.23,20.139 36.372,22.476 36.372,4.76 18.655,9.434 18.655,23.61 	"/>
+	<polyline class="roll" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" points="18.655,23.61 
+		18.655,27.151 9.798,29.487 19.399,36.558 	"/>
+</g>
+</svg>

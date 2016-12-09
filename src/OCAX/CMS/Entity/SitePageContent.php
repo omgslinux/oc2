@@ -28,14 +28,14 @@ class SitePageContent
     /**
      * @var SitePage
      *
-     * @ORM\ManyToOne(targetEntity="IntroPage", inversedBy="pages")
+     * @ORM\ManyToOne(targetEntity="IntroPage")
      */
     private $page;
 
     /**
      * @var Language
      *
-     * @ORM\ManyToOne(targetEntity="Language", inversedBy="sitepagecontents")
+     * @ORM\ManyToOne(targetEntity="OCAX\Common\Entity\Language")
      */
     private $language;
 

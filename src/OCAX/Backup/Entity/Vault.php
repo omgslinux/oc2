@@ -75,7 +75,7 @@ class Vault
     /**
      * @var integer
      *
-     * @ORM\Column(type="tinyint", length=2)
+     * @ORM\Column(type="smallint", length=2)
      */
     private $state;
 

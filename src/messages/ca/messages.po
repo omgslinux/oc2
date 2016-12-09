@@ -1,0 +1,3392 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ocax_ca\n"
+"POT-Creation-Date: 2015-11-05 11:42+0100\n"
+"PO-Revision-Date: 2016-10-06 16:05+0100\n"
+"Last-Translator: Chris <chris@gatopelao.org>\n"
+"Language-Team: \n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-Basepath: /home/chris/projects/ocax\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SearchPath-0: protected/models\n"
+"X-Poedit-SearchPath-1: protected/views\n"
+"X-Poedit-SearchPath-2: protected/controllers\n"
+
+#: protected/models/IntroPage.php:105
+msgid "Order"
+msgstr "Ordre"
+
+#: protected/models/IntroPage.php:106
+msgid "Top"
+msgstr "Superior"
+
+#: protected/models/IntroPage.php:107
+msgid "Left"
+msgstr "Esquerra"
+
+#: protected/models/IntroPage.php:108
+msgid "Font color"
+msgstr "Color de font"
+
+#: protected/models/IntroPage.php:109
+msgid "Background color"
+msgstr "Color de fons"
+
+#: protected/models/IntroPage.php:110
+msgid "Opacity"
+msgstr "Opacitat"
+
+#: protected/models/IntroPage.php:111
+msgid "Width"
+msgstr "Amplària"
+
+#: protected/models/IntroPage.php:112 protected/models/SitePage.php:107
+#: protected/models/Newsletter.php:108 protected/views/budget/admin.php:94
+msgid "Published"
+msgstr "Publicat"
+
+#: protected/models/Budget.php:138
+msgid "Parent"
+msgstr "Pare"
+
+#: protected/models/Budget.php:141
+#: protected/views/enquiry/_budgetDetails.php:80
+#: protected/views/budget/_budgetDetails.php:102
+#: protected/views/budget/_compareYears.php:25
+#: protected/controllers/BudgetController.php:323
+msgid "Year"
+msgstr "Any"
+
+#: protected/models/Budget.php:142 protected/models/BudgetDescCommon.php:102
+#: protected/models/BudgetDescLocal.php:106
+#: protected/models/BudgetCategory.php:89
+#: protected/models/BudgetDescState.php:109
+msgid "Code"
+msgstr "Codi"
+
+#: protected/models/Budget.php:143 protected/models/BudgetDescCommon.php:103
+#: protected/models/BudgetDescLocal.php:107
+#: protected/models/BudgetDescState.php:110
+#: protected/views/budgetDescription/_form.php:94
+msgid "Label"
+msgstr "Etiqueta"
+
+#: protected/models/Budget.php:144 protected/models/BudgetDescCommon.php:104
+#: protected/models/BudgetDescLocal.php:108
+#: protected/models/BudgetDescState.php:111
+#: protected/views/enquiry/_changeType.php:127
+#: protected/views/budget/deleteTree.php:83
+#: protected/views/budget/featured.php:86
+#: protected/views/budgetDescription/_form.php:96
+msgid "Concept"
+msgstr "Concepte"
+
+#: protected/models/Budget.php:145
+msgid "Initial provision"
+msgstr "Provisió inicial"
+
+#: protected/models/Budget.php:146
+msgid "Actual provision"
+msgstr "Provisió actual"
+
+#: protected/models/Budget.php:147
+msgid "Trimester 1"
+msgstr "Trimestre 1"
+
+#: protected/models/Budget.php:148
+msgid "Trimester 2"
+msgstr "Trimestre 2"
+
+#: protected/models/Budget.php:149
+msgid "Trimester 3"
+msgstr "Trimestre 3"
+
+#: protected/models/Budget.php:150
+msgid "Trimester 4"
+msgstr "Trimestre 4"
+
+#: protected/models/Budget.php:151
+msgid "Featured"
+msgstr "Destacat"
+
+#: protected/models/Budget.php:152 protected/models/SitePage.php:106
+msgid "Weight"
+msgstr "Pes"
+
+#: protected/models/Budget.php:172 protected/views/enquiry/create.php:47
+#: protected/views/budget/view.php:114
+#: protected/views/budget/_indexModified.php:75
+#: protected/controllers/BudgetController.php:88
+msgid "Budget"
+msgstr "Pressupost"
+
+#: protected/models/Budget.php:331
+msgid "Budget table saved on the"
+msgstr "Taula de pressupostos guardada el"
+
+#: protected/models/SitePage.php:94
+msgid "Combination already exists."
+msgstr "El nom del fitxer ja existeix"
+
+#: protected/models/SitePage.php:105
+msgid "Block"
+msgstr "Bloc"
+
+#: protected/models/SitePage.php:108
+msgid "Advanced HTML"
+msgstr "HTML Avançat"
+
+#: protected/models/SitePage.php:109
+msgid "Include title"
+msgstr "Incloure títol"
+
+#: protected/models/ImportCSV.php:51
+msgid "CSV file"
+msgstr "Fitxer CSV"
+
+#: protected/models/ImportCSV.php:713
+msgid "generated on the"
+msgstr "generada el"
+
+#: protected/models/User.php:129 protected/models/LoginForm.php:58
+#: protected/models/RegisterForm.php:86
+msgid "Username"
+msgstr "Nom d'usuari"
+
+#: protected/models/User.php:130 protected/models/RegisterForm.php:87
+msgid "Full name"
+msgstr "Nom complet"
+
+#: protected/models/User.php:131 protected/models/LoginForm.php:59
+#: protected/models/RegisterForm.php:88
+msgid "Password"
+msgstr "Contrasenya"
+
+#: protected/models/User.php:132
+msgid "New password"
+msgstr "Contrasenya nova"
+
+#: protected/models/User.php:133 protected/models/RegisterForm.php:89
+msgid "Repeat password"
+msgstr "Contrasenya repetida"
+
+#: protected/models/User.php:134 protected/models/RegisterForm.php:90
+#: protected/views/config/email.php:48 protected/views/config/index.php:109
+#: protected/views/layouts/foot.php:29
+msgid "Email"
+msgstr "Correu electrònic"
+
+#: protected/models/User.php:135 protected/models/BudgetDescCommon.php:101
+#: protected/models/BudgetDescLocal.php:105
+#: protected/models/SitePageContent.php:108
+#: protected/models/BudgetDescState.php:108
+msgid "Language"
+msgstr "Idioma"
+
+#: protected/models/User.php:136
+msgid "Joined"
+msgstr "Data d'alta"
+
+#: protected/models/User.php:137
+msgid "Active"
+msgstr "Actiu"
+
+#: protected/models/User.php:138
+msgid "Is partner"
+msgstr "És soci"
+
+#: protected/models/User.php:139
+msgid "Budget description editor"
+msgstr "Editor descripció partides pressupostàries"
+
+#: protected/models/User.php:141 protected/views/user/panel.php:232
+#: protected/views/user/updateRoles.php:124
+msgid "Page editor"
+msgstr "Editor de pàgines"
+
+#: protected/models/User.php:192 protected/models/User.php:200
+#: protected/models/User.php:212 protected/models/Log.php:77
+#: protected/models/Vote.php:91 protected/models/Comment.php:128
+msgid "User"
+msgstr "Usuari"
+
+#: protected/models/User.php:192
+msgid "enabled"
+msgstr "Activat"
+
+#: protected/models/User.php:200
+msgid "disabled"
+msgstr "Inhabilitat"
+
+#: protected/models/User.php:212
+msgid "deleted account"
+msgstr "compte borrat"
+
+#: protected/models/Reply.php:97 protected/models/Email.php:106
+#: protected/views/enquiry/_reformulated.php:44
+#: protected/views/enquiry/view.php:78 protected/views/enquiry/assigned.php:89
+#: protected/views/budget/view.php:213
+#: protected/views/budget/updateYear.php:133
+#: protected/controllers/EnquiryController.php:87
+#: protected/controllers/EnquiryController.php:317
+#: protected/controllers/EnquiryController.php:417
+#: protected/controllers/EnquiryController.php:462
+#: protected/controllers/EnquiryController.php:463
+#: protected/controllers/EnquiryController.php:514
+#: protected/controllers/EnquiryController.php:521
+#: protected/controllers/EnquiryController.php:640
+#: protected/controllers/EnquiryController.php:642
+#: protected/controllers/EnquiryController.php:670
+#: protected/controllers/EnquiryController.php:683
+#: protected/controllers/EnquiryController.php:753
+#: protected/controllers/EnquiryController.php:892
+#: protected/controllers/EnquiryController.php:894
+#: protected/controllers/EnquiryController.php:920
+#: protected/controllers/ReplyController.php:106
+#: protected/controllers/ReplyController.php:134
+#: protected/controllers/CommentController.php:161
+msgid "Enquiry"
+msgstr "Consulta"
+
+#: protected/models/Reply.php:98
+msgid "Date of reply"
+msgstr "Data de resposta"
+
+#: protected/models/Reply.php:100 protected/models/Newsletter.php:114
+#: protected/models/Email.php:107 protected/models/Enquiry.php:230
+#: protected/models/EmailTemplate.php:114
+#: protected/models/SitePageContent.php:111
+msgid "Body"
+msgstr "Cos"
+
+#: protected/models/Newsletter.php:61
+msgid "Draft"
+msgstr "Esborrador"
+
+#: protected/models/Newsletter.php:62
+msgid "Failed to send"
+msgstr "Enviament fallit"
+
+#: protected/models/Newsletter.php:63
+msgid "Sent OK"
+msgstr "Enviat OK"
+
+#: protected/models/Newsletter.php:107 protected/models/Archive.php:96
+#: protected/models/Log.php:78 protected/models/Backup.php:101
+#: protected/models/Email.php:100 protected/models/Vault.php:180
+#: protected/models/Vault.php:190 protected/views/archive/_editArchive.php:100
+msgid "Created"
+msgstr "Creada"
+
+#: protected/models/Newsletter.php:109 protected/models/Backup.php:105
+#: protected/models/Enquiry.php:228 protected/models/Vault.php:182
+#: protected/models/EmailTemplate.php:113
+#: protected/views/enquiry/_reformulated.php:48
+#: protected/views/enquiry/_detailsForCitizen.php:47
+#: protected/views/enquiry/index.php:206
+#: protected/views/enquiry/_detailsForTeam.php:27
+#: protected/views/newsletter/admin.php:45 protected/views/user/panel.php:332
+#: protected/views/user/panel.php:366 protected/views/user/view.php:142
+#: protected/views/vault/admin.php:168 protected/views/vault/view.php:146
+#: protected/views/vault/view.php:189
+#: protected/views/emailTemplate/admin.php:41
+msgid "State"
+msgstr "Estat"
+
+#: protected/models/Newsletter.php:113
+msgid "Subject"
+msgstr "Assumpte"
+
+#: protected/models/Archive.php:90
+#: protected/views/archive/_editArchive.php:102
+msgid "File"
+msgstr "Fitxer"
+
+#: protected/models/Archive.php:91 protected/models/File.php:110
+#: protected/views/archive/index.php:265
+msgid "Name"
+msgstr "Nom"
+
+#: protected/models/Archive.php:92 protected/models/File.php:111
+#: protected/views/archive/_editArchive.php:111
+#: protected/views/file/admin.php:69 protected/views/file/wallpaper.php:73
+msgid "Path"
+msgstr "Camí"
+
+#: protected/models/Archive.php:94
+msgid "Author"
+msgstr "Autor"
+
+#: protected/models/Archive.php:95 protected/models/Config.php:208
+#: protected/models/BudgetDescCommon.php:105
+#: protected/models/BudgetCategory.php:90
+#: protected/views/archive/index.php:276
+#: protected/controllers/BudgetDescriptionController.php:151
+#: protected/controllers/BudgetDescriptionController.php:212
+#: protected/controllers/BudgetDescriptionController.php:263
+msgid "Description"
+msgstr "Descripció"
+
+#: protected/models/Archive.php:97
+#: protected/views/enquiry/_managerSearch.php:91
+#: protected/views/enquiry/_memberSearch.php:67
+#: protected/views/newsletter/_search.php:44
+#: protected/views/budget/index.php:246 protected/views/user/_search.php:55
+#: protected/views/archive/_search.php:46
+#: protected/views/budgetDescription/_search.php:51
+msgid "Search"
+msgstr "Cerca"
+
+#: protected/models/Archive.php:141
+msgid "index"
+msgstr "índex"
+
+#: protected/models/Config.php:90
+msgid "Please define a language"
+msgstr "Selecciona l'idioma"
+
+#: protected/models/Config.php:97
+msgid "is not a valid language."
+msgstr "no és un idioma vàlid"
+
+#: protected/models/Config.php:105
+msgid "Missing value"
+msgstr "Falta valor"
+
+#: protected/models/Config.php:110
+msgid "Character 'n' is missing."
+msgstr "Mancar el carácter 'n'"
+
+#: protected/models/Config.php:118
+msgid "Expecting a 6 digit web color"
+msgstr "Esperant una web color de 6 dígits"
+
+#: protected/models/Config.php:206
+msgid "Parameter"
+msgstr "Paràmetre"
+
+#: protected/models/Config.php:207
+msgid "Value"
+msgstr "Valor"
+
+#: protected/models/LoginForm.php:57
+msgid "Remember me"
+msgstr "Recorda'm"
+
+#: protected/models/Log.php:79 protected/models/Email.php:99
+#: protected/models/Enquiry.php:226 protected/models/Vault.php:178
+#: protected/views/enquiry/_detailsForCitizen.php:63
+#: protected/views/enquiry/_detailsForTeam.php:39
+#: protected/views/vault/admin.php:156
+msgid "Type"
+msgstr "Tipus"
+
+#: protected/models/Backup.php:99 protected/views/vault/admin.php:151
+#: protected/controllers/VaultController.php:489
+msgid "Vault"
+msgstr "Capsa"
+
+#: protected/models/Backup.php:100
+msgid "Filename"
+msgstr "Nom de fitxer"
+
+#: protected/models/Backup.php:102
+msgid "Initiated"
+msgstr "Iniciat"
+
+#: protected/models/Backup.php:103
+msgid "Completed"
+msgstr "Completat"
+
+#: protected/models/Backup.php:104 protected/views/vault/admin.php:163
+#: protected/views/vault/view.php:184
+msgid "Filesize"
+msgstr "Mida del fitxer"
+
+#: protected/models/Backup.php:112
+msgid "Failed"
+msgstr "Fallit"
+
+#: protected/models/Backup.php:114
+msgid "Success"
+msgstr "Èxit"
+
+#: protected/models/Backup.php:115
+msgid "Not finished"
+msgstr "No acabat"
+
+#: protected/models/Backup.php:150
+msgid "Cannot create zip file"
+msgstr "No es pot crear fitxer zip"
+
+#: protected/models/BudgetDescCommon.php:107
+#: protected/models/BudgetDescLocal.php:111
+#: protected/models/BudgetDescState.php:114
+msgid "Modified"
+msgstr "Modificat"
+
+#: protected/models/Email.php:101 protected/models/Comment.php:127
+msgid "Sent"
+msgstr "Enviat"
+
+#: protected/models/Email.php:102 protected/models/Enquiry.php:229
+#: protected/views/introPage/admin.php:44
+msgid "Title"
+msgstr "Títol"
+
+#: protected/models/Email.php:103
+msgid "Sender"
+msgstr "Remitent"
+
+#: protected/models/Email.php:104 protected/views/newsletter/_form.php:72
+msgid "Sent as"
+msgstr "Enviat com"
+
+#: protected/models/Email.php:105
+msgid "Recipients"
+msgstr "Destinataris"
+
+#: protected/models/BudgetDescLocal.php:82
+msgid "Internal_code/Language combination already exists."
+msgstr "La combinació Internal_code/Idioma ja existeix"
+
+#: protected/models/BudgetDescLocal.php:109
+#: protected/models/BudgetDescState.php:112
+msgid "Explication"
+msgstr "Explicació"
+
+#: protected/models/Enquiry.php:67
+msgid "Generic"
+msgstr "Genèrica"
+
+#: protected/models/Enquiry.php:68
+msgid "Budgetary"
+msgstr "Pressupostària"
+
+#: protected/models/Enquiry.php:98
+#, php-format
+msgid "Pending validation by the %s"
+msgstr "Esperant validació per l'%s"
+
+#: protected/models/Enquiry.php:99
+msgid "Enquiry assigned to team member"
+msgstr "Consulta assignada a team member"
+
+#: protected/models/Enquiry.php:100
+#, php-format
+msgid "Enquiry rejected by the %s"
+msgstr "Consulta rebutjada per l'%s"
+
+#: protected/models/Enquiry.php:101
+#, php-format
+msgid "Enquiry accepted by the %s"
+msgstr "Consulta acceptada per l'%s"
+
+#: protected/models/Enquiry.php:102
+msgid "Awaiting reply from the administration"
+msgstr "Esperant resposta de l'administració"
+
+#: protected/models/Enquiry.php:103
+msgid "Reply pending assessment"
+msgstr "Resposta tot esperant valoració"
+
+#: protected/models/Enquiry.php:104 protected/views/enquiry/assess.php:64
+#: protected/views/enquiry/assess.php:67
+msgid "Reply considered satisfactory"
+msgstr "Resposta considerada satisfactòria"
+
+#: protected/models/Enquiry.php:105 protected/views/enquiry/assess.php:73
+#: protected/views/enquiry/assess.php:76
+msgid "Reply considered insatisfactory"
+msgstr "Resposta considerada no satisfactòria"
+
+#: protected/models/Enquiry.php:108
+msgid "Awaiting reply from the observatory"
+msgstr "Esperant resposta del observatori"
+
+#: protected/models/Enquiry.php:185
+msgid "The title cannot include the question."
+msgstr "El títol no pot ser una pregunta."
+
+#: protected/models/Enquiry.php:217
+msgid "Related to"
+msgstr "Relacionada amb"
+
+#: protected/models/Enquiry.php:218
+#: protected/views/enquiry/_detailsForTeam.php:31
+msgid "Formulated by"
+msgstr "Formulada por"
+
+#: protected/models/Enquiry.php:219 protected/views/enquiry/admin.php:89
+#: protected/views/enquiry/_detailsForTeam.php:35
+msgid "Assigned to"
+msgstr "Assignada a"
+
+#: protected/models/Enquiry.php:220
+msgid "Manager"
+msgstr "Manager"
+
+#: protected/models/Enquiry.php:221
+#: protected/views/enquiry/_reformulated.php:53
+#: protected/views/enquiry/_detailsForCitizen.php:30
+#: protected/views/enquiry/_detailsForCitizen.php:41
+#: protected/views/enquiry/index.php:201 protected/views/budget/view.php:218
+#: protected/views/user/panel.php:327 protected/views/user/panel.php:361
+msgid "Formulated"
+msgstr "Formulada"
+
+#: protected/models/Enquiry.php:222
+msgid "Assigned"
+msgstr "Assignada"
+
+#: protected/models/Enquiry.php:223
+#: protected/views/enquiry/_detailsForCitizen.php:57
+#: protected/views/enquiry/_detailsForTeam.php:68
+msgid "Submitted"
+msgstr "Lliurada"
+
+#: protected/models/Enquiry.php:224
+#: protected/views/enquiry/_detailsForCitizen.php:54
+#: protected/views/enquiry/_detailsForTeam.php:59
+msgid "Registry number"
+msgstr "Nº de registre"
+
+#: protected/models/Enquiry.php:225 protected/views/enquiry/submit.php:138
+msgid "Documentation"
+msgstr "Documentació"
+
+#: protected/models/Enquiry.php:227
+#: protected/views/enquiry/_detailsForTeam.php:43
+msgid "Addressed to"
+msgstr "Dirigit a"
+
+#: protected/models/Enquiry.php:251 protected/models/Enquiry.php:253
+msgid "Send an email to the"
+msgstr "Enviar un correu al"
+
+#: protected/models/Enquiry.php:251
+msgid "team member"
+msgstr "team member"
+
+#: protected/models/Enquiry.php:253
+msgid "people subscribed to the Enquiry"
+msgstr "persones subscrites a la consulta"
+
+#: protected/models/Vote.php:90 protected/views/enquiry/pdf.php:160
+#: protected/views/reply/_view.php:59
+msgid "Reply"
+msgstr "Resposta"
+
+#: protected/models/Vote.php:92 protected/views/reply/_view.php:80
+#: protected/views/reply/_view.php:87
+msgid "Vote"
+msgstr "Vota"
+
+#: protected/models/Vault.php:95
+msgid "Not a valid key"
+msgstr "Codi no vàlid"
+
+#: protected/models/Vault.php:101
+msgid "Please choose at least one day"
+msgstr "Escull al mínim"
+
+#: protected/models/Vault.php:177
+msgid "Host"
+msgstr "Host"
+
+#: protected/models/Vault.php:179 protected/views/vault/view.php:151
+#: protected/views/vault/schedule.php:47
+msgid "Schedule"
+msgstr "Agenda"
+
+#: protected/models/Vault.php:181
+msgid "Count"
+msgstr "Compte"
+
+#: protected/models/Vault.php:183
+msgid "Key"
+msgstr "Tecla"
+
+#: protected/models/Vault.php:191
+msgid "Verified"
+msgstr "Modificat"
+
+#: protected/models/Vault.php:192
+msgid "Ready"
+msgstr "Preparat"
+
+#: protected/models/Vault.php:193
+msgid "Loaded"
+msgstr "Carregat"
+
+#: protected/models/Vault.php:194
+msgid "Busy"
+msgstr "Ocupat"
+
+#: protected/models/Vault.php:202
+msgid "Monday"
+msgstr "Dilluns"
+
+#: protected/models/Vault.php:203
+msgid "Tuesday"
+msgstr "Dimarts"
+
+#: protected/models/Vault.php:204
+msgid "Wednesday"
+msgstr "Dimecres"
+
+#: protected/models/Vault.php:205
+msgid "Thursday"
+msgstr "Dijous"
+
+#: protected/models/Vault.php:206
+msgid "Friday"
+msgstr "Divendres"
+
+#: protected/models/Vault.php:207
+msgid "Saturday"
+msgstr "Dissabte"
+
+#: protected/models/Vault.php:208
+msgid "Sunday"
+msgstr "Diumenge"
+
+#: protected/models/Vault.php:220
+msgid "Local"
+msgstr "Local"
+
+#: protected/models/Vault.php:222
+msgid "Remote"
+msgstr "Remot"
+
+#: protected/models/Vault.php:224
+msgid "Not defined"
+msgstr "no definit"
+
+#: protected/models/EmailTemplate.php:89
+msgid "User fullname will go here"
+msgstr "El nom d'usuari anirà aquí."
+
+#: protected/models/SitePageContent.php:107
+#: protected/controllers/SitePageController.php:164
+#: protected/controllers/SitePageController.php:266
+#: protected/controllers/SitePageController.php:302
+msgid "Page"
+msgstr "Pàgina"
+
+#: protected/models/SitePageContent.php:109
+msgid "Page URL"
+msgstr "URL de la pàgina"
+
+#: protected/models/SitePageContent.php:110
+msgid "Page Title"
+msgstr "Títol de la pàgina"
+
+#: protected/models/SitePageContent.php:112
+#: protected/views/newsletter/_form.php:130
+#: protected/views/sitePage/_form.php:254
+msgid "Preview"
+msgstr "Vista preliminar"
+
+#: protected/models/Comment.php:129 protected/views/enquiry/pdf.php:146
+#: protected/views/enquiry/pdf.php:174
+msgid "Comment"
+msgstr "Comentari"
+
+#: protected/views/log/index.php:37
+msgid "Browse logs"
+msgstr "Registres anteriors"
+
+#: protected/views/log/modalIndex.php:52 protected/views/user/panel.php:173
+#: protected/views/layouts/column2.php:59
+#: protected/views/archive/index.php:217
+msgid "Log"
+msgstr "Log"
+
+#: protected/views/email/create.php:27 protected/views/email/index.php:26
+#: protected/views/email/index.php:33 protected/views/enquiry/assess.php:25
+#: protected/views/enquiry/submit.php:25
+#: protected/views/enquiry/changeType.php:25 protected/views/reply/edit.php:26
+msgid "View enquiry"
+msgstr "Veure consulta"
+
+#: protected/views/email/create.php:28 protected/views/enquiry/teamView.php:34
+#: protected/views/enquiry/changeBudget.php:37
+#: protected/views/enquiry/changeType.php:26
+msgid "Edit enquiry"
+msgstr "Edita consulta"
+
+#: protected/views/email/create.php:29
+#: protected/views/enquiry/adminView.php:27
+#: protected/views/enquiry/assess.php:26
+#: protected/views/enquiry/teamView.php:25
+#: protected/views/enquiry/manage.php:25
+#: protected/views/enquiry/validate.php:26 protected/views/reply/edit.php:27
+#: protected/controllers/EmailController.php:256
+msgid "Sent emails"
+msgstr "Correu enviats"
+
+#: protected/views/email/create.php:30 protected/views/email/index.php:27
+#: protected/views/email/index.php:35 protected/views/enquiry/adminView.php:28
+#: protected/views/enquiry/assess.php:27
+#: protected/views/enquiry/teamView.php:26
+#: protected/views/enquiry/reformulate.php:28
+#: protected/views/enquiry/submit.php:26
+#: protected/views/enquiry/validate.php:27
+#: protected/views/enquiry/changeType.php:27
+#: protected/views/enquiry/teamEdit.php:28 protected/views/reply/edit.php:28
+msgid "List enquiries"
+msgstr "Llista consultes"
+
+#: protected/views/email/create.php:71
+#: protected/views/email/_contactPetition.php:71
+msgid "Send email"
+msgstr "Envia correu"
+
+#: protected/views/email/create.php:146 protected/views/enquiry/_form.php:140
+#: protected/views/site/login.php:117
+msgid "Send"
+msgstr "Enviar"
+
+#: protected/views/email/create.php:146
+#: protected/views/enquiry/_changeType.php:94
+#: protected/views/introPage/_form.php:159
+#: protected/views/budget/_formYear.php:86
+#: protected/views/user/updateRoles.php:146
+#: protected/views/user/update.php:145
+msgid "Save"
+msgstr "Desa"
+
+#: protected/views/email/_contactPetition.php:34
+msgid "Petition to make contact via email"
+msgstr "Petition to make contact via email"
+
+#: protected/views/email/_contactPetition.php:46
+#: protected/controllers/SiteController.php:145
+#: protected/controllers/SiteController.php:341
+msgid "Hello"
+msgstr "Hola"
+
+#: protected/views/email/_contactPetition.php:48
+#, php-format
+msgid "a user like you at the %s"
+msgstr "un usuari com tu de l'%s"
+
+#: protected/views/email/_contactPetition.php:49
+msgid "would like to contact you privately via email"
+msgstr "vol contactar amb tu via email"
+
+#: protected/views/email/_contactPetition.php:50
+msgid "However, we do not share users' email addresses"
+msgstr "No obstant això, no compartim les adreces de correu dels usuaris"
+
+#: protected/views/email/_contactPetition.php:51
+msgid "If you wish, you may make contact yourself with"
+msgstr "Si desitges, pots contactar el teu mateix amb"
+
+#: protected/views/email/_contactPetition.php:52
+msgid ""
+"If you think this user is spamming you, you can block future petitions at "
+"this link"
+msgstr ""
+"Si penses que aquest usuari t'està enviant correu brossa, pots bloquejar "
+"futurs peticions amb aquest enllaç"
+
+#: protected/views/email/_contactPetition.php:54
+#: protected/controllers/SiteController.php:345
+#: protected/controllers/CommentController.php:135
+msgid "Kind regards"
+msgstr "Cordials salutacions"
+
+#: protected/views/email/_contactPetition.php:62
+msgid "says"
+msgstr "diu"
+
+#: protected/views/email/_contactPetition.php:63
+msgid "Optionally, you may attach text to this email"
+msgstr "Si desitges, pots adjuntar un text a aquest correu"
+
+#: protected/views/email/_contactPetition.php:72
+#: protected/views/enquiry/_changeType.php:95
+#: protected/views/enquiry/_form.php:152 protected/views/comment/_form.php:45
+#: protected/views/user/update.php:146 protected/views/reply/_form.php:94
+#: protected/views/archive/_editArchive.php:130
+msgid "Cancel"
+msgstr "Cancel·la"
+
+#: protected/views/email/_contactPetition.php:89
+msgid "Sending email"
+msgstr "Enviant correu electrònic"
+
+#: protected/views/email/_contactPetition.php:94
+msgid "Email sent"
+msgstr "Correu electrònic enviat"
+
+#: protected/views/email/index.php:34 protected/views/enquiry/adminView.php:26
+#: protected/views/enquiry/manage.php:98
+#: protected/controllers/EnquiryController.php:566
+#: protected/controllers/EnquiryController.php:716
+msgid "Manage enquiry"
+msgstr "Gestiona consulta"
+
+#: protected/views/email/index.php:41
+msgid "Emails originated from the enquiry"
+msgstr "Emails enviats des de la consulta"
+
+#: protected/views/enquiry/workflow-horizontal.php:35
+#: protected/views/enquiry/workflow-horizontal.php:44
+#: protected/views/enquiry/workflow-horizontal.php:62
+#: protected/views/enquiry/workflow-horizontal.php:71
+msgid "enquiries"
+msgstr "Consultes"
+
+#: protected/views/enquiry/admin.php:67 protected/views/enquiry/manage.php:26
+#: protected/views/user/panel.php:246
+#: protected/controllers/EnquiryController.php:731
+msgid "Manage enquiries"
+msgstr "Gestionar consultes"
+
+#: protected/views/enquiry/_megaDelete.php:25
+msgid "Delete enquiry"
+msgstr "Eliminar la consulta"
+
+#: protected/views/enquiry/_megaDelete.php:34
+msgid "Are you sure you want to delete it all?"
+msgstr "Voleu obrir tots els directoris?"
+
+#: protected/views/enquiry/_megaDelete.php:40
+msgid "Reformulated enquires"
+msgstr "Consultes reformuladas"
+
+#: protected/views/enquiry/_megaDelete.php:41
+msgid "Replies"
+msgstr "Respostes"
+
+#: protected/views/enquiry/_megaDelete.php:42
+#: protected/views/file/adminDatabaseDownload.php:148
+msgid "Files"
+msgstr "Fitxers"
+
+#: protected/views/enquiry/_megaDelete.php:43
+msgid "Record of sent emails"
+msgstr "Record de correus enviats"
+
+#: protected/views/enquiry/_megaDelete.php:44
+#: protected/views/comment/_showThread.php:37
+msgid "Comments"
+msgstr "Comentaris"
+
+#: protected/views/enquiry/_megaDelete.php:45
+msgid "Votes"
+msgstr "Vots"
+
+#: protected/views/enquiry/_megaDelete.php:46
+msgid "User email subscriptions"
+msgstr "Subscripcions per email"
+
+#: protected/views/enquiry/_megaDelete.php:54
+msgid "Yes, delete it all"
+msgstr "Sí, esborrar-ho"
+
+#: protected/views/enquiry/_teamView.php:29
+msgid "The Enquiry"
+msgstr "La Consulta"
+
+#: protected/views/enquiry/create.php:36 protected/views/enquiry/create.php:39
+msgid "Formulate a"
+msgstr "Formular una"
+
+#: protected/views/enquiry/create.php:36
+msgid "budgetary enquiry"
+msgstr "consulta pressupostària"
+
+#: protected/views/enquiry/create.php:39
+#: protected/controllers/EnquiryController.php:411
+#: protected/controllers/EnquiryController.php:416
+#: protected/controllers/EnquiryController.php:460
+msgid "generic enquiry"
+msgstr "consulta genèrica"
+
+#: protected/views/enquiry/create.php:46
+msgid ""
+"If you wish to formulate a budgetary enquiry, you must first find the "
+"corresponding"
+msgstr ""
+"Si vols formular una consulta pressupostària, primer hauràs de seleccionar "
+"la partida concreta a la pestanya"
+
+#: protected/views/enquiry/create.php:58 protected/views/enquiry/edit.php:38
+msgid "Enquiry steps"
+msgstr "Passos d'una consulta"
+
+#: protected/views/enquiry/create.php:59 protected/views/enquiry/edit.php:39
+msgid "ENQUIRIES_STEP_MSG"
+msgstr ""
+"<p>1. Fes la teva consulta</p><p>2. Nosaltres l'enviem a l'Ajuntament</"
+"p><p>3. Comparteix, difón la consulta</p><p>4. Publicarem la resposta de "
+"l'Ajuntament i t'avisarem</p><p>5. Valora la resposta</p>"
+
+#: protected/views/enquiry/create.php:67
+#: protected/views/enquiry/reformulate.php:41
+msgid "The original enquiry"
+msgstr "La consulta original"
+
+#: protected/views/enquiry/create.php:80
+#: protected/views/enquiry/teamView.php:78
+#: protected/views/enquiry/manage.php:165
+#: protected/views/enquiry/_validationOptions.php:79
+#: protected/views/user/panel.php:435
+msgid "Yes"
+msgstr "Sí"
+
+#: protected/views/enquiry/create.php:81
+msgid "No, take me to"
+msgstr "No, porta'm al"
+
+#: protected/views/enquiry/_reformulated.php:26
+#: protected/views/enquiry/pdf.php:99
+msgid "The enquiry"
+msgstr "La Consulta"
+
+#: protected/views/enquiry/_reformulated.php:26
+msgid "has been reformulated"
+msgstr "ha estat reformulada"
+
+#: protected/views/enquiry/_reformulated.php:28
+msgid "time"
+msgstr "vegada"
+
+#: protected/views/enquiry/_reformulated.php:30
+msgid "times"
+msgstr "vegades"
+
+#: protected/views/enquiry/_managerSearch.php:53
+#: protected/views/enquiry/_managerSearch.php:61
+#: protected/views/enquiry/_managerSearch.php:69
+#: protected/views/enquiry/_managerSearch.php:84
+#: protected/views/enquiry/_searchPublic.php:52
+#: protected/views/enquiry/_searchPublic.php:56
+#: protected/views/enquiry/_memberSearch.php:56
+#: protected/views/enquiry/_memberSearch.php:61
+#: protected/views/budget/_indexModified.php:46
+msgid "Not filtered"
+msgstr "Sense filtrar"
+
+#: protected/views/enquiry/assess.php:58
+#: protected/views/enquiry/teamView.php:58
+msgid "Assess reply"
+msgstr "Valorar resposta"
+
+#: protected/views/enquiry/assess.php:65
+msgid "The general consensus is that the reply is satisfactory"
+msgstr "El consens general indica que la resposta és satisfactòria"
+
+#: protected/views/enquiry/assess.php:74
+msgid "The general consensus is that the reply is not satisfactory"
+msgstr "El consens general indica que la resposta és insatisfactòria"
+
+#: protected/views/enquiry/pdf.php:85
+msgid "PDF created on the"
+msgstr "PDF creat el dia"
+
+#: protected/views/enquiry/pdf.php:87
+msgid "Source"
+msgstr "Font"
+
+#: protected/views/enquiry/pdf.php:91
+msgid "page"
+msgstr "pàgina"
+
+#: protected/views/enquiry/pdf.php:116
+msgid "Relative budgetary information"
+msgstr "Informació pressupostària"
+
+#: protected/views/enquiry/pdf.php:141 protected/views/enquiry/pdf.php:169
+msgid "Citizen comments"
+msgstr "Comentaris dels ciutadans"
+
+#: protected/views/enquiry/teamView.php:29
+#: protected/views/enquiry/submit.php:60
+#: protected/controllers/EnquiryController.php:486
+msgid "Submit enquiry"
+msgstr "Lliura la consulta"
+
+#: protected/views/enquiry/teamView.php:38
+msgid "Accept / Reject"
+msgstr "Acceptar / Rebutjar"
+
+#: protected/views/enquiry/teamView.php:42 protected/views/reply/edit.php:41
+#: protected/controllers/ReplyController.php:85
+msgid "Add reply"
+msgstr "Afegir resposta"
+
+#: protected/views/enquiry/teamView.php:47 protected/views/reply/edit.php:43
+msgid "Correct reply"
+msgstr "Corregir resposta"
+
+#: protected/views/enquiry/teamView.php:51
+#: protected/views/enquiry/submit.php:62
+msgid "Correct submission"
+msgstr "Corregir lliurament"
+
+#: protected/views/enquiry/teamView.php:62
+#: protected/controllers/EnquiryController.php:265
+msgid "Reformulate enquiry"
+msgstr "Reformular consulta"
+
+#: protected/views/enquiry/teamView.php:79
+#: protected/views/enquiry/manage.php:167
+#: protected/views/enquiry/_validationOptions.php:81
+#: protected/views/user/panel.php:436
+msgid "No"
+msgstr "No"
+
+#: protected/views/enquiry/_detailsForCitizen.php:33
+#: protected/views/enquiry/_detailsForCitizen.php:34
+#: protected/views/enquiry/_detailsForCitizen.php:43
+#: protected/views/archive/_editArchive.php:110
+msgid "by"
+msgstr "per"
+
+#: protected/views/enquiry/_detailsForCitizen.php:64
+#: protected/views/enquiry/_detailsForTeam.php:40
+msgid "reformulated"
+msgstr "reformulada"
+
+#: protected/views/enquiry/_searchPublic.php:64
+msgid "Minimum date"
+msgstr "Data mínima"
+
+#: protected/views/enquiry/_searchPublic.php:85
+msgid "Maximum date"
+msgstr "Data màxima"
+
+#: protected/views/enquiry/_searchPublic.php:105
+msgid "Text"
+msgstr "Text"
+
+#: protected/views/enquiry/_searchPublic.php:111
+msgid "Filter"
+msgstr "Filtre"
+
+#: protected/views/enquiry/reformulate.php:27
+#: protected/views/enquiry/teamEdit.php:26
+msgid "View Enquiry"
+msgstr "Veure consulta"
+
+#: protected/views/enquiry/manage.php:107
+msgid "Please study the enquiry below before continuing"
+msgstr "Estudia la consulta més a baix abans de decidir per una opció"
+
+#: protected/views/enquiry/manage.php:111
+#: protected/views/enquiry/validate.php:60
+#: protected/views/enquiry/_form.php:131
+msgid "Who will reply to this enquiry?"
+msgstr "Qui respondrà a la consulta?"
+
+#: protected/views/enquiry/manage.php:122
+msgid "Assign enquiry"
+msgstr "Assignar consulta"
+
+#: protected/views/enquiry/manage.php:125
+msgid "Not assigned"
+msgstr "No assignada"
+
+#: protected/views/enquiry/manage.php:128
+msgid "Assign"
+msgstr "Assigna"
+
+#: protected/views/enquiry/manage.php:130
+msgid "Change team member"
+msgstr "Canviar team member"
+
+#: protected/views/enquiry/manage.php:135
+msgid "Reject the enquiry"
+msgstr "Rebutjar la consulta"
+
+#: protected/views/enquiry/manage.php:135
+#: protected/views/enquiry/validate.php:79
+msgid "The enquiry is inappropriate"
+msgstr "The enquiry is inappropriate"
+
+#: protected/views/enquiry/manage.php:136
+#: protected/views/enquiry/validate.php:80
+msgid "Reject"
+msgstr "Rebutja"
+
+#: protected/views/enquiry/manage.php:141
+msgid "The enquiry is spam"
+msgstr "La consulta és spam"
+
+#: protected/views/enquiry/manage.php:141
+msgid "Delete the enquiry and"
+msgstr "Eliminar la consulta i"
+
+#: protected/views/enquiry/manage.php:142
+msgid "disable the user"
+msgstr "deshabilitar l'usuari"
+
+#: protected/views/enquiry/manage.php:146
+msgid "Delete"
+msgstr "Elimina"
+
+#: protected/views/enquiry/changeBudget.php:29
+#: protected/views/budget/deleteTree.php:29
+#: protected/views/budget/updateYear.php:110
+#: protected/views/budget/featured.php:29
+msgid "Edit year"
+msgstr "Editar any"
+
+#: protected/views/enquiry/changeBudget.php:30
+#: protected/views/budget/admin.php:80
+#: protected/views/budget/deleteTree.php:30
+#: protected/views/budget/updateYear.php:26
+#: protected/views/budget/featured.php:30
+#: protected/views/budget/createYear.php:22
+msgid "Manage years"
+msgstr "Gestiona anys"
+
+#: protected/views/enquiry/changeBudget.php:34
+msgid "Use this when you need to make corrections to the budget database"
+msgstr ""
+"Utilitza aquesta opció quan necessitis fer correccions de la bases de dades "
+"pressupostària"
+
+#: protected/views/enquiry/changeBudget.php:37
+msgid "change related budget"
+msgstr "canviar partida pressupostària"
+
+#: protected/views/enquiry/view.php:107
+msgid "Share"
+msgstr "Compartir"
+
+#: protected/views/enquiry/view.php:118
+msgid "Export"
+msgstr "Exportar"
+
+#: protected/views/enquiry/view.php:125
+msgid "Subscribed"
+msgstr "Subscrits"
+
+#: protected/views/enquiry/view.php:135
+msgid "You can"
+msgstr "Pots"
+
+#: protected/views/enquiry/view.php:136
+msgid "edit the enquiry"
+msgstr "editar la consulta"
+
+#: protected/views/enquiry/view.php:136
+msgid "and even"
+msgstr "i fins i tot"
+
+#: protected/views/enquiry/view.php:137
+msgid "delete it"
+msgstr "esborrar-ho"
+
+#: protected/views/enquiry/view.php:141
+#: protected/views/enquiry/_validationOptions.php:69
+#: protected/views/sitePage/_form.php:36 protected/views/sitePage/_form.php:43
+msgid "Are you sure?"
+msgstr "Estàs segur?"
+
+#: protected/views/enquiry/view.php:142
+msgid "until it has been accepted by the observatory."
+msgstr "fins que hagi estat acceptat per l'observatori."
+
+#: protected/views/enquiry/_budgetDetails.php:47
+#: protected/views/budget/_budgetDetails.php:50
+#: protected/views/user/panel.php:111
+#: protected/controllers/EnquiryController.php:171
+#: protected/controllers/EnquiryController.php:241
+#: protected/controllers/EnquiryController.php:316
+msgid "New enquiry"
+msgstr "Nova consulta"
+
+#: protected/views/enquiry/_budgetDetails.php:52
+#: protected/views/enquiry/_budgetDetails.php:54
+#: protected/views/enquiry/_budgetDetails.php:69
+#: protected/views/budget/_budgetDetails.php:60
+#: protected/views/budget/_budgetDetails.php:62
+#: protected/views/budget/_budgetDetails.php:76
+msgid "1 enquiry made"
+msgstr "1 consulta feta"
+
+#: protected/views/enquiry/_budgetDetails.php:57
+#: protected/views/enquiry/_budgetDetails.php:59
+#: protected/views/enquiry/_budgetDetails.php:62
+#: protected/views/enquiry/_budgetDetails.php:71
+#: protected/views/enquiry/_budgetDetails.php:73
+#: protected/views/budget/_budgetDetails.php:65
+#: protected/views/budget/_budgetDetails.php:67
+#: protected/views/budget/_budgetDetails.php:70
+#: protected/views/budget/_budgetDetails.php:78
+#: protected/views/budget/_budgetDetails.php:80
+msgid "enquiries made"
+msgstr "consultes fetes"
+
+#: protected/views/enquiry/_budgetDetails.php:77
+#: protected/views/budget/_budgetDetails.php:84
+#: protected/views/budget/_compareYears.php:23
+msgid "of total"
+msgstr "del total"
+
+#: protected/views/enquiry/_budgetDetails.php:80
+#: protected/views/budget/_budgetDetails.php:102
+msgid "Year / Code"
+msgstr "Any / codi"
+
+#: protected/views/enquiry/_budgetDetails.php:86
+#: protected/views/budget/_budgetDetails.php:108
+msgid "Euros per person"
+msgstr "Euros per persona"
+
+#: protected/views/enquiry/_budgetDetails.php:105
+#: protected/views/enquiry/_budgetDetails.php:119
+#: protected/views/enquiry/index.php:196
+#: protected/views/budget/_budgetDetails.php:126
+#: protected/views/budget/_budgetDetails.php:172
+#: protected/views/user/panel.php:322 protected/views/user/panel.php:356
+#: protected/views/user/view.php:136 protected/views/layouts/mainmenu.php:28
+#: protected/controllers/EnquiryController.php:100
+#: protected/controllers/EnquiryController.php:868
+msgid "Enquiries"
+msgstr "Consultes"
+
+#: protected/views/enquiry/submit.php:32
+msgid "Registry number is possibly incorrect"
+msgstr ""
+"El número de registre s'ha de modificar, hem d'introduir el número registre "
+"de l'Ajuntament"
+
+#: protected/views/enquiry/submit.php:71
+msgid "Date the Enquiry was submitted to the Administration"
+msgstr "Data la consulta es va lliurar a l'administració"
+
+#: protected/views/enquiry/submit.php:99
+msgid "Is this information correct?"
+msgstr "És aquesta informació correcta?"
+
+#: protected/views/enquiry/submit.php:100
+msgid "Submit"
+msgstr "Lliura la consulta"
+
+#: protected/views/enquiry/submit.php:102
+msgid "Add document"
+msgstr "Afegir document"
+
+#: protected/views/enquiry/_view.php:62
+msgid "Before participating, please confirm your email address"
+msgstr ""
+"Abans de participar si us plau, confirma la teva adreça de correu electrònic"
+
+#: protected/views/enquiry/_view.php:148 protected/views/enquiry/_view.php:346
+msgid "Are you sure you want to delete it?"
+msgstr "Estàs segur que desitja eliminar-ho?"
+
+#: protected/views/enquiry/_view.php:176 protected/views/enquiry/_view.php:192
+msgid "You have already voted favourably"
+msgstr "Ja has votat favorablement"
+
+#: protected/views/enquiry/_view.php:179 protected/views/enquiry/_view.php:194
+msgid "You have already voted unfavourably"
+msgstr "Ja has votat desfavorablement"
+
+#: protected/views/enquiry/_view.php:305 protected/views/layouts/main.php:63
+#: protected/views/site/login.php:25 protected/views/site/login.php:67
+#: protected/views/site/login.php:97
+msgid "Login"
+msgstr "Inicia sessió"
+
+#: protected/views/enquiry/_view.php:308
+msgid "Please login to participate"
+msgstr "Si us plau, inicia una sessió per a participar"
+
+#: protected/views/enquiry/_view.php:309
+#, php-format
+msgid "If you have an account, %s"
+msgstr "SI tens un compte, %s"
+
+#: protected/views/enquiry/_view.php:310
+msgid "login"
+msgstr "inicia sessió"
+
+#: protected/views/enquiry/_view.php:313
+#, php-format
+msgid "Are you new here? %s is just a moment"
+msgstr "Ets un usuari nou? %s , es fa en un moment"
+
+#: protected/views/enquiry/_view.php:314
+msgid "Signing up"
+msgstr "Registra't"
+
+#: protected/views/enquiry/_changeType.php:42
+msgid "Select a budget from the grid below"
+msgstr "Selecciona un pressupost de la taula més a baix"
+
+#: protected/views/enquiry/_changeType.php:83
+#: protected/views/enquiry/changeType.php:33
+#: protected/views/enquiry/teamEdit.php:27
+msgid "Change type"
+msgstr "Canviar tipus"
+
+#: protected/views/enquiry/_changeType.php:138
+msgid "Choose budget"
+msgstr "Triar pressupost"
+
+#: protected/views/enquiry/index.php:145
+msgid "Enquiries made to date"
+msgstr "Consultes fetes fins a avui"
+
+#: protected/views/enquiry/index.php:147
+msgid "This is a list of enquiries made by citizens like you."
+msgstr "Llista de consultes realitzades per ciutadan@s com tu"
+
+#: protected/views/enquiry/index.php:148
+msgid "Formulate a new enquiry"
+msgstr "Formula una consulta nova"
+
+#: protected/views/enquiry/index.php:221
+msgid "No enquiries here"
+msgstr "Cap consulta realitzada"
+
+#: protected/views/enquiry/index.php:229 protected/views/budget/index.php:348
+#: protected/views/archive/index.php:309
+msgid "go to top"
+msgstr "pujar al principi"
+
+#: protected/views/enquiry/validate.php:56
+msgid "Validate enquiry"
+msgstr "Validar consulta"
+
+#: protected/views/enquiry/validate.php:57
+msgid "Please study the enquiry below before deciding on an option"
+msgstr "Estudia la consulta més a baix abans de decidir per una opció"
+
+#: protected/views/enquiry/validate.php:70
+#, php-format
+msgid "Tell %s you do not want to take responsibility of this enquiry"
+msgstr "Digues-li a %s que no vols responsabilitzar-te d'aquesta consulta"
+
+#: protected/views/enquiry/validate.php:75
+msgid "Accept the Enquiry"
+msgstr "Acceptar la consulta"
+
+#: protected/views/enquiry/validate.php:75
+msgid "You accept this enquiry as valid"
+msgstr "Acceptes aquesta consulta com a vàlida"
+
+#: protected/views/enquiry/validate.php:76
+msgid "Accept"
+msgstr "Accepta"
+
+#: protected/views/enquiry/validate.php:79
+msgid "Reject the Enquiry"
+msgstr "Rebutjar la consulta"
+
+#: protected/views/enquiry/_detailsForTeam.php:32
+#: protected/views/enquiry/_detailsForTeam.php:36
+msgid "on the"
+msgstr "el día"
+
+#: protected/views/enquiry/_detailsForTeam.php:47
+msgid "Subscribed users"
+msgstr "Usuaris subscrits"
+
+#: protected/views/enquiry/_detailsForTeam.php:58
+msgid "missing"
+msgstr "falta"
+
+#: protected/views/enquiry/_form.php:65
+msgid "New reformulated enquiry"
+msgstr "Nova consulta reformulada"
+
+#: protected/views/enquiry/_form.php:67
+#: protected/controllers/EnquiryController.php:334
+msgid "Modify enquiry"
+msgstr "Modificar consulta"
+
+#: protected/views/enquiry/_form.php:140 protected/views/reply/_form.php:91
+#: protected/views/vault/_capacity.php:46
+msgid "Update"
+msgstr "Actualitza"
+
+#: protected/views/enquiry/subscribeScript.php:31
+msgid "We can notify you by email when this enquiry gets updated"
+msgstr ""
+"Se li enviarà un correu electrònic quan aquestes consultes s'actualitzin"
+
+#: protected/views/enquiry/subscribeScript.php:33
+msgid "Please login to subscribe"
+msgstr "Si us plau, inicia una sessió per a participar"
+
+#: protected/views/enquiry/subscribeScript.php:38
+msgid "Yes please"
+msgstr "Sí, si us plau"
+
+#: protected/views/enquiry/subscribeScript.php:42
+msgid "Not right now"
+msgstr "Ara no"
+
+#: protected/views/enquiry/subscribeScript.php:49
+msgid "Cancel my subscription"
+msgstr "Cancel.la la meva subscripció"
+
+#: protected/views/enquiry/_validationOptions.php:71
+msgid ""
+"Are you sure that this enquiry should be replied to by the Observatory and "
+"not the Administration?"
+msgstr ""
+"Estàs segur que aquesta consulta ha de ser resposta per l'Observatori "
+"Ciutadà i no per l'administració?"
+
+#: protected/views/enquiry/_validationOptions.php:76
+msgid "Find information about this at the wiki."
+msgstr "Amplia informació a la wiki del projecte."
+
+#: protected/views/enquiry/assigned.php:68 protected/views/user/panel.php:220
+#: protected/controllers/EnquiryController.php:605
+msgid "Entrusted enquiries"
+msgstr "Consultes encomanades"
+
+#: protected/views/newsletter/admin.php:25
+#: protected/views/newsletter/adminView.php:26
+#: protected/views/newsletter/update.php:25
+msgid "Create bulk email"
+msgstr "Crear butlletí"
+
+#: protected/views/newsletter/admin.php:30
+msgid "Manage Bulk Emails"
+msgstr "Gestionar butlletins"
+
+#: protected/views/newsletter/adminView.php:27
+#: protected/views/newsletter/create.php:26
+#: protected/views/newsletter/update.php:27
+msgid "Manage bulk email"
+msgstr "Llistar butlletins"
+
+#: protected/views/newsletter/adminView.php:32
+msgid "Delete draft"
+msgstr "Esborrar esborrany"
+
+#: protected/views/newsletter/adminView.php:36
+#: protected/views/user/updateRoles.php:49 protected/views/user/view.php:31
+msgid "Are you sure you want to delete this item?"
+msgstr "Estàs segur que vols esborrar aquest ítem?"
+
+#: protected/views/newsletter/adminView.php:107
+#: protected/views/newsletter/_form.php:78
+msgid "BCC Recipients"
+msgstr "BCC Destinataris ocults"
+
+#: protected/views/newsletter/adminView.php:109
+#: protected/views/newsletter/_form.php:79
+msgid "Show"
+msgstr "Mostrar"
+
+#: protected/views/newsletter/adminView.php:118
+msgid "Edit draft"
+msgstr "Editar esborrany"
+
+#: protected/views/newsletter/adminView.php:119
+msgid "Publish now"
+msgstr "Publicar ara"
+
+#: protected/views/newsletter/view.php:28
+#: protected/controllers/NewsletterController.php:99
+#: protected/controllers/NewsletterController.php:233
+#: protected/controllers/NewsletterController.php:297
+msgid "Newsletter"
+msgstr "Butlletí"
+
+#: protected/views/newsletter/showRecipients.php:26
+msgid "Will send to all users at"
+msgstr "S'enviarà a tots els usuaris de"
+
+#: protected/views/newsletter/showRecipients.php:28
+msgid "Was sent to these users"
+msgstr "Es va enviar a aquests usuaris"
+
+#: protected/views/newsletter/_view.php:27
+msgid "Published on the"
+msgstr "Publicat el dia"
+
+#: protected/views/newsletter/index.php:27 protected/views/user/panel.php:274
+#: protected/views/layouts/main.php:85
+#: protected/controllers/NewsletterController.php:85
+msgid "Newsletters"
+msgstr "Butlletins"
+
+#: protected/views/newsletter/_form.php:65
+msgid "Send bulk email"
+msgstr "Enviar butlletí"
+
+#: protected/views/newsletter/update.php:26
+msgid "View bulk email"
+msgstr "Veure butlletí"
+
+#: protected/views/introPage/admin.php:26
+#: protected/views/introPage/create.php:29
+#: protected/views/introPage/update.php:33
+#: protected/views/sitePage/admin.php:25
+#: protected/views/sitePage/create.php:31
+#: protected/controllers/IntroPageController.php:92
+#: protected/controllers/SitePageController.php:138
+msgid "Create page"
+msgstr "Crear pàgina"
+
+#: protected/views/introPage/admin.php:32
+msgid "Manage Introduction pages"
+msgstr "Editar página introducció"
+
+#: protected/views/introPage/create.php:24
+#: protected/views/introPage/view.php:84
+#: protected/views/introPage/update.php:34
+#: protected/views/sitePage/admin.php:84
+#: protected/views/sitePage/create.php:25
+#: protected/views/sitePage/update.php:31 protected/views/sitePage/show.php:66
+#: protected/controllers/IntroPageController.php:198
+#: protected/controllers/SitePageController.php:325
+msgid "Manage pages"
+msgstr "Gestionar pàgines"
+
+#: protected/views/introPage/view.php:72
+msgid "You are in edit mode"
+msgstr "Estàs en mode edició"
+
+#: protected/views/introPage/view.php:78 protected/views/sitePage/show.php:63
+msgid "Edit page"
+msgstr "Editar pàgina"
+
+#: protected/views/introPage/_form.php:73
+msgid "Text box attributes"
+msgstr "Atributs de la caixa de text"
+
+#: protected/views/introPage/_form.php:78
+msgid "Distance between top of photo and top of box"
+msgstr "Distància entre part superior imatge i part superior requadre"
+
+#: protected/views/introPage/_form.php:85
+msgid "Distance from lefthand side of photo to box"
+msgstr "Distància entre esquerra imatge i el requadre"
+
+#: protected/views/introPage/_form.php:92
+msgid "Width of the box"
+msgstr "Ample del requadre"
+
+#: protected/views/introPage/_form.php:101
+#: protected/views/introPage/_form.php:108
+msgid "Leave empty to recover default values"
+msgstr "Deixar buit per recuperar valors per omissió"
+
+#: protected/views/introPage/_form.php:115
+msgid "Box transparentcy"
+msgstr "Transparencia requadre"
+
+#: protected/views/introPage/_form.php:124
+msgid "Text box content"
+msgstr "Contingut de la caixa de text"
+
+#: protected/views/introPage/_form.php:130
+msgid "Translations"
+msgstr "Traduccions"
+
+#: protected/views/introPage/_form.php:159
+#: protected/views/budget/_formYear.php:86
+#: protected/views/sitePage/_form.php:254
+#: protected/views/archive/_createContainer.php:72
+msgid "Create"
+msgstr "Crear"
+
+#: protected/views/introPage/update.php:25
+#: protected/views/sitePage/update.php:24
+msgid "Delete this page"
+msgstr "Esborrar aquesta pàgina"
+
+#: protected/views/introPage/update.php:27
+#: protected/views/sitePage/update.php:26
+msgid "and translations"
+msgstr "i traduccions"
+
+#: protected/views/introPage/update.php:31
+msgid "View page"
+msgstr "Veure pàgina"
+
+#: protected/views/introPage/update.php:32
+#: protected/views/sitePage/update.php:30
+msgid "Delete page"
+msgstr "Esborrar pàgina"
+
+#: protected/views/introPage/update.php:40
+#: protected/views/sitePage/update.php:37
+#: protected/controllers/IntroPageController.php:129
+#: protected/controllers/SitePageController.php:188
+msgid "Update page"
+msgstr "Actualitzar pàgina"
+
+#: protected/views/budget/admin.php:25
+#: protected/views/budget/createYear.php:29
+msgid "Create Year"
+msgstr "Crear any"
+
+#: protected/views/budget/admin.php:26
+msgid "Default year"
+msgstr "Any per omissió"
+
+#: protected/views/budget/admin.php:29
+msgid "Restore database"
+msgstr "Restaurar base de dades"
+
+#: protected/views/budget/admin.php:61
+msgid "Restore budgets"
+msgstr "Restaurar pressupostos"
+
+#: protected/views/budget/admin.php:99 protected/views/budget/_formYear.php:54
+msgid "Population"
+msgstr "Població"
+
+#: protected/views/budget/noDescriptions.php:25
+msgid "Manage descriptions"
+msgstr "Gestionar les descripcions"
+
+#: protected/views/budget/noDescriptions.php:30
+#: protected/views/budgetDescription/admin.php:28
+msgid "Budgets without description"
+msgstr "Partides sense descripció"
+
+#: protected/views/budget/deleteTree.php:39
+#, php-format
+msgid "Delete \\\"%s\\\" and its sub-budgets?"
+msgstr "Borrar \\\"%s\\\" i les subpartides?"
+
+#: protected/views/budget/deleteTree.php:52
+#, php-format
+msgid "Cannot delete the budget tree because it contains %s enquiries"
+msgstr "No es pot esborrar l'arbre de pressupostos per què conté %s consultes"
+
+#: protected/views/budget/deleteTree.php:56
+#, php-format
+msgid "%s budgets deleted ok"
+msgstr "%s pressupostos esborrats ok"
+
+#: protected/views/budget/deleteTree.php:71
+msgid "Delete budgets"
+msgstr "Eliminar pressupostos"
+
+#: protected/views/budget/_formYear.php:47
+msgid "Only 4 digits"
+msgstr "Solament 4 dígits"
+
+#: protected/views/budget/_formYear.php:57
+msgid "Population this year"
+msgstr "La població d'aquest any"
+
+#: protected/views/budget/_formYear.php:62
+#: protected/views/comment/_form.php:44 protected/views/reply/_form.php:91
+msgid "Publish"
+msgstr "Publicar"
+
+#: protected/views/budget/_formYear.php:65
+msgid "Remember to update the zip file"
+msgstr "Recorda d'actualitzar l'arxiu ZIP"
+
+#: protected/views/budget/_formYear.php:73
+msgid "defined budgets"
+msgstr "Partides definides"
+
+#: protected/views/budget/_formYear.php:78
+#: protected/views/budget/index.php:279 protected/views/budget/featured.php:74
+msgid "Featured budgets"
+msgstr "Partides destacades"
+
+#: protected/views/budget/view.php:46
+msgid "Budget with internal code"
+msgstr "Pressupost amb Internal code"
+
+#: protected/views/budget/view.php:46
+msgid "is not defined"
+msgstr "no està definida"
+
+#: protected/views/budget/view.php:126
+msgid "Compare years"
+msgstr "Comparar anys"
+
+#: protected/views/budget/view.php:128
+#, php-format
+msgid "Details for %s"
+msgstr "Detalls del %s"
+
+#: protected/views/budget/view.php:153 protected/views/budget/view.php:155
+msgid "Can you improve this description?"
+msgstr "Vols millorar la despripció de la partida pressupostària?"
+
+#: protected/views/budget/view.php:163
+msgid "Read the administration's description"
+msgstr "Llegir la descripció de l'administració"
+
+#: protected/views/budget/view.php:165
+msgid "Official description"
+msgstr "Descripció oficial"
+
+#: protected/views/budget/view.php:173 protected/views/budget/view.php:175
+msgid "Please consider adding a description here"
+msgstr "Si us plau, considera afegir descripció aquí"
+
+#: protected/views/budget/view.php:182
+msgid "No enquiries have been made about this budget yet"
+msgstr ""
+"Encara ningú no ha fet una consulta a l'Ajuntament sobre aquesta partida "
+"pressupostària"
+
+#: protected/views/budget/view.php:183
+msgid "Do you wish to make an enquiry"
+msgstr "En vols fer tu una"
+
+#: protected/views/budget/view.php:196
+msgid "One enquiry has already been made about this budget"
+msgstr "Ja hi ha una consulta feta sobre aquesta partida pressupostària"
+
+#: protected/views/budget/view.php:198
+#, php-format
+msgid "%s enquiries have already been made about this budget"
+msgstr "Ja hi ha %s consultes fetes sobre aquesta partida pressupostària"
+
+#: protected/views/budget/_budgetDetails.php:54
+msgid "More detail"
+msgstr "Més detall"
+
+#: protected/views/budget/_budgetDetails.php:91
+msgid "Graph"
+msgstr "Gràfic"
+
+#: protected/views/budget/_budgetDetails.php:136
+#: protected/views/budget/_budgetDetails.php:142
+#: protected/views/budget/_indexBar.php:165
+msgid "Executed"
+msgstr "Executat"
+
+#: protected/views/budget/_budgetDetails.php:144
+msgid "Unknown"
+msgstr "Desconegut"
+
+#: protected/views/budget/index.php:187 protected/views/user/panel.php:115
+#: protected/views/config/summary.php:89
+#: protected/views/layouts/mainmenu.php:27
+#: protected/controllers/BudgetController.php:541
+#: protected/controllers/BudgetController.php:598
+msgid "Budgets"
+msgstr "Pressupostos"
+
+#: protected/views/budget/index.php:211
+msgid "Available years"
+msgstr "Anys disponibles"
+
+#: protected/views/budget/index.php:255
+msgid "No search results"
+msgstr "No va haver-hi coincidències"
+
+#: protected/views/budget/index.php:267
+msgid "Pie graph"
+msgstr "Gràfic de pastís"
+
+#: protected/views/budget/index.php:270
+msgid "Bar graph"
+msgstr "Gràfic de barres"
+
+#: protected/views/budget/index.php:275
+#: protected/views/budget/_indexModified.php:38
+msgid "Modifications"
+msgstr "Modificacions"
+
+#: protected/views/budget/index.php:288 protected/views/budget/index.php:293
+msgid "Download data"
+msgstr "Baixar Dades"
+
+#: protected/views/budget/index.php:322
+msgid "No data available"
+msgstr "No hi ha dades disponibles"
+
+#: protected/views/budget/updateYear.php:25
+msgid "Import budgets"
+msgstr "Importar pressupostos"
+
+#: protected/views/budget/updateYear.php:30
+msgid "Selected budget delete"
+msgstr "Esborrar pressupostos seleccionats"
+
+#: protected/views/budget/updateYear.php:34
+msgid "Delete this year's budgets"
+msgstr "Esborrar els pressupostos de aquest any."
+
+#: protected/views/budget/updateYear.php:38
+msgid "Define graphics"
+msgstr "Definir gràfics"
+
+#: protected/views/budget/updateYear.php:44
+msgid "Export budgets"
+msgstr "Exportar pressupostos"
+
+#: protected/views/budget/updateYear.php:47
+msgid "Delete year"
+msgstr "Esborrar any"
+
+#: protected/views/budget/updateYear.php:122
+msgid "Budgetary enquiries for"
+msgstr "Consultes pressupostàries del"
+
+#: protected/views/budget/_indexBar.php:164
+msgid "Actual"
+msgstr "Actual"
+
+#: protected/views/budget/_indexModified.php:70
+msgid "Category"
+msgstr "Categoria"
+
+#: protected/views/budget/_indexModified.php:80
+msgid "initial_provision"
+msgstr "Provisió inicial"
+
+#: protected/views/budget/_indexModified.php:89
+msgid "actual_provision"
+msgstr "Provisió actual"
+
+#: protected/views/comment/_showThread.php:42
+#: protected/views/comment/_showThread.php:54
+msgid "Add comment"
+msgstr "Afegeix comentari"
+
+#: protected/views/comment/_view.php:40
+msgid "comments on the"
+msgstr "comenta el día"
+
+#: protected/views/comment/_form.php:39
+msgid "comments"
+msgstr "comenta"
+
+#: protected/views/user/admin.php:66 protected/views/user/panel.php:273
+msgid "Users and roles"
+msgstr "Usuaris i rols"
+
+#: protected/views/user/panel.php:95
+msgid "Welcome"
+msgstr "Benvingut"
+
+#: protected/views/user/panel.php:114
+msgid "ENQUIRY_NEW_MSG"
+msgstr ""
+"Pregunta el que vulguis saber al teu ajuntament, des d'aquest apartat  pots "
+"fer una consulta oberta. Per a fer una consulta pressupostària ves a  la "
+"pestanya %s i realitzar la consulta des d'allà."
+
+#: protected/views/user/panel.php:126
+msgid "My user information"
+msgstr "Les meves dades d'usuari"
+
+#: protected/views/user/panel.php:128
+msgid "Change your profile"
+msgstr "Canvia el teu perfil"
+
+#: protected/views/user/panel.php:129
+msgid "Configure your email"
+msgstr "Configura el teu email"
+
+#: protected/views/user/panel.php:130
+msgid "Change your password"
+msgstr "Canvia la teva contrasenya"
+
+#: protected/views/user/panel.php:155
+msgid "For your information"
+msgstr "Per la teva informació"
+
+#: protected/views/user/panel.php:156
+msgid "You have a task"
+msgstr "Tens una tasca pendent"
+
+#: protected/views/user/panel.php:157
+msgid "OCAx needs attention"
+msgstr "OCAx necesita atenció"
+
+#: protected/views/user/panel.php:159
+#: protected/views/budgetDescription/_legend.php:26
+msgid "Complete"
+msgstr "Complert"
+
+#: protected/views/user/panel.php:160
+#: protected/views/budgetDescription/_legend.php:27
+msgid "Partial"
+msgstr "Parcial"
+
+#: protected/views/user/panel.php:161
+#: protected/views/budgetDescription/_legend.php:28
+msgid "Empty"
+msgstr "Buida"
+
+#: protected/views/user/panel.php:162
+#: protected/views/budgetDescription/_legend.php:29
+msgid "Missing"
+msgstr "Manca"
+
+#: protected/views/user/panel.php:176
+msgid "Agora"
+msgstr "Àgora"
+
+#: protected/views/user/panel.php:197
+msgid "OCAx installation"
+msgstr "Instal.lació OCAx"
+
+#: protected/views/user/panel.php:202
+msgid "Check server requirements"
+msgstr "Comprovar requeriments del servidor"
+
+#: protected/views/user/panel.php:225 protected/views/user/updateRoles.php:116
+msgid "Manage the enquiries you are responsable for"
+msgstr "Respon a les consultes encarregades"
+
+#: protected/views/user/panel.php:234
+msgid "Introduction pages"
+msgstr "Pàginas de introducció"
+
+#: protected/views/user/panel.php:235
+msgid "Site pages"
+msgstr "Pàgina de lloc"
+
+#: protected/views/user/panel.php:238
+#: protected/controllers/FileController.php:310
+msgid "Wallpaper"
+msgstr "Wallpaper"
+
+#: protected/views/user/panel.php:250 protected/views/user/updateRoles.php:132
+msgid "Assign enquiries to team members and check status"
+msgstr "Encarrega consultes a altres companys"
+
+#: protected/views/user/panel.php:257
+msgid "Administator's options"
+msgstr "Opcions de administrador"
+
+#: protected/views/user/panel.php:260
+msgid "Years and budgets"
+msgstr "Anys i pressupostos"
+
+#: protected/views/user/panel.php:261
+#: protected/controllers/BudgetDescriptionController.php:286
+msgid "Budget descriptions"
+msgstr "Descripcions de partides"
+
+#: protected/views/user/panel.php:263
+#: protected/controllers/FileController.php:297
+msgid "Zip file"
+msgstr "Fitxer zip"
+
+#: protected/views/user/panel.php:268 protected/views/config/index.php:113
+#: protected/views/config/backups.php:26 protected/views/vault/admin.php:78
+#: protected/views/vault/view.php:162
+#: protected/controllers/VaultController.php:612
+msgid "Backups"
+msgstr "Còpies de seguretat"
+
+#: protected/views/user/panel.php:270
+msgid "Manual Backup"
+msgstr "Còpia de seguretat manual"
+
+#: protected/views/user/panel.php:275
+#: protected/views/emailTemplate/admin.php:28
+#: protected/controllers/EmailTemplateController.php:110
+msgid "Email text templates"
+msgstr "Plantilles de correu-e"
+
+#: protected/views/user/panel.php:276 protected/views/config/update.php:25
+msgid "Global parameters"
+msgstr "Paràmetres globals"
+
+#: protected/views/user/panel.php:305
+msgid "My enquiries"
+msgstr "Les meves consultes"
+
+#: protected/views/user/panel.php:343
+msgid "I am subscribed to these enquirytions"
+msgstr "Estic subscrit a aquestes consultes"
+
+#: protected/views/user/panel.php:344
+msgid "You will be sent an email when these enquiries are updated"
+msgstr ""
+"Se li enviarà un correu electrònic quan aquestes consultes s'actualitzen"
+
+#: protected/views/user/panel.php:385
+msgid "Enquiries of your interest will be displayed here"
+msgstr ""
+"Les consultes que hagis realitzat o a les quals t'hagis subscrit apareixeran "
+"aquí"
+
+#: protected/views/user/panel.php:433
+msgid "Do you want to block"
+msgstr "Vols bloquejar"
+
+#: protected/views/user/updateRoles.php:42
+msgid "View User"
+msgstr "Veure Usuari"
+
+#: protected/views/user/updateRoles.php:43
+msgid "Manage Users"
+msgstr "Gestiona Usuaris"
+
+#: protected/views/user/updateRoles.php:48 protected/views/user/view.php:30
+msgid "Delete user"
+msgstr "Suprimir usuari"
+
+#: protected/views/user/updateRoles.php:54 protected/views/user/view.php:36
+msgid "Enable user"
+msgstr "Habilitar usuari"
+
+#: protected/views/user/updateRoles.php:57 protected/views/user/view.php:39
+msgid "Disable user"
+msgstr "Deshabilitar usuari"
+
+#: protected/views/user/updateRoles.php:89
+msgid "Change roles"
+msgstr "Canviar rols"
+
+#: protected/views/user/updateRoles.php:108
+msgid "Can edit budget descriptions"
+msgstr "Editar descripcions pressupostàries"
+
+#: protected/views/user/view.php:24
+msgid "Change user's roles"
+msgstr "Canviar rols d'usuari"
+
+#: protected/views/user/view.php:25
+msgid "List all users"
+msgstr "Llistar tots els usuaris"
+
+#: protected/views/user/view.php:100
+msgid "User details"
+msgstr "Detalls d'usuari"
+
+#: protected/views/user/view.php:125
+msgid "Enquiries made by"
+msgstr "Consultes fetes per"
+
+#: protected/views/user/view.php:150
+msgid "has not made a enquiry"
+msgstr "no ha fet cap consulta"
+
+#: protected/views/user/_notActiveInfo.php:23
+msgid "USER_NOT_ACTIVE_INFO"
+msgstr ""
+"<p>Per començar a realitzar consultes i a subscriure't a consultes d'altres "
+"usuaris, és necessari que confirmis la teva adreça de correu electrònic.</"
+"p><p>- T'hem enviat un correu electrònic amb unes senzilles instruccions."
+"<br />- Si no has rebut el correu, comprova que no t'hagi arribat com spam."
+"<br />- Si vols que t'enviem el correu de nou a %s, fes %s.<br />- Si la "
+"teva adreça de correu no és %s la pots canviar per una altra fent %s.</p>"
+
+#: protected/views/user/_notActiveInfo.php:26
+#: protected/views/user/_notActiveInfo.php:28
+msgid "click here"
+msgstr "clic aquí"
+
+#: protected/views/user/update.php:29
+msgid "Are you sure you want to delete your account?"
+msgstr "Estàs segur que vols esborrar el teu compte?"
+
+#: protected/views/user/update.php:63
+msgid "Change your user information"
+msgstr "Canviar les teves dades d'usuari"
+
+#: protected/views/user/update.php:64
+msgid "Delete my user account"
+msgstr "Esborrar el meu compte d'usuari"
+
+#: protected/views/user/update.php:79
+msgid "Your information"
+msgstr "Les teves dades"
+
+#: protected/views/user/update.php:98
+msgid "Change password"
+msgstr "Canviar la contrasenya"
+
+#: protected/views/user/update.php:115
+msgid "Details"
+msgstr "Detalls"
+
+#: protected/views/user/update.php:120
+msgid "Your preferred language"
+msgstr "Preferència d'idioma"
+
+#: protected/views/user/update.php:128 protected/views/site/register.php:135
+msgid "Yes, I want to be a member"
+msgstr "Sí, vull ser un soci"
+
+#: protected/views/user/update.php:129
+msgid "What does this mean?"
+msgstr "Que significa això?"
+
+#: protected/views/user/update.php:140 protected/views/site/register.php:132
+msgid "MEMBERSHIP_MSG"
+msgstr ""
+"Pots marcar en aquest espai fer-te soci a més d'usuari. Com més socis tingui "
+"el teu OCM més pressió podreu realitzar al vostre Ajuntament. Pensa que cada "
+"consulta que feu arribar a l'Ajuntament tindrà la firma implícita de tots "
+"els socis, a més de l'usuari que hagi realitzat."
+
+#: protected/views/config/_title.php:22
+msgid "Configure"
+msgstr "Configurar"
+
+#: protected/views/config/postInstallCheck.php:46
+#: protected/views/config/postInstallCheck.php:50
+#: protected/views/config/postInstallCheck.php:54
+#: protected/views/config/postInstallCheck.php:58
+#: protected/views/config/postInstallCheck.php:62
+msgid "Error: Cannot write to"
+msgstr "Error: no es pot escriure a"
+
+#: protected/views/config/postInstallCheck.php:69
+msgid "Directory permissions seem Ok"
+msgstr "Permissos de directori semblen correctes"
+
+#: protected/views/config/postInstallCheck.php:79
+msgid "Info: Native mysqldump not available. Using PHP alternative for backups"
+msgstr ""
+"Info: no es trova myspldump . Utilitzant PHP alternatiu per a realitzar "
+"còpies"
+
+#: protected/views/config/postInstallCheck.php:82
+msgid "Using native mysqldump for backups"
+msgstr "Utilitzant mysqldump per a realitzar còpies"
+
+#: protected/views/config/postInstallCheck.php:90
+msgid "PHP ZipArchive lib is installed"
+msgstr "PHP ZipArchive lib està instal.lat"
+
+#: protected/views/config/postInstallCheck.php:92
+msgid "PHP ZipArchive ib is not installed"
+msgstr "PHP ZipArchive lib no està instal.lat"
+
+#: protected/views/config/image.php:72
+msgid "Observatory color and logo"
+msgstr "Color i logo de l'observatori"
+
+#: protected/views/config/image.php:78
+msgid "Create a logo"
+msgstr "Crear un logo"
+
+#: protected/views/config/image.php:79
+msgid "and save it on your PC"
+msgstr "i gravar-ho en el teu PC"
+
+#: protected/views/config/image.php:81
+msgid "Upload the file"
+msgstr "Pujar fitxer"
+
+#: protected/views/config/image.php:83
+#: protected/views/config/observatory.php:94
+msgid "Refresh the page pressing F5"
+msgstr "Actualitza la página amb F5"
+
+#: protected/views/config/image.php:113
+msgid "Your site color is"
+msgstr "El color del teu web és "
+
+#: protected/views/config/summary.php:46
+msgid "Site summary"
+msgstr "Resum web"
+
+#: protected/views/config/summary.php:56
+msgid "Users"
+msgstr "Usuaris "
+
+#: protected/views/config/summary.php:58
+msgid "Total users"
+msgstr "Usuaris totals"
+
+#: protected/views/config/summary.php:59
+msgid "OCM members"
+msgstr "Membres del grup "
+
+#: protected/views/config/summary.php:66
+msgid "OCAx version"
+msgstr "Versió OCAx"
+
+#: protected/views/config/summary.php:74
+msgid "Disk usage (approx)"
+msgstr "Us del disc (aproximadament)"
+
+#: protected/views/config/summary.php:76
+msgid "Free"
+msgstr "Lliure"
+
+#: protected/views/config/summary.php:77
+msgid "Total"
+msgstr "Total"
+
+#: protected/views/config/summary.php:92
+msgid "budgets"
+msgstr "Pressupostos"
+
+#: protected/views/config/misc.php:26 protected/views/config/index.php:114
+msgid "Misc"
+msgstr "Altres"
+
+#: protected/views/config/observatory.php:26
+#: protected/views/config/index.php:108
+msgid "Observatory"
+msgstr "Observatori"
+
+#: protected/views/config/pendingConfiguration.php:27
+msgid "Admin tasks"
+msgstr "Tasques del administrador"
+
+#: protected/views/config/pendingConfiguration.php:34
+msgid "New version available"
+msgstr "Nova versió disponible"
+
+#: protected/views/config/pendingConfiguration.php:34
+msgid "Upgrade now"
+msgstr "Actualitzar ara"
+
+#: protected/views/config/pendingConfiguration.php:40
+msgid "Installation is incomplete"
+msgstr "Instal.lació completa"
+
+#: protected/views/config/pendingConfiguration.php:41
+msgid "Budget descriptions table is empty. Please read INSTALL"
+msgstr ""
+"La taula de descripcions pressupostàries està buida. Si us plau, llegeix "
+"l'arixu INSTALL"
+
+#: protected/views/config/pendingConfiguration.php:47
+msgid "The Observatory's initials have not been configured"
+msgstr "No s'han configurat les sigles de l'Observatori"
+
+#: protected/views/config/pendingConfiguration.php:53
+msgid "Email has not been configured"
+msgstr "No s'ha configurat el correu-e"
+
+#: protected/views/config/pendingConfiguration.php:59
+msgid "The Observatory's name has not been configured"
+msgstr "No s'ha configurat el nom de l'Observatori"
+
+#: protected/views/config/pendingConfiguration.php:65
+msgid "Language(s) have not been configured"
+msgstr "No s'ha configurat l'idioma"
+
+#: protected/views/config/pendingConfiguration.php:71
+msgid "Administration name has not been configured"
+msgstr "No s'ha configurat el nom de l'administració"
+
+#: protected/views/config/pendingConfiguration.php:80
+#, php-format
+msgid "%s email templates need to be defined"
+msgstr "%s las plantilles de correu necessiten ser definides"
+
+#: protected/views/config/locale.php:27 protected/views/config/index.php:110
+msgid "Locale"
+msgstr "Local"
+
+#: protected/views/config/locale.php:55
+msgid "Coordinates for the map at"
+msgstr "Coordenades pel mapa en"
+
+#: protected/views/config/locale.php:72
+msgid "Find coordinates here"
+msgstr "Trobar coordenades aquí"
+
+#: protected/views/config/email.php:41 protected/views/config/email.php:73
+msgid "Send as"
+msgstr "Enviar com"
+
+#: protected/views/config/email.php:71
+msgid "Send a test email"
+msgstr "Enviar email de prova"
+
+#: protected/views/config/email.php:74
+msgid "Send to"
+msgstr "Enviar a "
+
+#: protected/views/config/index.php:111 protected/views/config/social.php:26
+msgid "Social networks"
+msgstr "Xarxes Socials"
+
+#: protected/views/config/index.php:112
+msgid "Image"
+msgstr "Imatge "
+
+#: protected/views/config/versionSummary.php:25
+msgid "Installed"
+msgstr "Instal·lat"
+
+#: protected/views/config/versionSummary.php:26
+msgid "Available"
+msgstr "Disponible"
+
+#: protected/views/config/versionSummary.php:30
+msgid "Please update"
+msgstr "Si us plau, actualitza"
+
+#: protected/views/config/update.php:42
+msgid "Change global parameter"
+msgstr "Canviar paràmetre global"
+
+#: protected/views/layouts/main.php:66
+msgid "Logout"
+msgstr "Logout"
+
+#: protected/views/layouts/main.php:91 protected/views/archive/index.php:211
+#: protected/controllers/ArchiveController.php:357
+msgid "Archive"
+msgstr "Arxiu"
+
+#: protected/views/layouts/main.php:98 protected/views/layouts/column2.php:41
+#: protected/views/layouts/column2.php:48
+#: protected/views/archive/index.php:218
+#: protected/controllers/UserController.php:67
+msgid "My page"
+msgstr "La meva pàgina"
+
+#: protected/views/layouts/column2.php:44
+msgid "Options"
+msgstr "Opcions"
+
+#: protected/views/layouts/column2.php:67
+#: protected/views/archive/index.php:216
+msgid "Help"
+msgstr "Ajuda"
+
+#: protected/views/layouts/foot.php:31
+msgid "Telephone"
+msgstr "Telèfon"
+
+#: protected/views/sitePage/admin.php:26
+#: protected/views/archive/_uploadFile.php:69
+#: protected/views/file/admin.php:25 protected/views/file/wallpaper.php:25
+#: protected/views/file/_form.php:61
+msgid "Upload file"
+msgstr "Puja fitxer"
+
+#: protected/views/sitePage/admin.php:27
+msgid "Show uploaded files"
+msgstr "Mostra els fitxers ja pujats"
+
+#: protected/views/sitePage/admin.php:96
+msgid "Page name"
+msgstr "Page name"
+
+#: protected/views/sitePage/_form.php:34
+msgid "We are going to reload the page"
+msgstr "Anem a recarregar la pàgina"
+
+#: protected/views/sitePage/_form.php:35
+msgid "Any changes will be lost"
+msgstr "Qualsevol canvi no guardat es perdrà!"
+
+#: protected/views/sitePage/_form.php:42
+msgid "Advanced HTML tags will be deleted"
+msgstr "Es borraran els tags de HTML avançats"
+
+#: protected/views/sitePage/_form.php:152
+msgid "Content"
+msgstr "Contingut"
+
+#: protected/views/sitePage/_form.php:170
+msgid "Warning! Advanced HTML editing. Copy/paste can create problems"
+msgstr ""
+"Avís! L'edició segura d'HTML està desactivada. Copiar/enganxar pot causar "
+"problemes."
+
+#: protected/views/sitePage/show.php:60
+#: protected/views/archive/_editArchive.php:129
+#: protected/views/budgetDescription/_form.php:263
+msgid "Save changes"
+msgstr "Desa els canvis"
+
+#: protected/views/sitePage/show.php:75
+msgid "Not published"
+msgstr "No publicat"
+
+#: protected/views/reply/edit.php:34
+msgid "The body of text will be displayed together with the enquiry"
+msgstr ""
+"La resposta que afegeixis es farà visible a la web sota la consulta ciutadana"
+
+#: protected/views/reply/edit.php:35
+msgid ""
+"After publishing this reply you will be able to attach the documentation you "
+"received from the administration"
+msgstr ""
+"Quan hagis afegit la respota, tindràs l'opció d'ajuntar la documentació "
+"rebuda de l'ajuntament."
+
+#: protected/views/reply/_view.php:94
+msgid "Add attachment"
+msgstr "Afegeix adjunt"
+
+#: protected/views/reply/_form.php:40
+msgid "Date the Obseravatory replied"
+msgstr "Data en que l'Observatori ha respost"
+
+#: protected/views/reply/_form.php:42
+msgid "Date the Administration replied"
+msgstr "Data en que l'administració ha respost"
+
+#: protected/views/vault/admin.php:23 protected/views/vault/create.php:24
+#: protected/views/vault/view.php:24
+msgid "Show schedule"
+msgstr "Mostrar agenda"
+
+#: protected/views/vault/admin.php:24
+msgid "Manual backup"
+msgstr "Còpia de seguretat manual"
+
+#: protected/views/vault/admin.php:25
+#: protected/controllers/VaultController.php:167
+msgid "Create vault"
+msgstr "Crea una capsa"
+
+#: protected/views/vault/admin.php:78
+#: protected/views/budgetDescription/admin.php:35
+msgid "Manage"
+msgstr "Gestionar"
+
+#: protected/views/vault/admin.php:83
+msgid "Total disk space"
+msgstr "Espai total del disc"
+
+#: protected/views/vault/admin.php:91 protected/views/vault/schedule.php:51
+msgid "Local vaults"
+msgstr "Capses locals"
+
+#: protected/views/vault/admin.php:92 protected/views/vault/view.php:92
+msgid "They save their copies on your server"
+msgstr "Ells guarden les còpies al teu servidor"
+
+#: protected/views/vault/admin.php:114 protected/views/vault/schedule.php:67
+msgid "Remote vaults"
+msgstr "Capses remotas"
+
+#: protected/views/vault/admin.php:116 protected/views/vault/view.php:96
+msgid "You save your copies on their server"
+msgstr "Tu guardes les tevés còpies al seu servidor"
+
+#: protected/views/vault/admin.php:140
+msgid "All Backups"
+msgstr "Totes les còpies de seguretat"
+
+#: protected/views/vault/create.php:25 protected/views/vault/view.php:25
+msgid "Manage backups"
+msgstr "Gestionar còpies de seguretat"
+
+#: protected/views/vault/create.php:86
+msgid "Create a vault"
+msgstr "Crear una capsa"
+
+#: protected/views/vault/create.php:104
+msgid "What type of vault are you creating?"
+msgstr "Quin tipus de capsa estàs creant?"
+
+#: protected/views/vault/create.php:108
+msgid "I want to allow someone to save their copies on my server"
+msgstr "Vull permetre a un altre guardar les serves còpies al meu servidor"
+
+#: protected/views/vault/create.php:109
+msgid "I want to save my copies on another server"
+msgstr "Vull guardar les meves còpies al servidor de l'altre"
+
+#: protected/views/vault/create.php:124
+msgid "When can they make backups?"
+msgstr "Quan poden realitzar les còpies de seguretat?"
+
+#: protected/views/vault/_configKey.php:40
+msgid "Verify"
+msgstr "Verificar"
+
+#: protected/views/vault/view.php:31
+msgid "You are going to delete this vault. Are you sure?"
+msgstr "Vas a esborrar aquesta capsa. Estàs segur?"
+
+#: protected/views/vault/view.php:40
+msgid "The copy was saved on "
+msgstr "La còpia de segureta va ser guardada el "
+
+#: protected/views/vault/view.php:90
+msgid "Local vault"
+msgstr "Capsa local"
+
+#: protected/views/vault/view.php:94
+msgid "Remote vault"
+msgstr "Capsa remota"
+
+#: protected/views/vault/view.php:104
+#, php-format
+msgid "Tell the Admin at %s that the vault has been created and the key is:"
+msgstr "Digue-li al Admin de %s que s'ha creat la capsa i la clau és:"
+
+#: protected/views/vault/view.php:109
+#, php-format
+msgid "Ask the Admin at %s to create a vault for you. Your URL is"
+msgstr "Demanar a l'Admin de %s que crei una capsa per a tu. El teu URL és"
+
+#: protected/views/vault/view.php:112
+#, php-format
+msgid "%s will send you a key"
+msgstr "%s t'enviarà la clau"
+
+#: protected/views/vault/view.php:117
+#, php-format
+msgid ""
+"You are waiting for the admin at %s to choose one or more of the following "
+"days"
+msgstr "Estàs esperant a que l'admin de %s escolli un o més dels següents dies"
+
+#: protected/views/vault/view.php:119
+msgid "Waiting..."
+msgstr "Esperant"
+
+#: protected/views/vault/view.php:124
+msgid "Choose day(s) to backup"
+msgstr "Tria un dia/diez per a realitzar els backups"
+
+#: protected/views/vault/view.php:128
+msgid "Total copies made"
+msgstr "Total còpies fetes"
+
+#: protected/views/vault/view.php:129
+msgid "Capacity"
+msgstr "Capacitat"
+
+#: protected/views/vault/view.php:131 protected/views/vault/view.php:133
+msgid "copies"
+msgstr "còpies"
+
+#: protected/views/vault/view.php:153
+msgid "Pending"
+msgstr "Pendent"
+
+#: protected/views/vault/_capacity.php:30
+msgid "Change vault capacity"
+msgstr "Cambiar capacitat capsa"
+
+#: protected/views/vault/_configSchedule.php:63
+#, php-format
+msgid "The admin at %s offers you these days"
+msgstr "L'admin %s t'ofereix aquests dies"
+
+#: protected/views/vault/_configSchedule.php:65
+msgid "Select the day(s) you want to make the copy"
+msgstr "Selecciona el dia/diez que vols realitzar les còpies"
+
+#: protected/views/vault/_configSchedule.php:86
+msgid "Programme"
+msgstr "Programa"
+
+#: protected/views/archive/_createContainer.php:35
+#: protected/views/archive/index.php:108
+msgid "Name required"
+msgstr "Nom necessari"
+
+#: protected/views/archive/_createContainer.php:39
+#: protected/views/archive/index.php:113
+#: protected/views/archive/_uploadFile.php:35
+msgid "Description required"
+msgstr "Falta incloure una descripció"
+
+#: protected/views/archive/_createContainer.php:56
+#: protected/views/archive/index.php:215
+msgid "Create a folder"
+msgstr "Crear una carpeta"
+
+#: protected/views/archive/_createContainer.php:66
+msgid "A description of this folder"
+msgstr "Descripció de la carpeta"
+
+#: protected/views/archive/index.php:177
+msgid "Sorry, cannot edit the csv zip file"
+msgstr "Disculpa, no es pot crear fitxer zip"
+
+#: protected/views/archive/index.php:186
+msgid "Delete this archive?"
+msgstr "Esborrar aquest arxiu?"
+
+#: protected/views/archive/index.php:214
+msgid "Upload a file"
+msgstr "Pujar un fitxer"
+
+#: protected/views/archive/index.php:234
+msgid "up to"
+msgstr "Pujar a"
+
+#: protected/views/archive/index.php:248
+msgid "Nothing found here"
+msgstr "No hi ha res aquí"
+
+#: protected/views/archive/index.php:280
+msgid "Date"
+msgstr "Data"
+
+#: protected/views/archive/_uploadFile.php:81
+msgid "A description of this file"
+msgstr "Una descripció d'aquest fitxer"
+
+#: protected/views/archive/_uploadFile.php:87
+#: protected/views/file/_form.php:80
+msgid "Upload"
+msgstr "Pujar"
+
+#: protected/views/archive/_editArchive.php:99
+msgid "Folder"
+msgstr "Carpeta"
+
+#: protected/views/archive/_editArchive.php:103
+msgid "Uploaded"
+msgstr "Arxius pujats"
+
+#: protected/views/archive/_editArchive.php:142
+msgid "Delete this folder"
+msgstr "Esborrar aquesta carpeta"
+
+#: protected/views/archive/_editArchive.php:144
+msgid "Delete this file"
+msgstr "Esborrar aquest arxiu"
+
+#: protected/views/archive/_editArchive.php:149
+msgid "This folder is not empty"
+msgstr "Aquesta carpeta no està buida"
+
+#: protected/views/archive/_editArchive.php:157
+msgid "Move this folder to .."
+msgstr "Moure carpeta a ..."
+
+#: protected/views/archive/_editArchive.php:159
+msgid "Move this file to .."
+msgstr "Moure el fitxer a ..."
+
+#: protected/views/budgetDescription/admin.php:26
+#: protected/views/budgetDescription/browseState.php:27
+#: protected/views/budgetDescription/create.php:27
+#: protected/views/budgetDescription/update.php:28
+#: protected/controllers/BudgetDescriptionController.php:299
+msgid "Common descriptions"
+msgstr "Descripcions comuns"
+
+#: protected/views/budgetDescription/admin.php:27
+#: protected/views/budgetDescription/create.php:28
+#: protected/views/budgetDescription/browseCommon.php:27
+#: protected/views/budgetDescription/update.php:29
+#: protected/controllers/BudgetDescriptionController.php:312
+msgid "State descriptions"
+msgstr "Descripcions estatals"
+
+#: protected/views/budgetDescription/admin.php:35
+msgid "budget descriptions"
+msgstr "Descripcions de partides "
+
+#: protected/views/budgetDescription/browseState.php:26
+#: protected/views/budgetDescription/create.php:26
+#: protected/views/budgetDescription/browseCommon.php:26
+#: protected/views/budgetDescription/update.php:27
+msgid "Local descriptions"
+msgstr "Descripcions locals"
+
+#: protected/views/budgetDescription/browseState.php:33
+msgid "Browse state descriptions"
+msgstr "Veure descripcions estatals"
+
+#: protected/views/budgetDescription/create.php:25
+#: protected/views/budgetDescription/update.php:25
+msgid "View description"
+msgstr "Veure descripció"
+
+#: protected/views/budgetDescription/browseCommon.php:33
+msgid "Browse common descriptions"
+msgstr "Veure descripcions comuns"
+
+#: protected/views/budgetDescription/_view.php:26
+#: protected/views/budgetDescription/_form.php:91
+msgid "Budget description"
+msgstr "Partida pressupostària"
+
+#: protected/views/budgetDescription/_form.php:69
+msgid "Explication preview"
+msgstr "Previsualitzar explicació"
+
+#: protected/views/budgetDescription/_form.php:102
+msgid "Used where"
+msgstr "Utilitzada a"
+
+#: protected/views/budgetDescription/_form.php:145
+msgid "State description"
+msgstr "Descripció estatal"
+
+#: protected/views/budgetDescription/_form.php:155
+msgid "Common description"
+msgstr "Descripció comuna"
+
+#: protected/views/budgetDescription/_form.php:165
+msgid "Local description"
+msgstr "Descripció local"
+
+#: protected/views/budgetDescription/_form.php:182
+msgid "Using data imported with CSV files"
+msgstr "Utilitzant dades importades amb l'arxiu CSV"
+
+#: protected/views/budgetDescription/_form.php:188
+#: protected/views/budgetDescription/_form.php:275
+#: protected/views/budgetDescription/_form.php:312
+msgid "Concept, Subconcept, Article"
+msgstr "Concepte, Subconcepte, Article"
+
+#: protected/views/budgetDescription/_form.php:198
+#: protected/views/budgetDescription/_form.php:282
+#: protected/views/budgetDescription/_form.php:319
+msgid "Concept of this budget"
+msgstr "Concepte d'aquesta partida"
+
+#: protected/views/budgetDescription/_form.php:250
+msgid "Citizen friendly explication"
+msgstr "Explicació propera a la ciutadania"
+
+#: protected/views/budgetDescription/_form.php:253
+msgid "Preview the explication"
+msgstr "Previsualitzar l'explicació"
+
+#: protected/views/budgetDescription/_form.php:300
+msgid "No common description in the database"
+msgstr "No hi ha descripció comuna a la base de dades"
+
+#: protected/views/budgetDescription/_form.php:337
+msgid "No state description in the database"
+msgstr "No hi ha descripció estatal a la base de dades"
+
+#: protected/views/budgetDescription/update.php:26
+msgid "Delete local description"
+msgstr "Borrar descripció local"
+
+#: protected/views/csv/yearsForZip.php:30
+msgid "Add CSV file to queue"
+msgstr "Afegeix fitxer csv a la cua"
+
+#: protected/views/csv/importCSV.php:26
+msgid "Edit"
+msgstr "Editar"
+
+#: protected/views/csv/importCSV.php:27
+msgid "List Years"
+msgstr "Llista anys"
+
+#: protected/views/csv/importCSV.php:30
+msgid "Upload CSV again"
+msgstr "Pujar el CSV de nou"
+
+#: protected/views/csv/importCSV.php:195
+msgid "Import csv into"
+msgstr "Importar csv a"
+
+#: protected/views/site/register.php:21 protected/views/site/register.php:44
+#: protected/views/site/register.php:121
+msgid "Register"
+msgstr "Registrar-se"
+
+#: protected/views/site/register.php:116
+msgid "Please enter the letters as they are shown in the image above"
+msgstr "Copia les lletres tal com surten en la imatge a dalt"
+
+#: protected/views/site/register.php:128
+msgid "REGISTER_MSG"
+msgstr ""
+"<p>Ser usuari et permetrà realitzar consultes al teu ajuntament de manera  "
+"pública i directa, així com compartir-les amb altres ciutadans del teu "
+"municipi.</p><p> Quants més ciutadans siguem els que lluitem units per la  "
+"transparència, més a prop estarem d'aconseguir que les decisions en  "
+"política i gestió del nostre municipi siguin preses des de la  ciutadania.</"
+"p>"
+
+#: protected/views/site/login.php:42
+msgid "Please enter your email address"
+msgstr "Si us plau, introdueix el teu correu electrònic"
+
+#: protected/views/site/login.php:106
+msgid "Still haven't got an account?"
+msgstr "Encara no tens el teu compte?"
+
+#: protected/views/site/login.php:108
+msgid "Sign up"
+msgstr "Apunta't"
+
+#: protected/views/site/login.php:111
+msgid "Forgotten your password?"
+msgstr "Has oblidat la teva contrasenya?"
+
+#: protected/views/site/login.php:114
+msgid "Follow these instructions"
+msgstr "Segueix aquestes instruccions "
+
+#: protected/views/site/login.php:116
+msgid "Enter your email address and we will send you a link"
+msgstr "Introdueix la teva adreça de correu electrònic i t'enviarem un enllaç"
+
+#: protected/views/site/map.php:24
+msgid "Map"
+msgstr "Mapa"
+
+#: protected/views/site/cookieAlert.php:44
+msgid ""
+"uses Twitter and Facebook cookies that collect statistics. By using this web "
+"site you accept this."
+msgstr ""
+"empra cookies de Twitter i Facebook que recullen estadístiques. Si navegues "
+"aquest lloc web és perquè estàs d'acord."
+
+#: protected/views/site/cookieAlert.php:46
+msgid "Ok"
+msgstr "Ok"
+
+#: protected/views/file/admin.php:58
+msgid "Document archive"
+msgstr "Arxiu de documents"
+
+#: protected/views/file/adminDatabaseDownload.php:25
+msgid "Generate the zip file"
+msgstr "Generar l'arxiu ZIP"
+
+#: protected/views/file/adminDatabaseDownload.php:26
+msgid "Add file to the queue"
+msgstr "Afegir arxiu a la cua"
+
+#: protected/views/file/adminDatabaseDownload.php:27
+msgid "Add csv to the queue"
+msgstr "Afegir un csv a la cua"
+
+#: protected/views/file/adminDatabaseDownload.php:30
+msgid "Download zip file"
+msgstr "Baixar fitxer zip"
+
+#: protected/views/file/adminDatabaseDownload.php:128
+msgid "Prepare file"
+msgstr "Prepari fitxer"
+
+#: protected/views/file/adminDatabaseDownload.php:137
+msgid "Files queued and ready to include in zip"
+msgstr "Fitxers en cua i llests per incloure en el zip"
+
+#: protected/views/file/adminDatabaseDownload.php:187
+msgid "Generating CSV file"
+msgstr "Generant arxiu CSV"
+
+#: protected/views/file/wallpaper.php:58
+msgid "Manage wallpaper"
+msgstr "Gestionar wallpaper"
+
+#: protected/views/file/showBudgetFiles.php:30
+msgid "Restore all budgets from a backup"
+msgstr "Restaurar tots els pressupostos des d'una còpia"
+
+#: protected/views/file/showBudgetFiles.php:35
+msgid "These copies are made right before a CSV file is imported"
+msgstr "Les còpies es fan just abans d'importar fitxers CSV"
+
+#: protected/views/file/showBudgetFiles.php:36
+msgid "READ ME"
+msgstr "READ ME"
+
+#: protected/views/file/showBudgetFiles.php:72
+msgid ""
+"Note: Delete some backups to save disk space. You only really need the last "
+"good copy."
+msgstr ""
+"Nota: Esborrar alguns backups per estalviar espai de disc. En realitat "
+"solament necessites l'última còpia bona"
+
+#: protected/views/file/showCMSfiles.php:29
+msgid "Uploaded files"
+msgstr "Arixus pujats"
+
+#: protected/views/file/_form.php:69
+msgid "Name used for the link"
+msgstr "Nom que s'usarà per a l'enllaç"
+
+#: protected/views/emailTemplate/view.php:25
+msgid "Edit template"
+msgstr "Editar plantilla"
+
+#: protected/views/emailTemplate/view.php:26
+#: protected/views/emailTemplate/update.php:26
+msgid "Manage templates"
+msgstr "Gestionar plantilles"
+
+#: protected/views/emailTemplate/view.php:32
+#: protected/views/emailTemplate/_form.php:33
+msgid "Template for"
+msgstr "Plantilla per "
+
+#: protected/views/emailTemplate/update.php:25
+msgid "View template"
+msgstr "Veure plantilla"
+
+#: protected/controllers/NewsletterController.php:217
+#: protected/controllers/EmailController.php:125
+#: protected/controllers/EmailController.php:227
+msgid "Email sent OK"
+msgstr "Email sent OK"
+
+#: protected/controllers/NewsletterController.php:218
+msgid "Newsletter published"
+msgstr "Butlletí publicat"
+
+#: protected/controllers/NewsletterController.php:222
+#: protected/controllers/SiteController.php:152
+#: protected/controllers/SiteController.php:177
+#: protected/controllers/EmailController.php:127
+#: protected/controllers/EmailController.php:230
+msgid "Error while sending email"
+msgstr "Error mentres s'enviava email"
+
+#: protected/controllers/UserController.php:188
+#: protected/controllers/SitePageController.php:267
+msgid "Changes saved Ok"
+msgstr "S'han guardat els canvis correctament"
+
+#: protected/controllers/UserController.php:215
+msgid "is blocked"
+msgstr "està bloquejat"
+
+#: protected/controllers/UserController.php:236
+msgid "User permissiones changed for"
+msgstr "Permissos d'usuari cambiats per "
+
+#: protected/controllers/UserController.php:255
+msgid "User disabled"
+msgstr "Usuari deshabilitat"
+
+#: protected/controllers/UserController.php:297
+msgid "User deleted"
+msgstr "Usuari suprimit"
+
+#: protected/controllers/IntroPageController.php:111
+#: protected/controllers/IntroPageController.php:160
+#: protected/controllers/IntroPageController.php:186
+msgid "introPage"
+msgstr "Pàgina introducció"
+
+#: protected/controllers/IntroPageController.php:111
+#: protected/controllers/SitePageController.php:164
+#: protected/controllers/BudgetDescriptionController.php:151
+msgid "created"
+msgstr "creada"
+
+#: protected/controllers/IntroPageController.php:160
+#: protected/controllers/EmailTemplateController.php:96
+#: protected/controllers/SitePageController.php:266
+#: protected/controllers/BudgetDescriptionController.php:212
+msgid "updated"
+msgstr "actualitzada"
+
+#: protected/controllers/IntroPageController.php:186
+#: protected/controllers/EnquiryController.php:892
+#: protected/controllers/SitePageController.php:302
+#: protected/controllers/BudgetDescriptionController.php:263
+msgid "deleted"
+msgstr "suprimit"
+
+#: protected/controllers/VaultController.php:130
+msgid "Backup vault"
+msgstr "Capsa de còpies de seguretat"
+
+#: protected/controllers/VaultController.php:219
+msgid "verifies the key ok"
+msgstr "verifica la clau"
+
+#: protected/controllers/VaultController.php:222
+msgid "rejects the key"
+msgstr "rebutja la clau"
+
+#: protected/controllers/VaultController.php:528
+msgid "notified. Updated correctly"
+msgstr "notificat. Actualitzat correctametn"
+
+#: protected/controllers/VaultController.php:532
+msgid "does not reply"
+msgstr "no contesta"
+
+#: protected/controllers/EnquiryController.php:182
+#, php-format
+msgid "This budget is from the year %s."
+msgstr "Aquesta partida és de l'any %s"
+
+#: protected/controllers/EnquiryController.php:182
+msgid "Do you want to continue?"
+msgstr "Vols continuar?"
+
+#: protected/controllers/EnquiryController.php:246
+msgid "We have sent you an email"
+msgstr "T'hem enviat un correu electrònic"
+
+#: protected/controllers/EnquiryController.php:250
+msgid "Your enquiry has been registered correctly"
+msgstr "S'ha registrat la teva consulta correctament"
+
+#: protected/controllers/EnquiryController.php:315
+msgid "New reformulated enquiry created OK"
+msgstr "Nova consulta reformulada"
+
+#: protected/controllers/EnquiryController.php:317
+#: protected/controllers/EnquiryController.php:683
+msgid "assigned to team member"
+msgstr "assignada al team member"
+
+#: protected/controllers/EnquiryController.php:417
+#: protected/controllers/EnquiryController.php:462
+#: protected/controllers/EnquiryController.php:463
+msgid "changed budget"
+msgstr "partida cambiada"
+
+#: protected/controllers/EnquiryController.php:500
+msgid "submitted to administration"
+msgstr "entregada a l'administració"
+
+#: protected/controllers/EnquiryController.php:502
+msgid "submit corrected"
+msgstr "entrega corregida"
+
+#: protected/controllers/EnquiryController.php:640
+msgid "rejected by team member"
+msgstr "rebutjada pel team member"
+
+#: protected/controllers/EnquiryController.php:642
+msgid "accepted by team member"
+msgstr "acceptada pel team member"
+
+#: protected/controllers/EnquiryController.php:670
+msgid "rejected by team manager"
+msgstr "Consulta rebutjada pel team manager"
+
+#: protected/controllers/EnquiryController.php:673
+#: protected/controllers/EnquiryController.php:685
+msgid "You must assign a team member"
+msgstr "Has d'assignar un team member"
+
+#: protected/controllers/EnquiryController.php:701
+msgid "New team member assigned"
+msgstr "Nou team member assignat"
+
+#: protected/controllers/EnquiryController.php:894
+#: protected/controllers/EnquiryController.php:920
+msgid "deleted by team manager"
+msgstr "Esborrat pel team manager"
+
+#: protected/controllers/EnquiryController.php:899
+#: protected/controllers/EnquiryController.php:922
+msgid "Enquiry has been deleted"
+msgstr "S'ha esborrat la consulta"
+
+#: protected/controllers/SiteController.php:123
+msgid "Please click the link below to activate your account"
+msgstr "Per favor, fes clic en el següent enllaç per activar el teu compte"
+
+#: protected/controllers/SiteController.php:144
+msgid "Activate your account"
+msgstr "Activar el teu compte"
+
+#: protected/controllers/SiteController.php:147
+#: protected/controllers/SiteController.php:172
+msgid "Thank you"
+msgstr "Moltes gràcies"
+
+#: protected/controllers/SiteController.php:150
+#: protected/controllers/SiteController.php:175
+msgid "We sent you an email"
+msgstr "T'hem enviat un correu electrònic"
+
+#: protected/controllers/SiteController.php:167
+#: protected/controllers/SiteController.php:169
+msgid "Welcome to the"
+msgstr "Benvingut a l'"
+
+#: protected/controllers/SiteController.php:170
+msgid "NEW_USER_EMAIL_MSG"
+msgstr ""
+"Acabem de donar d'alta el teu usuari.<br />Des d'aquest moment ja pots "
+"realitzar consultes, subscriure't a consultes d'altres ciutadans, així com "
+"valorar  les respostes del nostre Ajuntament."
+
+#: protected/controllers/SiteController.php:218
+msgid "New user"
+msgstr "Usuari nou"
+
+#: protected/controllers/SiteController.php:242
+msgid "Your account is active"
+msgstr "S'ha activat el teu compte"
+
+#: protected/controllers/SiteController.php:324
+msgid "Invalid email address"
+msgstr "Adreça de correu invàlida"
+
+#: protected/controllers/SiteController.php:339
+msgid "New password request"
+msgstr "Petició de nova contrasenya"
+
+#: protected/controllers/SiteController.php:342
+msgid "has received a request to reset your password"
+msgstr "ha rebut una petició de restableix la teva contrasenya"
+
+#: protected/controllers/SiteController.php:343
+msgid "If you have not forgotten your password, please ignore this email"
+msgstr "Si no has oblidat la teva contrasenya per favor, ignora aquest correu"
+
+#: protected/controllers/SiteController.php:344
+msgid "To reset your password, follow this link"
+msgstr "Per restablir la teva contrasenya, segueix aquest enllaç"
+
+#: protected/controllers/SiteController.php:349
+msgid "We've just sent you an email"
+msgstr "T'hem enviat un correu electrònic"
+
+#: protected/controllers/SiteController.php:353
+msgid "Sorry, we cannot find you on our database"
+msgstr "Disculpa, no et trobem en la base de dades"
+
+#: protected/controllers/SiteController.php:369
+msgid "The password recovery link has expired"
+msgstr "L'enllaç per recuperar la teva contrasenya s'ha caducat"
+
+#: protected/controllers/SiteController.php:377
+msgid "Please change your password now"
+msgstr "Per favor, canvia la teva contrasenya ara"
+
+#: protected/controllers/FileController.php:137
+#: protected/controllers/ArchiveController.php:176
+msgid "File uploaded correctly"
+msgstr "Fitxer pujat correctament"
+
+#: protected/controllers/FileController.php:251
+msgid "MSG_ZIP_DESCRIPTION"
+msgstr ""
+"Un fitxer ZIP que conté les dades dels pressupostos en format CSV i "
+"documentació relacionada."
+
+#: protected/controllers/FileController.php:265
+msgid "Zip file updated"
+msgstr "Fitxer zip actualitzat"
+
+#: protected/controllers/FileController.php:267
+msgid "Error: zip file not created"
+msgstr "Error: no s'ha generat el fitxer zip"
+
+#: protected/controllers/EmailTemplateController.php:67
+msgid "Email template"
+msgstr "Plantilla email"
+
+#: protected/controllers/EmailTemplateController.php:80
+msgid "Update template"
+msgstr "Actualitzar plantilla"
+
+#: protected/controllers/EmailTemplateController.php:96
+msgid "Template"
+msgstr "Plantilla"
+
+#: protected/controllers/EmailController.php:170
+msgid "has blocked you"
+msgstr "t'ha bloquejat"
+
+#: protected/controllers/EmailController.php:182
+#, php-format
+msgid "Private email request from a user at the %s"
+msgstr "Petició de contacte privat per email d'un usuari de l'%s"
+
+#: protected/controllers/EmailController.php:196
+msgid "Email not sent"
+msgstr "Email not sent"
+
+#: protected/controllers/ReplyController.php:106
+#: protected/controllers/ReplyController.php:134
+msgid "Reply added"
+msgstr "Resposta afegida"
+
+#: protected/controllers/ArchiveController.php:174
+#, php-format
+msgid "Uploaded \"%s\" to"
+msgstr "Pujat \"%s\" a"
+
+#: protected/controllers/ArchiveController.php:178
+msgid "File uploaded failed"
+msgstr "Transferencia d'arxiu fallida"
+
+#: protected/controllers/ArchiveController.php:204
+#: protected/controllers/ArchiveController.php:240
+#: protected/controllers/ArchiveController.php:295
+#: protected/controllers/ArchiveController.php:302
+msgid "A folder with that name already exists"
+msgstr "Ja existeix una carpeta amb aquest nom"
+
+#: protected/controllers/ArchiveController.php:213
+msgid "Folder created"
+msgstr "Carpeta creada"
+
+#: protected/controllers/ArchiveController.php:214
+msgid "Folder created correctly"
+msgstr "Carpeta creada correctament"
+
+#: protected/controllers/ArchiveController.php:217
+msgid "New folder failed"
+msgstr "No s'ha pogut crear carpeta"
+
+#: protected/controllers/ArchiveController.php:246
+msgid "Changed name to"
+msgstr "Canviar el nom a "
+
+#: protected/controllers/ArchiveController.php:306
+msgid "Cannot move folder into sub folder"
+msgstr "No es pot moure la carpeta a la subcarpeta"
+
+#: protected/controllers/ArchiveController.php:313
+#, php-format
+msgid "Moved folder \"%s\" to"
+msgstr "Carpeta \"%s\" mogut a"
+
+#: protected/controllers/ArchiveController.php:316
+#, php-format
+msgid "Moved file \"%s\" to"
+msgstr "Arxiu \"%s\" mogut a"
+
+#: protected/controllers/ArchiveController.php:338
+msgid "Deleted folder"
+msgstr "Borrar carpeta"
+
+#: protected/controllers/ArchiveController.php:340
+#, php-format
+msgid "Deleted file \"%s\" from"
+msgstr "Borrar arxiu \"%s\" de"
+
+#: protected/controllers/CommentController.php:130
+msgid "New comment at"
+msgstr "Nou comentari en"
+
+#: protected/controllers/CommentController.php:132
+msgid "A new comment has been added to the enquiry"
+msgstr "S'ha afegit un comentari a la consulta"
+
+#: protected/controllers/CommentController.php:161
+#: protected/controllers/CommentController.php:163
+msgid "Team member deleted user comment"
+msgstr "El team member ha borrat un comentari"
+
+#: protected/controllers/BudgetController.php:320
+msgid "unpublished"
+msgstr "No publicat"
+
+#: protected/controllers/BudgetController.php:322
+msgid "published"
+msgstr "Publicat"
+
+#: protected/controllers/BudgetController.php:505
+msgid "All budgets deleted"
+msgstr "Tots als pressupostos esborrats"
+
+#: protected/controllers/BudgetController.php:525
+msgid "Year deleted"
+msgstr "Any esborrat"
+
+#: protected/controllers/BudgetController.php:639
+msgid "Database restored correctly"
+msgstr "Database restaurada correctament"
+
+#: protected/controllers/BudgetDescriptionController.php:152
+#: protected/controllers/BudgetDescriptionController.php:213
+msgid "Budget description saved Ok"
+msgstr "Descripció de partida guardada OK"
+
+#: protected/controllers/BudgetDescriptionController.php:154
+msgid "Do you want to share it with others observatories?"
+msgstr "Vols compartir-ho amb altres observatoris?"
+
+#: protected/controllers/BudgetDescriptionController.php:215
+msgid "Do you want to share it with other observatories"
+msgstr "Vols compartir-ho amb altres observatoris?"
+
+#~ msgid "Download"
+#~ msgstr "Descarrega"
+
+#~ msgid "If you wish to formulate a budgetary enquiry, you must first"
+#~ msgstr ""
+#~ "Si vols formular una consulta pressupostària a l'Ajuntament, primer "
+#~ "hauràs de seleccionar la partida concreta a l'apartat pressupostos"
+
+#~ msgid "find the corresponding budget"
+#~ msgstr "trova el corresponent pressupost"
+
+#~ msgid "Home"
+#~ msgstr "Inici"
+
+#~ msgid "About the Archive"
+#~ msgstr "Sobre l'Arxiu"
+
+#~ msgid "Who is this enquiry addressed to?"
+#~ msgstr "A qui està dirigida està consulta?"
+
+#~ msgid "Do you want to share it with others"
+#~ msgstr "Vols compartir-ho amb els altres?"
+
+#~ msgid "List all parameters"
+#~ msgstr "Llistar tots els paràmetres"
+
+#~ msgid "optional"
+#~ msgstr "opcional"
+
+#~ msgid "Files to include"
+#~ msgstr "Files to include"
+
+#~ msgid "Keep me informed via email when there are changes"
+#~ msgstr "Mantingues-me informat per correu quan hagin canvis"
+
+#~ msgid "Direct link"
+#~ msgstr "Enllaç"
+
+#~ msgid "disable %s here on"
+#~ msgstr "deshabilitar %s aquí en"
+
+#~ msgid "Remember you must first"
+#~ msgstr "Recorda que primer has de"
+
+#~ msgid "or"
+#~ msgstr " o"
+
+#~ msgid "What are the different states of an enquiry?"
+#~ msgstr "Quins són els estats d'una consulta?"
+
+#~ msgid "search options"
+#~ msgstr "opcions de cerca"
+
+#~ msgid "Enquiries addressed to"
+#~ msgstr "Consultes dirigides a"
+
+#~ msgid "You address this enquiry to"
+#~ msgstr "Dirigeixes aquesta consulta a"
+
+#~ msgid "A reminder"
+#~ msgstr "Un recordatori"
+
+#~ msgid "ADDRESSED_TO_MSG"
+#~ msgstr ""
+#~ "Has marcat la consulta que estàs realitzant està adreçada a l'equip de "
+#~ "l'OCM i no a l'Ajuntament. ¿Estàs segur?"
+
+#~ msgid "Who do you want to address the enquiry to?"
+#~ msgstr "A qui dirigeixes aquesta consulta?"
+
+#~ msgid "Context help"
+#~ msgstr "Ajuda contextual"
+
+#~ msgid "Contact information"
+#~ msgstr "Dades de contacte"
+
+#~ msgid "Description not defined"
+#~ msgstr "Description not defined"
+
+#~ msgid "CMS editor options"
+#~ msgstr "Opcions de editor CMS"
+
+#~ msgid "activity"
+#~ msgstr "activitat"

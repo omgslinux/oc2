@@ -1,0 +1,129 @@
+
+
+.pgrid-cursor-pointer table.items tr td
+{
+	cursor: pointer;
+}
+
+.grid-view-loading
+{
+	background: url("../images/pgridview/loading.gif") no-repeat;
+}
+
+.pgrid-view table.items
+{
+	width: 100%;
+}
+
+.pgrid-view table.items th, .pgrid-view table.items td
+{
+
+	font-size: 0.95em;
+	border-bottom: 1px #B8B8B8 solid;
+	border-left: 0px;
+	border-right: 0px;
+	padding: 0.3em;
+}
+
+.pgrid-view  td.PButtonColumn
+{
+	cursor: default;
+}
+
+.pgrid-view table.items th
+{
+	color: #FFFFFF;
+	background-color: #827E78;
+	text-align: left;
+}
+
+.pgrid-view table.items th a
+{
+	color:  #FFFFFF;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.pgrid-view table.items th a:hover
+{
+	color: #FFF;
+}
+
+.pgrid-view table.items th a.asc
+{
+	background:url("../images/pgridview/up.gif") right center no-repeat;
+	padding-right: 10px;
+}
+
+.pgrid-view table.items th a.desc
+{
+	background:url("../images/pgridview/down.gif") right center no-repeat;
+	padding-right: 10px;
+}
+
+.pgrid-view table.items tr.even
+{
+	background: none;
+}
+
+.pgrid-view table.items tr.odd
+{
+	background: none;
+}
+
+.pgrid-view table.items tr.selected
+{
+	background: #BCE774;
+}
+
+.pgrid-view table.items tr:hover
+{
+	background: #ECFBD4;
+}
+
+.pgrid-view .link-column img
+{
+	border: 0;
+}
+
+.pgrid-view .button-column
+{
+	text-align: center;
+	width: 60px;
+}
+
+.pgrid-view .button-column img
+{
+	border: 0;
+}
+
+.pgrid-view .checkbox-column
+{
+	width: 15px;
+}
+
+.pgrid-view .summary
+{
+	margin: 0 0 5px 0;
+	text-align: right;
+}
+
+.pgrid-view .pager
+{
+	margin: 5px 0 0 0;
+	text-align: right;
+}
+
+.pgrid-view .empty
+{
+	font-style: italic;
+}
+
+.pgrid-view .filters input,
+.pgrid-view .filters select
+{
+	width: 100%;
+	border: 1px solid #ccc;
+}
+
+.pgrid-view i { font-size: 1.2em; }

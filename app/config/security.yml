@@ -22,3 +22,20 @@ security:
 
             # form_login: ~
             # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
+            form_login:
+                login_path: site_login
+                check_path: site_login
+            logout:
+                path: site_logout
+                target: /
+            remember_me:
+                secret:   '%secret%'
+                lifetime: 604800 # 1 week in seconds
+                path:     /
+                # por defecto, esta funcionalidad está disponible en una
+                # checkbox en el formulario de login, descomenta la
+                # siguiente línea para activarlo siempre.
+                always_remember_me: true
+    encoders:
+        OCAX\Common\Entity\User:
+            algorithm: bcrypt

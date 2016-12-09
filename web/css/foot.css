@@ -1,0 +1,55 @@
+/*FOOTER*/
+#footer
+{
+	width:980px;
+	margin:0 auto;
+	height:90px;
+	font-size: 1.1em;
+}
+
+
+#footer a { color: #e4ded7; }
+#footer span { color: #e4ded7;}
+
+#observatoryFooter {
+width: 660px; float:left; margin:0px;
+}
+#observatoryFooterDetails { float:left; line-height: 1.4em; padding: 5px 0 5px 0;}
+#observatoryFooterDetails #observatoryFooterName { display: inline-block; font-weight: bold; }
+
+
+#PACDFooter{
+	width: 290px; float:right;
+	margin:0px;
+}
+
+#logo {
+	width:90px;
+	height:90px;
+	margin-right:15px;
+}
+
+#PACDdetails {
+	float: left;
+	line-height: 1.4em;
+	padding: 5px 0 5px 0;
+}
+#pacd_logo {
+  margin: 9px 7px 0 0;
+  width: 75px;
+  height: 75px;
+  background: url(../images/svg/logo-pacd.svg);
+  background-size: 75px 75px;
+}
+
+#postFooterRSSLink { float:right; text-align:right; }
+#postFooterRSSLink > a {
+	vertical-align: middle;
+	margin-left:5px;
+}
+
+.poweredBy
+{
+	padding-top:10px;
+	text-align:center;
+}

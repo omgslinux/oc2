@@ -1,0 +1,110 @@
+{#
+/**
+ * OCAX -- Citizen driven Observatory software
+ * Copyright (C) 2014 OCAX Contributors. See AUTHORS.
+
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+$lang = Yii::app()->user->getState('applicationLanguage');
+
+#}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $lang?>" lang="<?php echo $lang?>">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="language" content="{{ locale }}" />
+	<meta property="og:image" content="{{ asset('/files/logo.png') }} " />
+
+	<script type="text/javascript" src="{{ asset('/assets/90792776/jquery.min.js') }}"></script>
+
+	<title><?php echo (($this->pageTitle) ? $this->pageTitle : Config::model()->findByPk('siglas')->value); ?>({{ locale }})</title>
+    {% block stylesheets %}
+	<link rel="stylesheet" type="text/css" href="{{ asset('/css/screen.css') }}" media="screen, projection" />
+	<link rel="stylesheet" type="text/css" href="{{ asset('/fonts/fontello/css/fontello.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ asset('/css/main.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ asset('/css/mainmenu.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ asset('/css/form.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ asset('/css/foot.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ asset('/css/color.css') }}" />
+    {% endblock %}
+    {# <?php
+        // Include custom stuff here
+        if (file_exists(dirname(Yii::app()->request->scriptFile).'/themes/head.html')){
+            echo file_get_contents(dirname(Yii::app()->request->scriptFile).'/themes/head.html');
+        }
+    #}
+
+</head>
+
+<body>
+<div style="position:relative;">
+
+<div id="header_bar">
+<ul>
+	<li><span style="float:right; position:relative">
+		{% for lang in locale %}
+			<a class="language_link" href="{{ path('site_language')}}?lang={{ lang }}">{{ lang }}</a>
+		{% endfor %}
+		</span>
+    </li>
+    <li>
+        {% if is_granted('USER_IS_AUTHENTICATED_FULLY') %}
+            <a href="{{ path('logout') }}"><i class="icon-logout header-icons"></i>{% trans %}Logout{% endtrans %} ({{ app.user.username }})</a></li>
+        <li><a href="{{ path('user_panel') }}"><i class="icon-home header-icons"></i>{% trans %}My page{% endtrans %}</a></li>
+		{% else %}
+            <a href="{{ path('site_login') }}"><i class="icon-user-female header-icons"></i>{% trans %}Login{% endtrans %}</a>
+        {% endif %}
+	</li>
+    {% if fbURL or twURL %}
+		<li>
+			{% if fbURL %}
+				<a href="{{ fbURL }}" target="_blank"><i class="icon-facebook-squared header-icons"></i></a>
+            {% endif %}
+			{% if twURL %}
+				<a href="{{ twURL }}" target="_blank"><i class="icon-twitter header-icons"></i></a>
+            {% endif %}
+		</li>
+	{% endif %}
+	<li>
+		<a href="{{ path('newsletter') }}"><i class="icon-megaphone header-icons"></i>{% trans %}Newsletters{% endtrans %}</a>
+	</li>
+	<li>
+		<a href="{{ path('archive') }}"><i class="icon-folder-1 header-icons"></i>{% trans %}Archive{% endtrans %}</a>
+	</li>
+</ul>
+
+</div>
+{#
+{% if config.socialnonfree and app.user.state.cookiesAccepted == false %}
+	{{ block('cookieAlert') }}
+{% endif %}
+#}
+<div id="header" >
+	<div id="observatoryTitle">
+		<span style="cursor:pointer" onclick="window.location='{{ path('homepage') }}">
+		TITULO
+		</span>
+	</div>
+</div>
+{{ block('mainmenu') }}
+
+<div class="container" id="page">
+	{% block body %}{% endblock %}
+	<div class="clear"></div>
+</div><!-- page -->
+
+{# include 'footer.lang.html.twig' #}
+
+</body>
+</html>

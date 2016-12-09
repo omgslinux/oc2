@@ -47,7 +47,7 @@ class Comment
     /**
      * @var User
      *
-     * @ORM\ManyToOne(targetEntity="User", inversedBy="comments")
+     * @ORM\ManyToOne(targetEntity="OCAX\Common\Entity\User", inversedBy="comments")
      */
     private $user;
 

@@ -27,14 +27,14 @@ class Enquiry
     /**
      * @var Enquiry
      *
-     * @ORM\ManyToOne(targetEntity="Enquiry", inversedBy="related")
+     * @ORM\ManyToOne(targetEntity="Enquiry")
      */
     private $parent;
 
     /**
      * @var User
      *
-     * @ORM\ManyToOne(targetEntity="User", inversedBy="enquiries")
+     * @ORM\ManyToOne(targetEntity="OCAX\Common\Entity\User", inversedBy="enquiries")
      */
     private $user;
 
@@ -76,7 +76,7 @@ class Enquiry
     /**
      * @var File
      *
-     * @ORM\ManyToOne(targetEntity="file", inversedBy="documents")
+     * @ORM\ManyToOne(targetEntity="File")
      */
     private $file;
 

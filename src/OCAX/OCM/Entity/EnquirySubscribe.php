@@ -33,7 +33,7 @@ class EnquirySubscribe
     /**
      * @var User
      *
-     * @ORM\ManyToOne(targetEntity="User", inversedBy="subscriptions")
+     * @ORM\ManyToOne(targetEntity="OCAX\Common\Entity\User", inversedBy="subscriptions")
      */
     private $user;
 

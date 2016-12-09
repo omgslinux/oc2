@@ -34,7 +34,7 @@ class IntroPage
     /**
      * @var integer
      *
-     * @ORM\Column(type="tinyint", length=2)
+     * @ORM\Column(type="smallint", length=2)
      */
     private $weight;
 
@@ -69,7 +69,7 @@ class IntroPage
     /**
      * @var tinyint
      *
-     * @ORM\Column(type="tinyint")
+     * @ORM\Column(type="smallint")
      */
     private $opacity;
 

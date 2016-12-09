@@ -1,0 +1,146 @@
+{#
+
+/**
+ * OCAX -- Citizen driven Observatory software
+ * Copyright (C) 2014 OCAX Contributors. See AUTHORS.
+
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/* @var $this SiteController */
+/* @var $model LoginForm */
+/* @var $form CActiveForm  */
+
+$this->pageTitle=Config::model()->findByPk('siglas')->value . ' - '.__('Login');
+#}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<style>
+	.outer{width:100%; padding: 0px; float: left;}
+	.left{width: 43%; float: left;  margin: 0px; padding-left:25px;}
+	.right{width: 53%; float: left; margin: 0px;}
+	.clear{clear:both;}
+</style>
+
+<script>
+function showPasswdInstructions(){
+	$('#passwd_instructions_link').replaceWith($('#passwd_instructions'));
+	$('#passwd_instructions').show();
+}
+function requestNewPasswd(){
+	if($('#email').val() == ''){
+		alert("{% trans %}Please enter your email address{% endtrans %}");
+		return;
+	}
+	$.ajax({
+		url: '{{ path('site_request_newpassword') }}',
+		type: 'POST',
+		data: {
+				'email': $('#email').val(),
+			},
+		beforeSend: function(){ $('#loading').show(); $('#email_button').prop('disabled', true);  },
+		success: function(data){
+			$('#loading').hide();
+			$('#email_button').prop('disabled', false);
+			$('#passwd_text').hide();
+			$('#passwd_text').html(data);
+			$('#passwd_text').fadeIn('fast');
+		},
+		error: function() {
+			alert("Error on request new password");
+		}
+	});
+}
+</script>
+
+
+<div class="outer">
+<div class="left">
+<h1>{% trans %}Login{% endtrans %}<i class="icon-user-female"></i></h1>
+
+<div class="form">
+<form id="login-form" action="{{ path('site_login') }}" method="post">
+<input value="8d8141b234bb8919468331fb16202aba0a98d56d" name="YII_CSRF_TOKEN" type="hidden">
+	<div class="row">
+		<label for="LoginForm_username" class="required">{% trans %}Username{% endtrans %}<span class="required">*</span></label>
+        <input name="LoginForm[username]" id="LoginForm_username" type="text">
+        <div class="errorMessage" id="LoginForm_username_em_" style="display:none"></div>
+    </div>
+
+	<div class="row">
+		<label for="LoginForm_password" class="required">{% trans%}Password{% endtrans %}<span class="required">*</span></label>
+        <input name="LoginForm[password]" id="LoginForm_password" type="password">
+		<div class="errorMessage" id="LoginForm_password_em_" style="display:none"></div>
+    </div>
+
+	<div class="row rememberMe">
+		<input id="ytLoginForm_rememberMe" value="0" name="LoginForm[rememberMe]" type="hidden"><input name="LoginForm[rememberMe]" id="LoginForm_rememberMe" value="1" type="checkbox">
+        <label for="LoginForm_rememberMe">{% trans %}Remember me{% endtrans %}</label>
+        <div class="errorMessage" id="LoginForm_rememberMe_em_" style="display:none"></div>
+    </div>
+
+
+
+    {% if withCaptcha %}
+	{# <?php if ($model->scenario == 'withCaptcha' && CCaptcha::checkRequirements()): ?> #}
+    	<div class="row">
+			<label for="verifyCode">{% trans %}Verify code{% endtrans %}</label>
+			<div>
+				<?php $this->widget('CCaptcha'); ?>
+				<?php echo $form->textField($model, 'verifyCode'); ?>
+			</div>
+			<?php echo $form->error($model, 'verifyCode'); ?>
+		</div>
+	{% endif %}
+	<div class="row buttons">
+		<input name="yt0" value="{% trans%}Log in{% endtrans %}" type="submit">	</div>
+
+</form></div><!-- form -->
+<p></p>
+
+</div>
+<div class="right">
+<p style="font-size:1.5em;margin-bottom:10px;">{% trans %}Still haven't got an account?{% endtrans %}</p>
+<p>
+	<h1 style="margin-top:-15px"><a href="{{ path('site_register') }}">{% trans %}Sign up{% endtrans %}</a></h1>
+</p>
+<br/>
+<p style="font-size:1.5em;margin-bottom:10px;">{% trans %}Forgotten your password?{% endtrans %}</p>
+
+<p>
+<a id="passwd_instructions_link" class="link" onClick="js:showPasswdInstructions()">{% trans %}Follow these instructions{% endtrans %}</a>
+<div id="passwd_instructions" class="form" style="display:none">
+<span id="passwd_text">{% trans %}Enter your email address and we will send you a link{% endtrans %}</span><br />
+<input id="email" type="text" size="35" style="margin-right:10px;" /><button id="email_button" onClick="js:requestNewPasswd();">{% trans %}Send{% endtrans %}</button>
+<img id="loading" src="{{ asset('/images/small_loading.gif') }}" style="vertical-align:middle;margin-left:10px;display:none"/>
+</div>
+</p>
+
+</div>
+</div>
+{#
+<?php if(Yii::app()->user->hasFlash('error')):?>
+	<script>
+		$(function() { setTimeout(function() {
+			$('.flash-error').slideUp('fast');
+    	}, 3500);
+		});
+	</script>
+    <div class="flash-error">
+		<?php echo Yii::app()->user->getFlash('error');?>
+    </div>
+<?php endif; ?>
+#}
+{% endblock %}

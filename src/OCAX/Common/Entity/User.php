@@ -14,7 +14,7 @@ use OCAX\OCM\Entity\Enquiry;
  * User
  *
  * @ORM\Table(name="user")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="OCAX\Common\Repository\UserRepository")
  */
 class User implements UserInterface
 {
@@ -57,7 +57,7 @@ class User implements UserInterface
     /**
      * @var string
      *
-     * @ORM\Column(type="string", length=128, nullable=false)
+     * @ORM\Column(type="string", length=128, nullable=true)
      */
     private $salt;
 
@@ -71,21 +71,21 @@ class User implements UserInterface
     /**
      * @var Language
      *
-     * @ORM\ManyToOne(targetEntity="language", inversedBy="users")
+     * @ORM\ManyToOne(targetEntity="Language")
      */
     private $language;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(type="datetime", nullable=false)
+     * @ORM\Column(type="datetime", nullable=true)
      */
     private $joined;
 
     /**
      * @var string
      *
-     * @ORM\Column(type="string", length=45, nullable=false)
+     * @ORM\Column(type="string", length=45, nullable=true)
      */
     private $activationcode;
 
@@ -148,21 +148,35 @@ class User implements UserInterface
     /**
      * @var ArrayCollection
      *
-     * @ORM\OneToMany(targetEntity="Enquiry", mappedBy="user")
+     * @ORM\OneToMany(targetEntity="OCAX\OCM\Entity\Comment", mappedBy="user")
+     */
+    private $comments;
+
+    /**
+     * @var ArrayCollection
+     *
+     * @ORM\OneToMany(targetEntity="OCAX\OCM\Entity\Email", mappedBy="sender")
+     */
+    private $emails;
+
+    /**
+     * @var ArrayCollection
+     *
+     * @ORM\OneToMany(targetEntity="OCAX\OCM\Entity\Enquiry", mappedBy="user")
      */
     private $enquiries;
 
     /**
      * @var ArrayCollection
      *
-     * @ORM\OneToMany(targetEntity="Newsletter", mappedBy="sender")
+     * @ORM\OneToMany(targetEntity="OCAX\CMS\Entity\Newsletter", mappedBy="sender")
      */
     private $newsletters;
 
     /**
      * @var ArrayCollection
      *
-     * @ORM\OneToMany(targetEntity="Reply", mappedBy="user")
+     * @ORM\OneToMany(targetEntity="OCAX\OCM\Entity\Reply", mappedBy="user")
      */
     private $replies;
 
@@ -176,26 +190,44 @@ class User implements UserInterface
     /**
      * @var ArrayCollection
      *
-     * @ORM\OneToMany(targetEntity="Vote", mappedBy="user")
+     * @ORM\OneToMany(targetEntity="OCAX\OCM\Entity\EnquirySubscribe", mappedBy="user")
+     */
+    private $subscriptions;
+
+    /**
+     * @var ArrayCollection
+     *
+     * @ORM\OneToMany(targetEntity="OCAX\OCM\Entity\Vote", mappedBy="user")
      */
     private $votes;
 
     /**
      * @var ArrayCollection
      *
-     * @ORM\OneToMany(targetEntity="BlockUser", mappedBy="user")
+     * @ORM\OneToMany(targetEntity="OCAX\OCM\Entity\BlockUser", mappedBy="blockinguser")
      */
     private $blockingusers;
 
     /**
      * @var ArrayCollection
      *
-     * @ORM\OneToMany(targetEntity="BlockUser", mappedBy="user")
+     * @ORM\OneToMany(targetEntity="OCAX\OCM\Entity\BlockUser", mappedBy="blockeduser")
      */
     private $blockedusers;
 
 
-
+    public function __construct()
+    {
+        $this->active = true;
+        $this->teammember = false;
+        $this->joined=new \DateTime();
+        $this->member = false;
+        $this->admin = false;
+        $this->disabled = false;
+        $this->descriptioneditor = false;
+        $this->manager = false;
+        $this->editor = false;
+    }
 
 
 

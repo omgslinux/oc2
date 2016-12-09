@@ -1,0 +1,36 @@
+.pgrid-view table.items th
+{
+	font-size: 1.2em;
+	color: #555;
+	background-color: transparent;
+	text-align: left;
+}
+.pgrid-view table.items td {
+	font-size: 1.1em;
+}
+.pgrid-view .button-column { width: 8px; }
+.pgrid-view i { cursor:pointer; color: #555; }
+
+#archiveOptions{
+	float:right;
+	padding-left:20px;
+	padding-top:8px;
+	color: #7D7D7D;
+}
+#archiveOptions i:hover{
+	color: #454545;
+}
+.pgrid-view img {
+	height: 28px;
+	width: 28px;
+}
+
+#archiveOptions i{
+	cursor:pointer;
+	font-size:26px;
+}
+#upLevel{
+	font-size: 18px;
+	position: absolute;
+	margin-top: -5px;
+}

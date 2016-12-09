@@ -33,7 +33,7 @@ class Translation
     /**
      * @var Language
      *
-     * @ORM\ManyToOne(targetEntity="Language", inversedBy="translations")
+     * @ORM\ManyToOne(targetEntity="Language")
      */
     private $language;
 

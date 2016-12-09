@@ -33,7 +33,7 @@ class Vote
     /**
      * @var User
      *
-     * @ORM\ManyToOne(targetEntity="User", inversedBy="votes")
+     * @ORM\ManyToOne(targetEntity="OCAX\Common\Entity\User", inversedBy="votes")
      */
     private $user;
 

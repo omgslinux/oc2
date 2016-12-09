@@ -55,7 +55,7 @@ class Archive
     /**
      * @var User
      *
-     * @ORM\ManyToOne(targetEntity="User")
+     * @ORM\ManyToOne(targetEntity="OCAX\Common\Entity\User")
      */
     private $author;
 

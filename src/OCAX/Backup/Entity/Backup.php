@@ -67,7 +67,7 @@ class Backup
     /**
      * @var integer
      *
-     * @ORM\Column(type="tinyint", length=1, options={"comment":"null=not_finished 0=failed 1=success"})
+     * @ORM\Column(type="smallint", length=1, options={"comment":"null=not_finished 0=failed 1=success"})
      */
     private $state;
 

@@ -33,7 +33,7 @@ class Reply
     /**
      * @var User
      *
-     * @ORM\ManyToOne(targetEntity="User", inversedBy="replies")
+     * @ORM\ManyToOne(targetEntity="OCAX\Common\Entity\User", inversedBy="replies")
      */
     private $user;
 

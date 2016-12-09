@@ -43,7 +43,7 @@ class Email
     /**
      * @var User
      *
-     * @ORM\ManyToOne(targetEntity="User", inversedBy="emails")
+     * @ORM\ManyToOne(targetEntity="OCAX\Common\Entity\User", inversedBy="emails")
      */
     private $sender;
 
