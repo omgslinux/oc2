@@ -1,0 +1,100 @@
+{#
+
+/**
+ * OCAX -- Citizen driven Observatory software
+ * Copyright (C) 2014 OCAX Contributors. See AUTHORS.
+
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/* @var $this EnquiryController */
+/* @var $model Enquiry */
+/* @var $form CActiveForm */
+
+$model = new Enquiry;
+$stats = $model->getStatistics();
+#}
+
+<div id="workflow_diagram" style="position:absolute; margin-left:-10px; width: 930px; height:120px;">
+
+    <div class="workflowState" style="top:0px;left:0px;">
+    	<img src="{{ asset('/images/workflow/pending.png') }}" />
+    	<div class="workflowStateText" style="">
+            {% set id = enquiriescount['ENQUIRY_PENDING_VALIDATION'] %}
+            {{ id.description|trans }}<br />
+            <strong>{{ id.count }} {% trans %}enquiries{% endtrans %}</strong>
+    	</div>
+    </div>
+    <div style="top:36px; left: 7px"><img src="{{ asset('/images/workflow/arrow.png') }}" /></div>
+
+    {% set id = enquiriescount['ENQUIRY_ACCEPTED'] %}
+    <div class="workflowState workflowFilter" style="top:0px;left:190px;" state="{{ id.id }}">
+    	<img src="{{ asset('/images/workflow/accepted.png') }}" />
+    	<div class="workflowStateText" style="color:#a4c30b; border-color:#a4c30b;">
+            {{ id.description|trans }}<br />
+            <strong>{{ id.count }} {% trans %}enquiries{% endtrans %}</strong>
+    	</div>
+    </div>
+    <div style="top:36px; left: 197px"><img src="{{ asset('/images/workflow/arrow-green.png') }}" /></div>
+
+    {% set id = enquiriescount['ENQUIRY_REJECTED'] %}
+    <div class="workflowState" style="top:60px;left:190px;">
+    	<img src="{{ asset('/images/workflow/rejected.png') }}" />
+    	<div class="workflowStateText red" style="color:#e0081d; border-color:#e0081d;">
+            {{ id.description|trans }}<br />
+            <strong>{{ id.count }} {% trans %}enquiries{% endtrans %}</strong>
+    	</div>
+    </div>
+    <div style="top:96px; left: 197px"><img src="{{ asset('/images/workflow/arrow.png') }}" /></div>
+
+    {% set id = enquiriescount['ENQUIRY_AWAITING_REPLY'] %}
+    <div class="workflowState workflowFilter" style="top:0px;left:380px;" state="{{ id.id }}">
+    	<img src="{{ asset('/images/workflow/waiting.png') }}" />
+    	<div class="workflowStateText" style="">
+            {{ id.description|trans }}<br />
+            <strong>{{ id.count }} {% trans %}enquiries{% endtrans %}</strong>
+    	</div>
+    </div>
+    <div style="top:36px; left: 387px"><img src="{{ asset('/images/workflow/arrow.png') }}" /></div>
+
+    {% set id = enquiriescount['ENQUIRY_REPLY_PENDING_ASSESSMENT'] %}
+    <div class="workflowState workflowFilter" style="top:0px;left:570px;" state="{{ id.id }}">
+    	<img src="{{ asset('/images/workflow/waiting.png') }}" />
+    	<div class="workflowStateText" style="">
+            {{ id.description|trans }}<br />
+            <strong>{{ id.count }} {% trans %}enquiries{% endtrans %}</strong>
+    	</div>
+    </div>
+    <div style="top:36px; left: 577px"><img src="{{ asset('/images/workflow/arrow.png') }}" /></div>
+
+    {% set id = enquiriescount['ENQUIRY_REPLY_SATISFACTORY'] %}
+    <div class="workflowState workflowFilter" style="top:0px;left:760px;" state="{{ id.id }}">
+    	<img src="{{ asset('/images/workflow/satisfactory.png') }}" />
+    	<div class="workflowStateText green" style="color:#a4c30b; border-color:#a4c30b;">
+            {{ id.description|trans }}<br />
+            <strong>{{ id.count }} {% trans %}enquiries{% endtrans %}</strong>
+    	</div>
+    </div>
+    <div style="top:36px; left: 767px"><img src="{{ asset('/images/workflow/arrow-green.png') }}" /></div>
+
+    {% set id = enquiriescount['ENQUIRY_REPLY_INSATISFACTORY'] %}
+    <div class="workflowState workflowFilter" style="top:60px;left:760px;" state="{{ id.id }}">
+    	<img src="{{ asset('/images/workflow/insatisfactory.png') }}" />
+    	<div class="workflowStateText red" style="color:#e0081d; border-color:#e0081d;">
+            {{ id.description|trans }}<br />
+            <strong>{{ id.count }} {% trans %}enquiries{% endtrans %}</strong>
+    	</div>
+    </div>
+    <div style="top:96px; left: 767px"><img src="{{ asset('/images/workflow/arrow.png') }}" /></div>
+</div>

@@ -21,7 +21,7 @@
 $this->pageTitle=Config::model()->findByPk('siglas')->value . ' - '.__('Register');
 #}
 
-$mailer->Subject = __('Welcome to the').' '.Config::model()->getObservatoryName();
+{# $mailer->Subject = __('Welcome to the').' '.Config::model()->getObservatoryName(); #}
 
 {% trans %}Welcome to the %ObservatoryName%{% endtrans %}
 {% trans %}NEW_USER_EMAIL_MSG{% endtrans %}

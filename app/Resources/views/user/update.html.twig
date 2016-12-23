@@ -1,0 +1,173 @@
+{#
+/**
+ * OCAX -- Citizen driven Municipal Observatory software
+ * Copyright (C) 2013 OCAX Contributors. See AUTHORS.
+
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/* @var $this UserController */
+/* @var $model User */
+
+$languages = getLanguagesArray();
+$solicit_membership = Config::model()->findByPk('membership')->value;
+#}
+{% extends 'base.html.twig' %}
+{% block body %}
+<script>
+function optout(){
+	retVal = confirm("{% trans %}Are you sure you want to delete your account?{% endtrans %}");
+	if( retVal == false ){
+		return;
+	}
+	$.ajax({
+		url: '{{ path('user_optout', { 'id': user.id }) }}',
+		type: 'POST',
+		data: { 'YII_CSRF_TOKEN' : '<?php echo Yii::app()->request->csrfToken; ?>' },
+		success: function(){
+			window.location.href = '{{ path('homepage') }}';
+		},
+		error: function() { alert("{% trans %}error on opt out{% endtrans %}"); },
+	});
+}
+</script>
+
+{# <?php if($languages || $solicit_membership) { ?> #}
+{% if languages is defined or membership is defined %}
+	<style>
+		.outer{width:100%; padding: 0px; float: left; margin-top:10px;}
+		.left{width: 32%; float: left;  margin: 0px; margin-left:20px;}
+		.middle{width: 32%; float: left;  margin: 0px; margin-left:40px;}
+		.right{width: 22%; float: left; margin: 0px;}
+		.clear{clear:both;}
+	</style>
+{% else %}
+	<style>
+		.outer{width:100%; padding: 0px; float: left; margin-top:10px;}
+		.left{width: 50%; float: left;  margin: 0px; margin-left:20px; }
+		.middle{width: 45%; float: left;  margin: 0px;}
+		.clear{clear:both;}
+	</style>
+{% endif %}
+
+<div style="margin:-10px 0 55px 0;">
+<span id="datos_usuario" style="margin-top:-15px;cursor:auto;float:left"></span>
+<h1 style="float:left">{% trans %}Change your user information{% endtrans %}</h1>
+<span class="link" style="float:right" onclick="js:optout();">{% trans %}Delete my user account{% endtrans %}</span>
+</div>
+<div style="clear:both"></div>
+
+
+<div class="form">
+
+{{ form_start(form) }}
+{# <?php $form=$this->beginWidget('CActiveForm', array(
+	'id'=>'user-form',
+	'enableAjaxValidation'=>false,
+)); ?> #}
+
+<div class="outer">
+<div class="left">
+
+	<p class="sub_title">{% trans %}Your information{% endtrans %}</p>
+
+	{# <?php /*echo $form->errorSummary($model);*/ ?> #}
+
+	<div class="row">
+    <label for="User_fullname" class="required">{% trans %}Fullname{%endtrans %}<span class="required">*</span></label>
+    <input size="30" maxlength="64" name="User[fullname]" id="User_fullname" value="{{ user.username }}" type="text">
+    	{# <?php echo $form->labelEx($model,'fullname'); ?>
+		<?php echo $form->textField($model,'fullname',array('size'=>30,'maxlength'=>64)); ?>
+		<?php echo $form->error($model,'fullname'); ?>#}
+	</div>
+
+	<div class="row">
+        <label for="User_email" class="required">{% trans %}email{% endtrans %}<span class="required">*</span></label>
+        <input size="30" maxlength="64" name="User[email]" id="User_email" value="{{ user.email }}" type="text">
+		{#}<?php echo $form->labelEx($model,'email'); ?>
+		<?php echo $form->textField($model,'email',array('size'=>30,'maxlength'=>64)); ?>
+		<?php echo $form->error($model,'email'); ?> #}
+	</div>
+
+</div>
+<div class="middle">
+<p class="sub_title">{% trans %}Change password{% endtrans %}</p>
+
+    <div class="row">
+		<label for="User_new_password">{%trans %}New password{% endtrans %}</label>
+        <input autocomplete="off" name="User[new_password]" id="User_new_password" value="" type="password">
+    </div>
+
+	<div class="row">
+		<label for="User_password_repeat">{% trans %}Repeat password{% endtrans %}</label>
+        <input autocomplete="off" name="User[password_repeat]" id="User_password_repeat" value="" type="password">
+    </div>
+</div>
+
+{# <?php if($languages || $solicit_membership) { ?> #}
+{% if languages is defined or membership is defined %}
+<div class="right">
+<p class="sub_title" class="sub_title">{% trans %}Details{% endtrans %}</p>
+		{% if languages is defined %}
+			<div class="row">
+                {{ form_label(form.languages) }}
+			<div class="hint">{% trans %}Your preferred language{% endtrans %}</div>
+			{# echo $form->dropDownList($model, 'language', $languages ); #}
+            {{ form_widget(form.languages)}}
+			</div>
+		{% endif %}
+
+	{% if membership is defined %}
+	<div class="row">
+		<label>{% trans %}Yes, I want to be a member{% endtrans %}
+            <input id="ytUser_is_socio" value="0" name="User[is_socio]" type="hidden">
+            <input name="User[is_socio]" id="User_is_socio" value="1" type="checkbox"></label>
+		<a href="#" onclick="js:$('#membership_means').slideDown('fast');">{% trans %}What does this mean?{% endtrans %}</a>
+	</div>
+	{% endif %}
+</div>
+{% endif %}
+
+</div>
+<div class="clear"></div>
+
+	{# <?php if($solicit_membership){ ?> #}
+    {% if solicit_membership is defined %}
+	<div id="membership_means" style="display:none" class="horizontalRule">
+	<p>{% trans %}MEMBERSHIP_MSG{% endtrans %}</p>
+	</div>
+	{% endif %}
+
+	<div class="row buttons" style="text-align:center;padding-top:20px;">
+        <input name="yt0" value="{% trans %}Save{% endtrans %}" type="submit">
+        <input onclick="window.location='{{ path('user_panel') }}'" value="{% trans %}Cancel{% endtrans %}" type="button">
+	</div>
+{{ form_row(form._token) }}
+</form>
+
+</div><!-- form -->
+
+{# <?php if(Yii::app()->user->hasFlash('success')):?>
+	<script>
+		$(function() { setTimeout(function() {
+			$('.flash-success').slideUp('fast');
+    	}, 5000);
+		});
+	</script>
+    <div class="flash-success">
+		<?php echo Yii::app()->user->getFlash('success');?>
+    </div>
+<?php endif; ?>
+#}
+{% endblock %}

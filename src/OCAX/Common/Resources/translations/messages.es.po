@@ -495,8 +495,8 @@ msgid "Enquiry accepted by the %s"
 msgstr "Consulta aceptada por el %s"
 
 #: protected/models/Enquiry.php:102
-msgid "Awaiting reply from the administration"
-msgstr "Esperando respuesta de la administración"
+msgid "Awaiting reply from the %s"
+msgstr "Esperando respuesta de %s"
 
 #: protected/models/Enquiry.php:103
 msgid "Reply pending assessment"
@@ -1891,7 +1891,7 @@ msgstr "Bienvenido"
 msgid "ENQUIRY_NEW_MSG"
 msgstr ""
 "Pregunta lo que quieras saber a tu Ayuntamiento, desde este apartado puedes "
-"hacer una consulta abierta. Para hacer una consulta  presupuestaria ve a la "
+"hacer una consulta abierta. Para hacer una consulta presupuestaria ve a la "
 "pestaña %s y realiza la consulta desde allí."
 
 #: protected/views/user/panel.php:126
@@ -3313,6 +3313,10 @@ msgstr "¿Quieres compartirlo con otros osbservatorios? "
 #: protected/controllers/BudgetDescriptionController.php:215
 msgid "Do you want to share it with other observatories"
 msgstr "Quieres compartirlo con otros osbservatorios"
+
+msgid "Showing %start%-%end% out of %total% results."
+msgstr "Mostrando %start%-%end% de %total% resultados."
+
 
 #~ msgid "Download"
 #~ msgstr "Descarga"

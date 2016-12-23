@@ -71,8 +71,7 @@ function requestNewPasswd(){
 <h1>{% trans %}Login{% endtrans %}<i class="icon-user-female"></i></h1>
 
 <div class="form">
-<form id="login-form" action="{{ path('site_login') }}" method="post">
-<input value="8d8141b234bb8919468331fb16202aba0a98d56d" name="YII_CSRF_TOKEN" type="hidden">
+{{ form_start(form) }}{{ form_row(form._token) }}
 	<div class="row">
 		<label for="LoginForm_username" class="required">{% trans %}Username{% endtrans %}<span class="required">*</span></label>
         <input name="LoginForm[username]" id="LoginForm_username" type="text">

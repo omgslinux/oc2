@@ -1,0 +1,101 @@
+
+.color { color:#a1a150; }
+
+body {color: #555; background-color: #e4ded7; }
+h1, h2, h3, h4, h5, h6 { color:#a1a150; }
+
+a { color:#a1a150; }
+a:hover { color:#676767; }
+
+.link { color:#a1a150;}
+.link:hover {color:#676767;}
+
+#page { background-color: #f5f1ed; }
+
+#mainmenu ul li a {	color:#f5f1ed; background-color:#a1a150; }
+#mainmenu ul li a:hover, #mainmenu ul li.active a {	color: #a1a150; background-color:#f5f1ed; }
+
+#header_bar > ul > li > a:hover { color:#a1a150; }
+
+#logo { color:#a6a29e; }
+#observatoryName2 { color: #a1a150; }
+
+#footer { color:#1F1F1F; background-color:#676767; }
+#footer div { color:#a6a6a6; }
+#footer div b {	color:#ffffff; }
+
+div.form .title{ color:#a1a150; }
+.bigTitle { color: #a1a150; }
+
+/* Mainmenu */
+#mainMbMenu #nav-bar li a { color:#f5f1ed; background-color: #a1a150; }
+#mainMbMenu #nav-bar li.active a { color: #a1a150; background-color:#f5f1ed; }
+#mainMbMenu #nav-bar li a:hover { color: #a1a150; background-color:white; }
+
+#mainMbMenu #nav-bar #nav ul li a {
+	color:#a1a150;
+	background-color:rgba(255, 255, 255, 0.9);
+}
+#mainMbMenu #nav-bar #nav ul li a:hover, #mainmenu ul li.active a {
+	color: white;
+	background-color:#a1a150;
+}
+
+.tabMenu { border-bottom: 1px solid #a1a150; }
+.tabMenu li.activeItem {	border-bottom: 4px solid #a1a150; }
+
+/*ENQUIRIYS*/
+.enquirys b { color:#00CADC; }
+.enquirys_titular {	color:#929292; }
+.email-subscribe.active i { color: #a1a150; } /* enquiry/_preview */
+
+/*sitePage Pages*/
+.sitePage_titulo { color:#a1a150; }
+.activeMenuItem a { color: #676767; }
+.sitePageInsert { border-color: #a1a150; }
+
+/*Budgets*/
+#budget_titulo_j { color: #a1a150; }
+
+.svg-color-fill { fill:#a1a150; }
+.svg-color-stroke { stroke: #a1a150; }
+
+#featured_menu > li:hover {color:white; background-color:#a1a150; }
+
+.prev_budget_arrow{	color:#a1a150; }
+
+/*graph bar*/
+.actual_provision_bar{ background-color:#a1a150; }
+
+.highlightWithColor{
+	color: white;
+	background-color: #a1a150 !important;
+}
+
+span.ocaxButton.active i { color: #a1a150; }
+
+/*yii pager*/
+
+ul.yiiPager a:link,
+ul.yiiPager a:visited
+{
+	border:solid 1px #827E78;
+	font-weight:bold;
+	color:#676767;
+	padding:1px 6px;
+	text-decoration:none;
+}
+ul.yiiPager a:hover
+{
+	border:solid 1px #a1a150;
+	background-color:#a1a150;
+	opacity: 0.5;
+	color:#000000;
+}
+ul.yiiPager .selected a
+{
+	border:solid 1px #a1a150;
+	background:#a1a150;
+	color:#FFFFFF;
+	font-weight:bold;
+}

@@ -22,6 +22,7 @@ namespace OCAX\OCM\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
+use OCAX\OCM\Entity\EnquiryState;
 
 /**
  * EnquiryState
@@ -43,7 +44,7 @@ class EnquiryState
     /**
      * @var string
      *
-     * @ORM\Column(type="string", length=16)
+     * @ORM\Column(type="string", length=32)
      */
     private $state;
 
@@ -79,6 +80,54 @@ class EnquiryState
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Set state
+     *
+     * @param string $state
+     *
+     * @return EnquiryState
+     */
+    public function setState($state)
+    {
+        $this->state = $state;
+
+        return $this;
+    }
+
+    /**
+     * Get state
+     *
+     * @return string
+     */
+    public function getState()
+    {
+        return $this->state;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return EnquiryState
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
     }
 
     /**

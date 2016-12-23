@@ -1,0 +1,34 @@
+<!-- help widget start -->
+<style>iframe{min-height:500px;}</style>
+<script src="{{ asset('/scripts/jquery.bpopup-0.9.4.min.js') }}"></script>
+<script>
+function helpModal2Page(){
+	var url = $('#help_popup').attr('url');
+	$('#help_popup').bPopup().close();
+	window.open(url);
+}
+function showHelp(url){
+		$('#help_popup').attr('url', url);
+		$('#help_popup').bPopup({
+			modalClose: false,
+			follow: ([false,false]),
+			speed: 10,
+			positionStyle: 'absolute',
+			modelColor: '#ae34d5',
+			content:'iframe',
+			iframeAttr:'width=916px scrolling=auto',
+			contentContainer:'#help_popup_content',
+			loadUrl:url,
+			/*loadCallback: function(){ $('.loading_help').hide(); },*/
+		});
+}
+</script>
+
+<div id="help_popup" class="modal" style="width:900px;" url="">
+	<div class="modalTitle">{% trans %}Help{% endtrans %%}</div>
+	<i class='icon-cancel-circled modalWindowButton bClose'></i>
+	<i class='icon-popup modalWindowButton bModal2Page' onclick="js:helpModal2Page();"></i>
+	<div id="help_popup_content" style="padding:0px; margin:0px 0px -8px -8px;"></div>
+</div>
+
+<!-- help widget stop -->

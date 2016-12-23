@@ -1,15 +1,18 @@
-common:
-    resource: "@CommonBundle/Controller/"
-    type:     annotation
 ocm:
     resource: "@OCMBundle/Controller/"
     type:     annotation
+
 cms:
     resource: "@CMSBundle/Controller/"
     type:     annotation
+
 budget:
     resource: "@BudgetBundle/Controller/"
     type:     annotation
+
 backup:
     resource: "@BackupBundle/Controller/"
+    type:     annotation
+common:
+    resource: "@CommonBundle/Controller/"
     type:     annotation

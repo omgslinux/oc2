@@ -192,6 +192,6 @@ class Config
 
     public function __toString()
     {
-        return $this->getDescription();
+        return $this->getValue();
     }
 }

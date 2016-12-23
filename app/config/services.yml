@@ -7,3 +7,11 @@ services:
 #    service_name:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+    app.readcsv:
+        class: OCAX\Common\Utils\ReadCSV
+        arguments: ['@service_container']
+        calls:
+            - [setRootdir , ["%kernel.root_dir%"]]
+    ocax.config:
+        class: OCAX\Common\Utils\ReadConfig
+        arguments: ['@service_container']

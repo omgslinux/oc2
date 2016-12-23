@@ -6,6 +6,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
 use OCAX\Common\Entity\User;
 use OCAX\Common\Entity\AppLog;
 
@@ -94,8 +95,13 @@ class SiteController extends Controller
             }
             $em->persist($user);
             $em->flush();
+            $token = new UsernamePasswordToken($user, null, 'main', array('ROLE_USER'));
+            $this->get('security.token_storage')->setToken($token);
+            $this->get('session')->set('_security_main', serialize($token));
 
-            return $this->redirectToRoute('homepage');
+            $this->sendWelcomeText($user);
+
+            return $this->redirectToRoute('user_panel');
         }
         return $this->render('site/register.html.twig', [
             'user' => $user,
@@ -171,6 +177,36 @@ class SiteController extends Controller
             }
         } else {
             echo '<span style="color:red">Email missing.</span>';
+        }
+    }
+
+    public function sendWelcomeText(User $user)
+    {
+//        if(Yii::app()->user->isGuest) // add accessRules() to $this controller instead?
+//			Yii::app()->end();
+
+        $message = \Swift_Message::newInstance()
+            ->setSubject('Welcome to the %ObservatoryName%')
+            ->setTo('ocax@gmail.com')
+            ->SetTo($user->getEmail())
+            ->setBody(
+                $this->renderView(
+                    'site/mail/welcome.html.twig',
+                    array(
+                        'ObservatoryName' => 'fdh',
+                        'user' => $user
+                    )
+                ),
+                'text/html'
+            );
+        return;
+
+        if ($this->get('mailer')->send($message)) {
+//			Yii::app()->user->setFlash('success',__('We sent you an email'));
+            $this->render('ds');
+        } else {
+//			Yii::app()->user->setFlash('newActivationCodeError',__('Error while sending email').'<br />'.$mailer->ErrorInfo);
+            return $this->render('gf');
         }
     }
 }

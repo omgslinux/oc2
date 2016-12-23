@@ -1,0 +1,466 @@
+{#
+/**
+ * OCAX -- Citizen driven Observatory software
+ * Copyright (C) 2014 OCAX Contributors. See AUTHORS.
+
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/* @var $this UserController */
+/* @var $model User */
+/*
+ * @property integer $is_team_member
+ * @property integer $is_editor
+ * @property integer $is_manager
+ * @property integer $is_admin
+*/
+#}
+{% include 'base.html.twig' %}
+
+{% set column = 0 %}
+{% macro changeColumn(column) %}
+{% if column == 0 %}
+    <div class="clear"></div>
+	<div class="panel_left" style="width:49%">
+{% set column = 1 %}
+{% else %}
+    <div class="panel_right" style="width:49%">
+{% set column = 0 %}
+{% endif %}
+{% endmacro %}
+
+{% if is_granted('IS_FULLY_AUTHENTICATED') %}
+	{# $this->widget('InlineHelp'); #}
+    {% include 'includes/inlinehelp.html.twig' %}
+{% endif %}
+
+<style>
+	.outer{ position:relative; width:100%; padding: 0px; float: left;}
+	.clear{clear:both;}
+</style>
+
+{% include 'includes/socialWidgetsScript.html.twig' %}
+
+{% if is_granted('IS_FULLY_AUTHENTICATED') %}
+<script>
+function toggleMoreOptions(){
+	if ($("#moreOptions").is(":visible")){
+		$("#moreOptionsToggle").html("<i class='icon-plus-circled'></i>");
+		$("#moreOptions").slideUp();
+	}else{
+		$("#moreOptionsToggle").html("<i class='icon-minus-circled'></i>");
+		$("#moreOptions").slideDown();
+	}
+}
+function toggleLegend(){
+	if ($("#legend").is(":visible")){
+		$("#legend").slideUp();
+	}else{
+		$("#legend").slideDown();
+	}
+}
+$(function() {
+	$("#ocmMemberPanel").mouseleave(function() {
+		$("#legend").fadeOut();
+	});
+});
+</script>
+{% endif %}
+
+{% if is_granted('IS_FULLY_AUTHENTICATED') %}
+{# <?php if($privilegedUser && $model->is_active) #}
+<div style="position:relative;">
+	<div id="moreOptionsToggle"
+			onCLick="js:toggleMoreOptions();return false;">
+		<i class="icon-plus-circled"></i>
+	</div>
+</div>
+<div style="position:relative; right:40px" >
+	<div class="teamMenu" onCLick="js:showHelp('<?php echo getInlineHelpURL(":manual:user:panel");?>');return false;">
+		<i class="icon-help-circled"></i>
+	</div>
+</div>
+{% endif %}
+
+{% if model is defined %}
+{# <?php if(!$model->is_active) #}
+	<div class="sub_title">{% trans %}Welcome{% endtrans %}</div>
+    {% include('notactiveinfo.html.twig') %}
+	{# $this->renderPartial('_notActiveInfo', array('model'=>$model)); #}
+	<div class="horizontalRule"></div>
+{% endif %}
+
+
+
+<div id="moreOptions" class="outer" style="{% if is_granted('IS_FULLY_AUTHENTICATED') %}display:none{% endif %}"><!-- outer starts -->
+
+<div class="panel_left">
+	<span style="cursor:pointer" onclick="location.href='{{ path('enquiry_create') }}'">
+		<img src="{{ asset('images/svg/newenquiry.svg') }}">
+	</span>
+
+	<div class="clear"></div>
+	<div class="sub_title"><a href="{{ path('enquiry_create') }}">{% trans %}New enquiry{% endtrans %}</a></div>
+    <p>{{ 'ENQUIRY_NEW_MSG'|trans(
+        {
+            '%s': '<a href="' ~ path('enquiry_index') ~ '">' ~ 'Budgets'|trans|lower ~ '</a>'
+        })|raw
+        }}</p>
+</div>
+<div class="panel_right">
+		<div style="cursor:pointer;" onclick="{{ path('user_update') }}">
+            {# include(svgDir().'userprofile.svg'); #}
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        	 width="52px" height="52px" viewBox="0 0 46 46" enable-background="new 0 0 46 46" xml:space="preserve"
+        	 class="svg-color-stroke svg-roll-grey">
+        <circle class="roll" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" cx="23.717" cy="10.93" r="5.676"/>
+        <path class="roll" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M11.033,40.749l2.15-14.697
+        	c0-1.75,1.199-3.169,2.676-3.169h15.717c1.479,0,2.674,1.419,2.674,3.169l2.15,14.697H11.033z"/>
+        </svg>
+	</div>
+	<div class="clear"></div>
+	<div class="sub_title" style="margin-top:8px;"><a href="{{ path('user_update') }}">{% trans %}My user information{% endtrans %}</div>
+	<p>
+		{% trans %}Change your profile{% endtrans %}<br />
+		{% trans %}Configure your email{% endtrans %}<br />
+		{% trans %}Change your password{% endtrans %}
+	</p>
+</div>
+
+<div class="horizontalRule" style="float:right;padding-top:10px;"></div>
+</div> <!-- outer ends -->
+
+<div class="clear"></div>
+
+<?php
+
+{% set panel_separator_added = 0 %}
+{% macro addPanelSeparator(panel_separator_added) %}
+	{% if not panel_separator_added %}
+		<div id="ocmMemberPanel" style="">
+
+		{# OCM Member Panel menu and legend #}
+		<div id="legendToggle" style="float:left;position:relative;"> {# left starts #}
+		<span style="cursor:pointer;" onclick="$(\'#legend\').toggle();">
+		{# include(svgDir().'controlpanel.svg'); #}
+		</span>
+		{# legend #}
+			<div id="legend">
+				<span><i class="icon-attention green"></i>{% trans %}For your information{% endtrans %}</span>
+				<span><i class="icon-attention amber"></i>{% trans %}You have a task{% endtrans %}</span>
+				<span><i class="icon-attention red"></i>{% trans %}OCAx needs attention{% endtrans %}</span>
+				<br />
+				<span><i class="icon-circle green"></i>{% trans %}Complete{% endtrans %}</span>
+				<span><i class="icon-dot-circled green"></i>{% trans %}Partial{% endtrans %}</span>
+				<span><i class="icon-circle-empty green"></i>{% trans %}Empty{% endtrans %}</span>
+				<span><i class="icon-circle red"></i>{% trans %}Missing{% endtrans %}</span>
+			</div>
+		</div>	{# left ends #}
+
+		<div id="ocmMemberMenu" style="float:left"	{# right starts #}
+
+		{# //echo '<div class="sub_title" style="float:right;font-size: 16pt;margin-left:50px;">';
+		//echo CHtml::link('social',array('site/chat'),array('target'=>'_chat'));
+		//echo '</div>'; #}
+		<div class="sub_title" style="font-size: 16pt;margin-left:50px; float:left; ">
+		<a href="{{ path('log_index') }}">{% trans %}Log{% endtrans %}</a>
+		</div>
+		<div class="sub_title" style="font-size: 16pt;margin-left:50px; float:left; ">
+		<a href="http://agora.ocax.net/" target="_agora">{% trans %}Agora{% endtrans %}</a>';
+		</div>
+		<div class="sub_title" style="font-size: 16pt;margin-left:50px; float:left; ">
+		<a href="http://wiki.ocax.net/'.Yii::app()->user->getState('applicationLanguage').':" target="_wiki">Wiki</a>
+		</div>
+		{#
+		echo '<div class="sub_title" style="font-size: 16pt;margin-left:50px; float:left; ">';
+		echo '<a href="http://ocax.net/pipermail/lista/" target="_list">defunct mailing list</a>';
+		echo '</div>';
+		#}
+
+		</div>	{# right ends #}
+
+		{# //echo '<div class="clear"></div>'; #}
+		{% set panel_separator_added = 1 %}
+	{% endif %}
+{% endmacro %}
+{% import _self as panels %}
+{% if is_granted('ROLE_ADMIN') %}
+	{# Site has just been installed/updated #}
+	{# if(!Config::model()->findByPk('siteConfigStatusPostInstallChecked')->value){ #}
+    {% if config.siteConfigStatusPostInstallChecked is defined %}
+		<div style="float:left;">
+		<div style="font-size:1.3em">{% trans %}OCAx installation{% endtrans %}</div>
+		{# $this->renderPartial('//config/versionSummary'); #}
+        {% include('config/versionSummary.html.twig') %}
+		</div>
+
+		<div style="float:left;margin-left:60px;">
+		<div style="font-size:1.3em">{% trans %}Check server requirements{% endtrans %}</div>
+		{# $this->renderPartial('//config/postInstallCheck'); #}
+        {% include 'config/postInstallCheck.html.twig' %}
+		</div>
+
+		<div class="clear"></div>
+		<div class="horizontalRule"></div>
+	{% endif %}
+	{# Configuration not complete #}
+	{# if(!Config::model()->findByPk('siteConfigStatus')->value){ #}
+    {% if config.siteConfigStatus is defined %}
+		{{ panels.addPanelSeparator('0') }}
+		<div class="clear"></div>
+		<p></p>
+		{# $this->renderPartial('//config/pendingConfiguration');#}
+        {% include 'config/pendingConfiguration.html.twig' %}
+	{% endif %}
+{% endif %}
+
+{% if is_granted('ROLE_TEAMMEMBER') %}
+	{{ panels.addPanelSeparator('1') }}
+	{{ panels.changeColumn() }}
+	<div class="sub_title"><a href="{{ path('enquiry_assigned') }}">{% trans %}Entrusted enquiries{% endtrans %}
+        {% if enquiry.teammember is defined %}
+	{# if(	Enquiry::model()->findByAttributes(array('team_member'=>$model->id, 'state'=>ENQUIRY_ASSIGNED)) ||
+		Enquiry::model()->findByAttributes(array('team_member'=>$model->id, 'state'=>ENQUIRY_AWAITING_REPLY, 'addressed_to'=>OBSERVATORY)) ) #}
+		<i class="icon-attention amber"></i>
+	</div>
+	<p><u>{% trans %}Team member{% endtrans %}</u><br />{% trans %}Manage the enquiries you are responsable for{% endtrans %}</p>
+	</div>'
+{% endif %}
+
+{# if($model->is_editor){ #}
+{% if is_granted('ROLE_EDITOR') %}
+	{{ panels.addPanelSeparator('1') }}
+	{{ panels.changeColumn() }}
+	<div class="sub_title">{% trans %}Page editor{% endtrans %}</div>
+	<div style="float:left"><p>
+		<a href="{{ path('intropage_admin') }}">{% trans %}Introduction pages{% endtrans %}</a><br />
+		<a href="{{ path('sitepage_admin') }}">{% trans %}Site pages{% endtrans %}</a><br />
+	</p></div>
+	<div style="float:left;margin-left:50px;"><p>
+		<a href="{{ path('file_wallpaper') }}">{% trans %}Wallpaper{% endtrans %}</a><br />
+	</p></div>
+	</div>
+{% endif %}
+
+{# if($model->is_manager){ #}
+{% if is_granted('ROLE_MANAGER') %}
+	{{ panels.addPanelSeparator('1') }}
+	{{ panels.changeColumn() }}
+	<div class="sub_title"><a href="{{ path('enquiry_admin') }}">{% trans %}Manage enquiries{% endtrans %}</a>
+	{# if(Enquiry::model()->alertTeamManager()) #}
+    {% if alertTeamManager is defined %}
+		<i class="icon-attention amber"></i>
+    {% endif %}
+	</div>
+	   <p><u>{% trans %}Team manager{% endtrans %}</u><br />{% trans %}Assign enquiries to team members and check status{% endtrans %}</p>
+	</div>
+{% endif %}
+
+{# if($model->is_admin){ #}
+{% if is_granted('ROLE_ADMIN') %}
+	{{ panels.addPanelSeparator('1') }}
+	{{ panels.changeColumn() }}
+	<div class="sub_title">{% trans %}Administator\'s options{% endtrans %}</div>';
+	<div style="float:left"><p>
+        {% if config.siteConfigStatusBudgetDescriptionsImport is defined %}
+		{# if(Config::model()->findByPk('siteConfigStatusBudgetDescriptionsImport')->value){ #}
+			<a href="{{ path('budget_admin') }}">{% trans %}Years and budgets{% endtrans %}</a><br />
+			<a href="{{ path('budgetdescription_admin') }}">{% trans %}Budget descriptions{% endtrans %}</a><br />
+		{% endif %}
+		<a href="{{ path('file_databasedownload') }}">{% trans %}Zip file{% endtrans %}</a>
+		{# if(!Config::model()->isZipFileUpdated()) #}
+        {% if config.isZipFileUpdated is defined %}
+			<i class="icon-attention amber"></i>
+        {% endif %}
+		<br />
+		{# if(Config::model()->findByPk('siteAutoBackup')->value) #}
+        {% if config.siteAutoBackup is defined %}
+			<a href="{{ path('vault_admin') }}">{% trans %}Backups{% endtrans %}</a><br />
+		{% else %}
+			<a href="{{ path('backup_manualcreate') }}">{% trans %}Manual Backup{% endtrans %}</a><br />';
+        {% endif %}
+	</p></div>
+	<div style="float:right"><p>
+		<a href="{{ path('user_admin') }}">{% trans %}Users and roles{% endtrans %}<br />
+		<a href="{{ path('newsletter_admin') }}">{% trans %}Newsletters{% endtrans %}<br />
+		<a href="{{ path('emailtemplate_admin') }}">{% trans %}Email text templates{% endtrans %}<br />
+		<a href="{{ path('config') }}">{% trans %}Global parameters{% endtrans %}<br />
+ 	</p></div>
+	</div>
+	</div>
+{% endif %}
+
+
+<div class="clear"></div>
+{% if is_granted('IS_FULLY_AUTHENTICATED') %}
+	<div class="horizontalRule" style="padding-top:20px;margin-top:20px;"></div>
+{% endif %}
+
+	<span>
+	{# include(svgDir().'myenquiries.svg'); #}
+	</span>
+
+
+<?php
+{% set showEnquiryGrid = 0 %}
+{# if($enquirys->getData() || $subscribed->getData()){ #}
+	$this->widget('EnquiryModal');
+	{% set showEnquiryGrid = 1 %}
+	<div>	{# open outer #}
+	<div style="float:left;margin-right:30px;width:550px">	{# open left #}
+{% endif %}
+
+{# if($enquirys->getData()){ #}
+{% if enquiries is defined %}
+<div class="sub_title">{% trans %}My enquiries{% endtrans %}</div>
+$this->widget('PGridView', array(
+//	'htmlOptions'=>array('class'=>'pgrid-view pgrid-cursor-pointer'),
+//	'cssFile'=>Yii::app()->request->baseUrl.'/css/pgridview.css',
+//	'loadingCssClass'=>'pgrid-view-loading',
+	'id'=>'enquiry-grid',
+	'selectableRows'=>1,
+//	'selectionChanged'=>'function(id){ location.href = "'.$this->createUrl('enquiry/view').'/"+$.fn.yiiGridView.getSelection(id);}',
+	'template' => '{items}{pager}',
+	'dataProvider'=>$enquirys,
+    'onClick'=>array(
+        'type'=>'javascript',
+        'call'=>'showEnquiry',
+    ),
+	'ajaxUpdate'=>true,
+	'columns'=>array(
+			array(
+				'header'=>__('Enquiries'),
+				'name'=>'title',
+				'value'=>'$data[\'title\']',
+			),
+			array(
+				'header'=>__('Formulated'),
+				'name'=>'created',
+				'value'=>'format_date($data[\'created\'])',
+			),
+			array(
+				'header'=>__('State'),
+				'name'=>'state',
+				'type' => 'raw',
+				'value'=>'$data->getHumanStates($data[\'state\'])',
+			),
+			array('class'=>'PHiddenColumn','value'=>'"$data[id]"'),
+)));
+<p></p>
+{% endif %}
+
+{# if($subscribed->getData()){ #}
+{% if subscribed is defined %}
+<div class="sub_title">{% trans %}I am subscribed to these enquirytions{% endtrans %}</div>
+<span class="hint">{% trans %}You will be sent an email when these enquiries are updated{% endtrans %}</span>
+$this->widget('PGridView', array(
+	'id'=>'subscribed-grid',
+	'template' => '{items}{pager}',
+	'dataProvider'=>$subscribed,
+    'onClick'=>array(
+        'type'=>'javascript',
+        'call'=>'showEnquiry',
+    ),
+	'ajaxUpdate'=>true,
+	'columns'=>array(
+			array(
+				'header'=>__('Enquiries'),
+				'name'=>'title',
+				'value'=>'$data[\'title\']',
+			),
+			array(
+				'header'=>__('Formulated'),
+				'name'=>'created',
+				'value'=>'format_date($data[\'created\'])',
+			),
+			array(
+				'header'=>__('State'),
+				'name'=>'state',
+				'type' => 'raw',
+				'value'=>'$data->getHumanStates($data[\'state\'])',
+			),
+            array('class'=>'PHiddenColumn','value'=>'"$data[id]"'),
+)));
+
+{% endif %}
+?>
+{% if showEnquiryGrid is defined %}
+	</div> {# close left #}
+	<div style="float:left;width:350px;">
+	{# $this->renderPartial('//enquiry/workflow-vertical'); #}
+    {% include 'enquiry/worflow-vertical.html.twig' %}
+	</div> {# close right #}
+	</div> {# close outer #}
+	<div class="clear"></div>
+{% else %}
+	<div class="sub_title">
+	{% trans %}Enquiries of your interest will be displayed here{% endtrans %}
+	</div>
+{% endif %}
+
+
+</div>
+</div>
+
+
+{# <?php if(Yii::app()->user->hasFlash('success')):?> #}
+{% if userhasflashsuccess is defined %}
+	<script>
+		$(function() {
+			$(".flash-success").slideDown('fast');
+			setTimeout(function() {
+				$('.flash-success').slideUp('fast');
+    		}, 5500);
+		});
+	</script>
+    <div class="flash-success" style="display:none">
+		{# <?php echo Yii::app()->user->getFlash('success');?> #}
+        {{ userhasflashsuccess }}
+    </div>
+{% endif %}
+
+
+{# <?php if(Yii::app()->user->hasFlash('error')):?> #}
+{% if userhasflasherror is defined %}
+    <div class="flash-error">
+		{# <?php echo Yii::app()->user->getFlash('error');?> #}
+        {{ userhasflasherror }}
+    </div>
+{% endif %}
+
+
+{# <?php if(Yii::app()->user->hasFlash('newActivationCodeError')):?> #}
+{% if userhasflasnewactivationcodeerror is defined %}
+	<script>
+		$(function() { setTimeout(function() {
+			$('.flash-error').slideUp('fast');
+    	}, 4500);
+		});
+	</script>
+    <div class="flash-error">
+		{# }<?php echo Yii::app()->user->getFlash('newActivationCodeError');?> #}
+        {{ userhasflasnewactivationcodeerror}}
+    </div>
+{% endif %}
+
+{# }<?php if(Yii::app()->user->hasFlash('prompt_blockuser')){ #}
+{% if userhasflaspromptblockuser is defined %}
+	list($name, $user_id) = explode("|", Yii::app()->user->getFlash('prompt_blockuser'));
+    <div class="flash-notice">
+		{% trans %}Do you want to block{% endtrans %} {{ name }}?
+		{# $url=Yii::app()->request->baseUrl.'/user/block/'.$user_id.'?confirmed=1'; #}
+		<button onclick="js:window.location='{{ path('user_block', { 'id': userid, 'confirmed': '1' }) }}'" style="margin-left:20px;margin-right:20px">{% trans %}Yes{% endtrans %}</button>
+		<button onclick="$(\'.flash-notice\').slideUp(\'fast\')">{% trans %}No{% endtrans %}</button>
+	</div>
+{% endif %}
