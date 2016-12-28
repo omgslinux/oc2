@@ -99,7 +99,7 @@ function basicFilter(el, filter){
 	$("#search_enquiries").submit();
 }
 function filterByDiagram(state){
-	humanStates = <?php echo json_encode($model->getHumanStates()) ?>;
+	humanStates = {# <?php echo json_encode($model->getHumanStates()); ?> #};
 	$("#Enquiry_state").val(state);
 	$("#search_enquiries").submit();
 	$('.workflowFilter').removeClass('selectedWorkflowFilter');
@@ -172,7 +172,7 @@ function resetForm(){
 </div>
 
 <div id="enquiryList" style="position:relative">
-{#}<?php
+{# <?php
 $template = '<div style="height:20px;">'.
 			'<div style="float:left; position:absolute; top: -20px; left: 60px;">{summary}</div>'.
 			'<div style="float:right; position:absolute; top: -20px; right:5px; ">{pager}</div><div class="clear">'.

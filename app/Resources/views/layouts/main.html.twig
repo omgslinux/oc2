@@ -20,15 +20,15 @@ $lang = Yii::app()->user->getState('applicationLanguage');
 
 #}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $lang?>" lang="<?php echo $lang?>">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{{ app.request.locale }}" lang="{{ app.request.locale }}">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="language" content="{{ locale }}" />
+	<meta name="language" content="{{ app.request.locale }}" />
 	<meta property="og:image" content="{{ asset('/files/logo.png') }} " />
 
 	<script type="text/javascript" src="{{ asset('/assets/90792776/jquery.min.js') }}"></script>
 
-	<title><?php echo (($this->pageTitle) ? $this->pageTitle : Config::model()->findByPk('siglas')->value); ?>({{ locale }})</title>
+    <title>{% block title %}{%if title is defined %}{{ title }}{% else %}{{ config.findParameter('siglas') }}{% endif %}{% endblock %}</title>
     {% block stylesheets %}
 	<link rel="stylesheet" type="text/css" href="{{ asset('/css/screen.css') }}" media="screen, projection" />
 	<link rel="stylesheet" type="text/css" href="{{ asset('/fonts/fontello/css/fontello.css') }}" />
@@ -53,18 +53,20 @@ $lang = Yii::app()->user->getState('applicationLanguage');
 <div id="header_bar">
 <ul>
 	<li><span style="float:right; position:relative">
-		{% for lang in locale %}
-			<a class="language_link" href="{{ path('site_language')}}?lang={{ lang }}">{{ lang }}</a>
+		{% for language in config.findParameter('languages')|split(',') %}
+			<a class="language_link" href="{{ path('site_index')}}?lang={{ language }}">{{ language }}</a>
 		{% endfor %}
 		</span>
-    </li>
-    <li>
-        {% if is_granted('USER_IS_AUTHENTICATED_FULLY') %}
-            <a href="{{ path('logout') }}"><i class="icon-logout header-icons"></i>{% trans %}Logout{% endtrans %} ({{ app.user.username }})</a></li>
-        <li><a href="{{ path('user_panel') }}"><i class="icon-home header-icons"></i>{% trans %}My page{% endtrans %}</a></li>
+  </li>
+  <li>
+    {% if is_granted('ROLE_USER') %}
+    <a href="{{ path('logout') }}"><i class="icon-logout header-icons"></i>{% trans %}Logout{% endtrans %} ({{ app.user.username }})</a>
+	</li>
+  <li><a href="{{ path('user_panel') }}"><i class="icon-home header-icons"></i>{% trans %}My page{% endtrans %}</a>
+	</li>
 		{% else %}
-            <a href="{{ path('site_login') }}"><i class="icon-user-female header-icons"></i>{% trans %}Login{% endtrans %}</a>
-        {% endif %}
+      <a href="{{ path('site_login') }}"><i class="icon-user-female header-icons"></i>{% trans %}Login{% endtrans %}</a>
+    {% endif %}
 	</li>
     {% if fbURL or twURL %}
 		<li>
@@ -73,7 +75,7 @@ $lang = Yii::app()->user->getState('applicationLanguage');
             {% endif %}
 			{% if twURL %}
 				<a href="{{ twURL }}" target="_blank"><i class="icon-twitter header-icons"></i></a>
-            {% endif %}
+      {% endif %}
 		</li>
 	{% endif %}
 	<li>
@@ -93,7 +95,7 @@ $lang = Yii::app()->user->getState('applicationLanguage');
 <div id="header" >
 	<div id="observatoryTitle">
 		<span style="cursor:pointer" onclick="window.location='{{ path('homepage') }}">
-		TITULO
+		{{ config.findParameter('administrationName') }}
 		</span>
 	</div>
 </div>

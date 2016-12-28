@@ -1,89 +1,73 @@
- <!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{{ app.request.locale }}" lang="{{ app.request.locale }}">
     <head>
         <meta charset="UTF-8" />
     	<meta name="language" content="{{ app.request.locale }}" />
     	<meta property="og:image" content="{{ asset('files/logo.png') }} " />
 
-        {% block stylesheets %}
-        <link rel="stylesheet" type="text/css" href="{{ asset('assets/90792776/jui/css/base/jquery-ui.css') }}" />
-        <link rel="stylesheet" type="text/css" href="{{ asset('/assets/eee3c3e6/listview/styles.css') }}" />
-        <link rel="stylesheet" type="text/css" href="{{ asset('/css/pager.css') }}" />
-        <script type="text/javascript" src="{{ asset('/assets/90792776/jquery.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('/assets/90792776/jquery.ba-bbq.min.js') }}"></script>
-    	<link rel="stylesheet" type="text/css" href="{{ asset('/css/screen.css') }}" media="screen, projection" />
-    	<link rel="stylesheet" type="text/css" href="{{ asset('/fonts/fontello/css/fontello.css') }}" />
-    	<link rel="stylesheet" type="text/css" href="{{ asset('/css/main.css') }}" />
-    	<link rel="stylesheet" type="text/css" href="{{ asset('/css/mainmenu.css') }}" />
-    	<link rel="stylesheet" type="text/css" href="{{ asset('/css/form.css') }}" />
-    	<link rel="stylesheet" type="text/css" href="{{ asset('/css/foot.css') }}" />
-    	<link rel="stylesheet" type="text/css" href="{{ asset('/css/color.css') }}" />
+      {% block stylesheets %}
+  	<link rel="stylesheet" type="text/css" href="{{ asset('/css/screen.css') }}" media="screen, projection" />
+  	<link rel="stylesheet" type="text/css" href="{{ asset('/fonts/fontello/css/fontello.css') }}" />
+  	<link rel="stylesheet" type="text/css" href="{{ asset('/css/main.css') }}" />
+  	<link rel="stylesheet" type="text/css" href="{{ asset('/css/mainmenu.css') }}" />
+  	<link rel="stylesheet" type="text/css" href="{{ asset('/css/form.css') }}" />
+  	<link rel="stylesheet" type="text/css" href="{{ asset('/css/foot.css') }}" />
+  	<link rel="stylesheet" type="text/css" href="{{ asset('/css/color.css') }}" />
+      {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    <title>{% block title %}{%if title is defined %}{{ title }}{% else %}{{ config.findParameter('siglas') }}{% endif %}{% endblock %}</title>
+  </head>
 
-        {% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-        <title>{% block title %}{%if title is defined %}{{ title }}{% else %}{{ config.findParameter('siglas') }}{% endif %}{% endblock %}</title>
-    </head>
-
-    <body>
+  <body>
     <div style="position:relative;">
-
-    <div id="header_bar">
-    <ul>
-    	<li><span style="float:right; position:relative">
-            {% for language in config.findParameter('languages')|split(',') %}
-			<a class="language_link" href="{{ path('site_index')}}?lang={{ language }}">{{ language }}</a>
-            {% endfor %}
-		  </span>
-        </li>
-
-        {% if is_granted('ROLE_USER') %}
-        <li>
-            <a href="{{ path('logout') }}"><i class="icon-logout header-icons"></i></a>
-            <span>{% trans %}Logout{% endtrans %} ({{ app.user.username }})</span>
-        </li>
-        <li>
-            <a href="{{ path('user_panel') }}"><i class="icon-home header-icons"></i>{% trans %}My page{% endtrans %}</a>
-        </li>
-		{% else %}
-        <li>
-            <a href="{{ path('site_login') }}"><i class="icon-user-female header-icons"></i></a>
-            <span><a href="{{ path('site_login') }}">{% trans %}Login{% endtrans %}</a></span>
-        </li>
-        {% endif %}
-
-        {% if fbURL is defined or twURL is defined %}
-		<li>
-			{% if fbURL %}
-			<a href="{{ fbURL }}" target="_blank"><i class="icon-facebook-squared header-icons"></i></a>
+      <div id="header_bar">
+        <ul>
+        	<li><span style="float:right; position:relative">
+        		{% for language in config.findParameter('languages')|split(',') %}
+        			<a class="language_link" href="{{ path('site_index')}}?lang={{ language }}">{{ language }}</a>
+        		{% endfor %}
+        		</span>
+          </li>
+          <li>
+            {% if is_granted('ROLE_USER') %}
+            <a href="{{ path('logout') }}"><i class="icon-logout header-icons"></i>{% trans %}Logout{% endtrans %} ({{ app.user.username }})</a>
+        	</li>
+          <li><a href="{{ path('user_panel') }}"><i class="icon-home header-icons"></i>{% trans %}My page{% endtrans %}</a>
+        	</li>
+        		{% else %}
+              <a href="{{ path('site_login') }}"><i class="icon-user-female header-icons"></i>{% trans %}Login{% endtrans %}</a>
             {% endif %}
-			{% if twURL %}
-			<a href="{{ twURL }}" target="_blank"><i class="icon-twitter header-icons"></i></a>
+        	</li>
+            {% if fbURL is defined or twURL is defined %}
+      		<li>
+      			{% if fbURL %}
+      				<a href="{{ fbURL }}" target="_blank"><i class="icon-facebook-squared header-icons"></i></a>
             {% endif %}
-		</li>
-    	{% endif %}
-    	<li>
-    		<a href="{{ path('newsletter') }}"><i class="icon-megaphone header-icons"></i></a>
-            <span><a href="{{ path('newsletter') }}">{% trans %}Newsletters{% endtrans %}</a></span>
-    	</li>
-    	<li>
-    		<a href="{{ path('archive') }}"><i class="icon-folder-1 header-icons"></i></a>
-            <span><a href="{{ path('archive') }}">{% trans %}Archive{% endtrans %}</a></span>
-    	</li>
-    </ul>
-
-    </div>
+      			{% if twURL %}
+      				<a href="{{ twURL }}" target="_blank"><i class="icon-twitter header-icons"></i></a>
+            {% endif %}
+      		</li>
+        	{% endif %}
+        	<li>
+        		<a href="{{ path('newsletter') }}"><i class="icon-megaphone header-icons"></i>{% trans %}Newsletters{% endtrans %}</a>
+        	</li>
+        	<li>
+        		<a href="{{ path('archive') }}"><i class="icon-folder-1 header-icons"></i>{% trans %}Archive{% endtrans %}</a>
+        	</li>
+        </ul>
+      </div>
     {#
     {% if config.socialnonfree and app.user.state.cookiesAccepted == false %}
     	{{ block('cookieAlert') }}
     {% endif %}
     #}
-    <div id="header" >
-    	<div id="observatoryTitle">
-    		<span style="cursor:pointer" onclick="window.location='{{ path('homepage') }}';">
-    		{{ config.findParameter('administrationName') }}
-    		</span>
-    	</div>
-    </div>
+      <div id="header" >
+      	<div id="observatoryTitle">
+      		<span style="cursor:pointer" onclick="window.location='{{ path('homepage') }}';">
+      		{{ config.findParameter('administrationName') }}
+      		</span>
+      	</div>
+      </div>
     {# {{ block('mainmenu') }} #}
 
     <div class="container" id="page">
