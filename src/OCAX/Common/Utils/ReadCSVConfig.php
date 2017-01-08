@@ -19,7 +19,7 @@ class ReadCSVConfig extends Controller
     /**
      * Loads the contents of a csv file into Securities from a FundBanks entity
      *
-     * @Route("/{id}/load", name="manage_securities_load")
+     * @Route("/load", name="readcsv_config_load")
      * @Method({"GET", "POST"})
      */
     public function loadAction(Request $request, Config $config)
