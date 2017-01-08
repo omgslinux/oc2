@@ -59,14 +59,14 @@ class File
      *
      * @ORM\Column(type="string", length=32)
      */
-    private $model;
+    private $entity;
 
     /**
      * @var integer
      *
      * @ORM\Column(type="integer")
      */
-    private $modelid;
+    private $entityId;
 
 
 
@@ -130,60 +130,55 @@ class File
     }
 
     /**
-     * Set model
+     * Set entity
      *
-     * @param string $model
+     * @param string $entity
      *
      * @return File
      */
-    public function setModel($model)
+    public function setEntity($entity)
     {
-        $this->model = $model;
+        $this->entity = $entity;
 
         return $this;
     }
 
     /**
-     * Get model
+     * Get entity
      *
-     * @return Model
+     * @return string
      */
-    public function getModel()
+    public function getEntity()
     {
-        return $this->model;
+        return $this->entity;
     }
 
     /**
-     * Set modelid
+     * Set modelId
      *
-     * @param integer $modelid
+     * @param integer $modelId
      *
      * @return File
      */
-    public function setModelId($modelid)
+    public function setEntityId($entityId)
     {
-        $this->modelid = $modelid;
+        $this->entityId = $entityId;
 
         return $this;
     }
 
     /**
-     * Get modelid
+     * Get entityId
      *
-     * @return Model
+     * @return integer
      */
-    public function getModelId()
+    public function getEntityId()
     {
-        return $this->modelid;
+        return $this->entityId;
     }
 
-    /**
-     * Get documents
-     *
-     * @return ArrayCollection
-     */
-    public function getDocuments()
+    public function __toString()
     {
-        return $this->documents;
+        return $this->getName();
     }
 }

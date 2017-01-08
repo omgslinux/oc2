@@ -38,13 +38,13 @@
               <a href="{{ path('site_login') }}"><i class="icon-user-female header-icons"></i>{% trans %}Login{% endtrans %}</a>
             {% endif %}
         	</li>
-            {% if fbURL is defined or twURL is defined %}
+            {% if config.findParameter('socialActivateNonFree') == '1' %}
       		<li>
-      			{% if fbURL %}
-      				<a href="{{ fbURL }}" target="_blank"><i class="icon-facebook-squared header-icons"></i></a>
+      			{% if config.findParameter('socialFacebookURL') %}
+      				<a href="{{ config.findParameter('socialFacebookURL') }}" target="_blank"><i class="icon-facebook-squared header-icons"></i></a>
             {% endif %}
-      			{% if twURL %}
-      				<a href="{{ twURL }}" target="_blank"><i class="icon-twitter header-icons"></i></a>
+      			{% if config.findParameter('socialTwitterURL') %}
+      				<a href="{{ config.findParameter('socialTwitterURL') }}" target="_blank"><i class="icon-twitter header-icons"></i></a>
             {% endif %}
       		</li>
         	{% endif %}
@@ -56,11 +56,11 @@
         	</li>
         </ul>
       </div>
-    {#
-    {% if config.socialnonfree and app.user.state.cookiesAccepted == false %}
+
+    {% if config.findParameter('socialActivateNonFree') and app.request.cookies == false %}
     	{{ block('cookieAlert') }}
     {% endif %}
-    #}
+
       <div id="header" >
       	<div id="observatoryTitle">
       		<span style="cursor:pointer" onclick="window.location='{{ path('homepage') }}';">
@@ -68,9 +68,16 @@
       		</span>
       	</div>
       </div>
-    {# {{ block('mainmenu') }} #}
+    {% include 'layouts/mainmenu.html.twig' %}
 
     <div class="container" id="page">
+        {% for type, messages in app.session.flashbag %}
+            {% for message in messages %}<!-- flash-{{ type }} block -->
+                <div class="flash-{{ type }}">
+                    {{ message }}
+                </div>
+            {% endfor %}<!-- end flash-{{ type }} block -->
+        {% endfor %}
     	{% block body %}{% endblock %}
     	<div class="clear"></div>
     </div><!-- page -->

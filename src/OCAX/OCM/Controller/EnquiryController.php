@@ -8,6 +8,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Cookie;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use OCAX\Budget\Entity\BudgetToken as Budget;
+use OCAX\OCM\Entity\Enquiry;
+use OCAX\Common\Entity\AppLog;
 
 /**
  * @Route("/enquiry", name="enquiry")
@@ -69,6 +73,7 @@ class EnquiryController extends Controller
             'enquiries' => $enquiries,
             'enquiriescount' => $enquiriescount,
             'enquirystates' => $enquirystates,
+            'enquiryactive' => 'active',
             //'dataProvider' => $model->publicSearch(),
         ));
     }
@@ -78,22 +83,119 @@ class EnquiryController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      *
      * @Route("/create", name="enquiry_create")
-     * @Method("GET")
+     * @Method({"GET", "POST"})
      */
-    public function createAction()
+    public function createAction(Request $request, Budget $budget = null)
     {
-        $this->layout='//layouts/column1';
-        $this->pageTitle=CHtml::encode(__('New enquiry'));
-        $model=new Enquiry;
+        //$this->layout='//layouts/column1';
+        //$this->pageTitle=CHtml::encode(__('New enquiry'));
+        $enquire=new Enquiry();
+        //$form = $this->createForm($enquire);
+        $user=$this->getUser();
+        $form = $this->createForm('OCAX\OCM\Form\EnquiryType', $enquire);
+
+        $form->handleRequest($request);
+
         // Uncomment the following line if AJAX validation is needed
         // $this->performAjaxValidation($model);
 
-        if (isset($_GET['budget'])) {
-            $model->budget=$_GET['budget'];
-            $model->type = 1;
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            /*        if (isset($_GET['budget'])) {
+                        $model->budget=$_GET['budget'];
+                        $model->type = 1;
+                    }
+            */
+            /* if ($this->request->get('budget')) {
+                $enquire->setBudgetary(true);
+            } */
+            $enquire->setCreationDate(new \DateTime());
+            $enquire->setAssignDate(new \DateTime());
+            $enquire->setModificationDate(new \DateTime());
+            $enquire->setSubmissionDate(new \DateTime());
+            $state = $em->getRepository('OCMBundle:EnquiryState')
+                ->findBy(array('description' => 'ENQUIRY_PENDING_VALIDATION'));
+            $enquire->setState($state);
+            $user = $em->getRepository('CommonBundle:User')->find($this->getUser());
+            $enquire->setUser($user);
+            $body=trim(strip_tags(str_replace("<br />", " ", $enquire->getBody())));
+            $enquire->setBody($body);
+            if (is_null($budget)) {
+                if (Config::model()->findByPk('year')->value != $budget->year) {
+                    $msg = __('This budget is from the year %s.').'. '.__('Do you want to continue?');
+                    $msg = str_replace('%s', $budget->year, $msg);
+                    $this->user->setFlash('prompt_year', $msg);
+                }
+            }
+
+            // Para obtener el id
+            $em->persist();
+
+            $description = new EnquiryText();
+            $description->setEnquiry($enquire->getId());
+            $description->setSubject($enquire->getSubject());
+            $description->setBody=trim(strip_tags(str_replace("<br />", " ", $enquire->getBody())));
+
+            $subscription=new EnquirySubscribe();
+            $subscription->setEnquiry($enquire);
+            $subscription->setUser($user);
+
+            $log=new AppLog();
+            $log->setEntity('Enquiry');
+            $log->setMessage($this->get('translator')->trans('New enquiry') . 'id='.$enquire->getId());
+            $log->setEntityId($enquire->getId());
+
+            $config = $this->get('ocax.config');
+
+            $enquiremail=new EnquiryEmail();
+            $enquiremail->setSubject=$this->get('translator')->trans($enquire->getState()->getDescription);
+            $enquiremail->setSender($user);
+            $recipients=$user->getEmail().',';
+            $message = \Swift_Message::newInstance()
+                    ->setSubject($enquiremail->getSubject())
+                    ->setSender($config->findParameter('emailNoReply'))
+                    ->SetFrom(
+                        array
+                        (
+                            $config->findParameter('emailNoReply'),
+                            $config->findParameter('siglas')
+                        )
+                    )
+                    ;
+            $managers=$em->getRepository('CommonBundle:User')->findBy(array('manager'=> true));
+            foreach ($managers as $manager) {
+                $message->addBcc($manager->getEmail());
+                $recipients.=' '.$manager->getEmail().',';
+            }
+            $template = $this->get('twig')->createTemplate($enquire->getState()->getEmailTemplates()->__toString());
+            $body=$template>render(
+                array(
+                    $enquire->getState()->getEmailTemplates()->__toString(),
+                    'enquiry' => $enquire,
+                    'user' => $user
+                )
+            );
+            $enquiremail
+                ->setBody($body)
+                ->setRecipients($recipients)
+                ->setEnquiry($enquire);
+            $message->setBody($body, 'text/html');
+            //$mailer->Body=EmailTemplate::model()->findByPk($model->state)->getBody($model);
+
+
+            if ($this->get('mailer')->send($message)) {
+                $enquiremail->setSent=true;
+                $this->addFlash('success', 'We have sent you an email');
+            } else {
+                $this->addFlash('success', 'Your enquiry has been registered correctly');
+            }
+
+            $em->flush();
+
+            return $this->redirectToRoute('user_panel');
         }
 
-        if ($budget=Budget::model()->findByPk($model->budget)) {
+/*        if ($budget=Budget::model()->findByPk($model->budget)) {
             if (Config::model()->findByPk('year')->value != $budget->year) {
                 $msg = __('This budget is from the year %s.').'. '.__('Do you want to continue?');
                 $msg = str_replace('%s', $budget->year, $msg);
@@ -102,10 +204,10 @@ class EnquiryController extends Controller
         } else {
             Yii::app()->end();
         }
+*/
+        //$model->addressed_to = ADMINISTRATION;
 
-        $model->addressed_to = ADMINISTRATION;
-
-        if (isset($_POST['Enquiry'])) {
+        /* if (isset($_POST['Enquiry'])) {
             $model->setScenario('create');
             $model->attributes=$_POST['Enquiry'];
             $model->user = Yii::app()->user->getUserID();
@@ -172,8 +274,13 @@ class EnquiryController extends Controller
                 $this->redirect(array('/user/panel'));
             }
         }
-        $this->render('create', array(
-            'model'=>$model,
+        */
+        return $this->render('enquiry/create.html.twig', array(
+            //'model'=>$model,
+            'title' => $this->get('translator')->trans('New enquiry'),
+            'form' => $form->createView(),
+            'user' => $user,
+            'enquiryactive' => 'active',
         ));
     }
 
@@ -217,5 +324,13 @@ class EnquiryController extends Controller
             Yii::app()->end();
         }
         echo '0';
+    }
+
+    public function budgetDetails(Budget $Budget)
+    {
+        // From 'enquiry/_detailsForTeam.html.twig'
+        $this->render('enquiry/_budgetDetails.html.twig', array(
+            'budget' => $Budget,
+        ));
     }
 }

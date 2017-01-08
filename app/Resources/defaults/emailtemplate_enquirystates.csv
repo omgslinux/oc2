@@ -1,0 +1,9 @@
+body,updated,description
+"<p>{% trans %}Hello{% endtrans %} {{ user.name }},</p><p>{{ enquiry.state }}</p>",0,"Pending validation by the %s"
+"<p>{% trans %}Hello, team member{% endtrans %},</p><p>{% trans %}This is an internal email.{% endtrans %}<br />{{ enquiry.state }}</p><p>{{ link }}</p>",0,"Enquiry assigned to team member"
+"<p>{% trans %}Hello{% endtrans %},</p><p>{{ enquiry.state }}</p>",0,"Enquiry rejected by the %s"
+"<p>Hola,</p><p>ENQUIRY_ACCEPTED</p><p>Link<br />%link%</p><p>Cordiales Saludos,</p>",0,"Enquiry accepted by the %s"
+"<p>Hola,</p><p>ENQUIRY_AWAITING_REPLY</p><p>Link<br />%link%</p><p>Cordiales Saludos,</p>",0,"Awaiting reply from the %s"
+"<p>Hola,</p><p>ENQUIRY_REPLY_PENDING_ASSESSMENT</p><p>Link<br />%link%</p><p>Cordiales Saludos,</p>",0,"Reply pending assessment"
+"<p>Hola,</p><p>ENQUIRY_REPLY_SATISFACTORY</p><p>Link<br />%link%</p><p>Cordiales Saludos,</p>",0,"Reply considered satisfactory"
+"<p>Hola,</p><p>ENQUIRY_REPLY_INSATISFACTORY</p><p>Link<br />%link%</p><p>Cordiales Saludos,</p>",0,"Reply considered insatisfactory"

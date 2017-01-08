@@ -137,6 +137,8 @@ class UserController extends Controller
             $em->persist($user);
             $em->flush();
 
+            $this->addFlash('success', 'Changes saved Ok');
+
             return $this->redirectToRoute('admin_users_show', array('id' => $user->getId()));
         }
 

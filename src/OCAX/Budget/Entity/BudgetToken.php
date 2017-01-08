@@ -1,10 +1,9 @@
 <?php
 
-namespace Budget\Entity;
+namespace OCAX\Budget\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
-use Common\Entity\Message;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
@@ -51,9 +50,23 @@ class BudgetToken
     /**
      * @var Message
      *
-     * @ORM\ManyToOne(targetEntity="Message", inversedBy="budgettokens")
+     * @ORM\ManyToOne(targetEntity="OCAX\Common\Entity\Message")
      */
     private $message;
+
+    /**
+     * @var ArrayCollection
+     *
+     * @ORM\OneToMany(targetEntity="BudgetDetail", mappedBy="token")
+     */
+    private $details;
+
+    /**
+     * @var ArrayCollection
+     *
+     * @ORM\OneToMany(targetEntity="\OCAX\OCM\Entity\Enquiry", mappedBy="budget")
+     */
+    private $enquiries;
 
 
 

@@ -1,0 +1,86 @@
+{#
+/**
+ * OCAX -- Citizen driven Municipal Observatory software
+ * Copyright (C) 2013 OCAX Contributors. See AUTHORS.
+
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+#}
+
+<?php
+$this->widget('zii.widgets.CDetailView', array(
+	'cssFile' => {{ asset('/css/pdetailview.css') }},
+	'data'=>$model,
+	'attributes'=>array(
+		array(
+	        'label'=>{% trans %}State{% endtrans %},
+	        'value'=>$model->getHumanStates($model->state,$model->addressed_to),
+		),
+		array(
+	        'label'=>{% trans %}Formulated by{% endtrans %},
+	        'value'=>$model->user0->fullname.' {% trans %}on the{% endtrans %} '.$model->created.' ('.$model->user0->email.')',
+		),
+		array(
+	        'label'=>{% trans %}Assigned to{% endtrans %},
+	        'value'=>($model->team_member) ? $model->teamMember->fullname.' {% trans %}on the{% endtrans %} '.$model->assigned : "",
+		),
+		array(
+	        'label'=>{% trans %}Type{% endtrans %},
+	        'value'=>($model->related_to) ? $model->getHumanTypes($model->type).' ({% trans %}reformulated{% endtrans %})' : $model->getHumanTypes($model->type),
+		),
+		array(
+	        'label'=>{% trans %}Addressed to{% endtrans %},
+	        'value'=>$model->getHumanAddressedTo($model->addressed_to),
+		),
+		array(
+	        'label'=>{% trans %}Subscribed users{% endtrans %},
+	        'value'=>count($model->subscriptions),
+		),
+	),
+));
+
+if($model->state >= ENQUIRY_AWAITING_REPLY){
+	$document='';
+	if($model->documentation)
+		$document ='Doc: <a href="'.$model->documentation0->getWebPath().'" target="_new">'.$model->documentation0->name.'</a>';
+	elseif($model->addressed_to == ADMINISTRATION)
+		$document ='Doc: <span style="color:red">{% trans %}missing{% endtrans %}</span>';
+	$submitted_info=format_date($model->submitted).', {% trans %}Registry number{% endtrans %}: '.$model->registry_number;
+	if($document)
+		$submitted_info = $submitted_info.', '.$document;
+
+	$this->widget('zii.widgets.CDetailView', array(
+	'cssFile' => {{ asset('/css/pdetailview.css') }},
+	'data'=>$model,
+	'attributes'=>array(
+		array(
+	        'label'=>{% trans %}Submitted{% endtrans %},
+			'type'=>'raw',
+	        'value'=>$submitted_info,
+		),
+	),
+	));
+}
+
+{# if($model->budget){
+	$budget=Budget::model()->findByPk($model->budget);
+	if ($budget===null){
+		throw new CHttpException(404,'The requested Budget does not exist.');
+	}
+	$this->renderPartial('//enquiry/_budgetDetails', array('model'=>$budget,'showMore'=>1));
+#}
+{% if enquiry.budgetary %}
+    {{ render('OCMBundle:Enquiry:budgetDetails', { 'Budget': enquiry.bugdet }) }}
+{% endif %}
+?>

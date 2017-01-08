@@ -17,6 +17,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
 //            new AppBundle\AppBundle(),
 //            new OCAX\OCAXBundle(),
+            new Stfalcon\Bundle\TinymceBundle\StfalconTinymceBundle(),
             new OCAX\Common\CommonBundle(),
             new OCAX\Backup\BackupBundle(),
             new OCAX\Budget\BudgetBundle(),

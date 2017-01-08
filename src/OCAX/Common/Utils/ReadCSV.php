@@ -12,15 +12,14 @@ use Symfony\Bridge\Doctrine\DataFixtures\ContainerAwareLoader;
 */
 class ReadCSV extends ContainerAwareLoader
 {
-    private $rootdir;
-    private $url=array();
-    private $basedir='../web/pdf/';
-    private $path;
-    private $container;
+    private $rootdir; //%kernel_root_dir% on startup via services.yml
+    private $basedir='../app/Resources/defaults/';
+    private $container; // @service_container on startup
 
     public function __construct($container)
     {
         $this->container = $container;
+        $this->basedir='../app/Resources/defaults/';
     }
 
     public function setRootdir($rootdir)
@@ -42,32 +41,17 @@ class ReadCSV extends ContainerAwareLoader
         $this->basedir = $basedir;
     }
 
-    public function getPath()
-    {
-        return $this->path;
-    }
-
-    public function setPath($path)
-    {
-        $this->path = $path;
-    }
-
     public function getFullbase()
     {
         return $this->rootdir . '/' . $this->getBaseDir();
     }
 
-    public function getFulldir()
-    {
-        return $this->getFullbase() . dirname($this->path) . '/';
-    }
-
     public function readcsv($csvfile)
     {
         // print getcwd();
-        print $this->getFulldir()."\n$csvfile\n";
+        print $this->getFullbase()."\n$csvfile\n";
 
-        if (($handle = fopen($this->getFulldir()."$csvfile", "r")) !== false) {
+        if (($handle = fopen($this->getFullbase()."$csvfile", "r")) !== false) {
             $headers = array();
             $data = array();
             $row = 0;
@@ -99,7 +83,8 @@ class ReadCSV extends ContainerAwareLoader
         $row = $params['row'];
         $fields = $params['fields'];
         $classname = $params['classname'];
-        eval('$class = new AppBundle\Entity\\' . $classname .'();');
+        $namespace = $params['namespace'];
+        eval('$class = new ' . $namespace . '\Entity\\' . $classname .'();');
         foreach ($row as $field => $value) {
             if (!empty($fields["$field"])) {
                 printf("<strong>field</strong>: (line %s) (%s) ", __LINE__, $field);
@@ -128,8 +113,9 @@ class ReadCSV extends ContainerAwareLoader
                                     $property = $entity['property'];
                                     $classname = $entity['classname'];
                                     $mappedby = $entity['mappedBy'];
+                                    $namespace = $entity['namespace'];
                                     printf("<strong>classname</strong>: (line %s) (%s)<br>", __LINE__, $classname);
-                                    $eval = '$classobject = new AppBundle\Entity\\'. $classname . '();';
+                                    $eval = '$classobject = new ' . $namespace .'\Entity\\'. $classname . '();';
                                     printf("eval (line %s): (%s)", __LINE__, $eval);
                                     eval($eval);
                                     $classobject = $em->getRepository('AppBundle:' . $classname)

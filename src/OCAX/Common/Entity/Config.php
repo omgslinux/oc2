@@ -46,6 +46,13 @@ class Config
     /**
      * @var boolean
      *
+     * @ORM\Column(type="boolean", options={"default"=true})
+     */
+    private $editable;
+
+    /**
+     * @var boolean
+     *
      * @ORM\Column(type="boolean")
      */
     private $required;
@@ -140,6 +147,30 @@ class Config
     public function getDescription()
     {
         return $this->description;
+    }
+
+    /**
+     * Set editable
+     *
+     * @param boolean $editable
+     *
+     * @return Config
+     */
+    public function setEditable($editable)
+    {
+        $this->editable = $editable;
+
+        return $this;
+    }
+
+    /**
+     * Is editable
+     *
+     * @return boolean
+     */
+    public function isEditable()
+    {
+        return $this->editable;
     }
 
     /**

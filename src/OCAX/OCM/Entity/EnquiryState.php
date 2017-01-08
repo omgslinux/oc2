@@ -203,4 +203,9 @@ class EnquiryState
     {
         return $this->related;
     }
+
+    public function __toString()
+    {
+        return $this->getDescription();
+    }
 }

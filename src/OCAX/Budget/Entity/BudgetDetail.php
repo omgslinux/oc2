@@ -1,6 +1,6 @@
 <?php
 
-namespace Budget\Entity;
+namespace OCAX\Budget\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -39,7 +39,7 @@ class BudgetDetail
     /**
      * @var decimal
      *
-     * @ORM\Column(type="decimal", scale=10, precision=2)
+     * @ORM\Column(type="decimal", precision=10, scale=2)
      */
     private $data;
 

@@ -122,7 +122,7 @@ class User implements UserInterface
      *
      * @ORM\Column(type="boolean")
      */
-    private $teammember;
+    private $teamMember;
 
     /**
      * @var boolean
@@ -155,7 +155,7 @@ class User implements UserInterface
     /**
      * @var ArrayCollection
      *
-     * @ORM\OneToMany(targetEntity="OCAX\OCM\Entity\Email", mappedBy="sender")
+     * @ORM\OneToMany(targetEntity="OCAX\OCM\Entity\EnquiryEmail", mappedBy="sender")
      */
     private $emails;
 
@@ -530,27 +530,27 @@ class User implements UserInterface
     }
 
     /**
-     * Set teammember
+     * Set teamMember
      *
-     * @param boolean $teammember
+     * @param boolean $teamMember
      *
      * @return User
      */
     public function setTeamMember($active)
     {
-        $this->teammember = $active;
+        $this->teamMember = $active;
 
         return $this;
     }
 
     /**
-     * Is teammember
+     * Is teamMember
      *
      * @return boolean
      */
     public function isTeamMember()
     {
-        return $this->teammember;
+        return $this->teamMember;
     }
 
     /**

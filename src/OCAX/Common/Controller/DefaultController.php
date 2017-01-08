@@ -17,6 +17,8 @@ class DefaultController extends Controller
         // replace this example code with whatever you need
         return $this->render('layouts/main.html.twig', [
             'locale' => $request->getLocale(),
+            'budgetactive' => false,
+            'enquiryactive' => false,
             'fbURL' => false,
             'twURL' => false,
         ]);
@@ -115,5 +117,24 @@ class DefaultController extends Controller
             ->setMethod('DELETE')
             ->getForm()
         ;
+    }
+
+    /**
+     * Displays a form to edit an existing Funds entity.
+     *
+     * @Route("/entities", name="manage_funds_edit")
+     * @Method({"GET", "POST"})
+     */
+    public function entitiesAction(Request $request)
+    {
+        $entities = array();
+        $em = $this->getDoctrine()->getManager();
+
+        $namespaces = $em->getConfiguration()->getEntityNamespaces();
+
+        foreach ($namespaces as $namespace) {
+            print "$namespace\n<br>";
+        }
+        return;
     }
 }

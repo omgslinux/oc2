@@ -8,12 +8,12 @@ use Doctrine\Common\Collections\ArrayCollection;
 use OCAX\Common\Entity\User;
 
 /**
- * Email
+ * EnquiryEmail
  *
- * @ORM\Table(name="email")
+ * @ORM\Table(name="enquiry_email")
  * @ORM\Entity
  */
-class Email
+class EnquiryEmail
 {
     /**
      * @var integer
@@ -98,6 +98,10 @@ class Email
 //    private $subscriptions;
 
 
+    public function __construct()
+    {
+        $this->creationdate=new \DateTime();
+    }
 
     /**
      * Get id

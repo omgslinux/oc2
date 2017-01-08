@@ -1,0 +1,35 @@
+parameter,value,description,required,editable
+administrationLatitude,,"Administration's WGS84 latitude on earth",0,1
+administrationLongitude,,"Administration's WGS84 longitude on earth",0,1
+administrationName,"Ayuntamiento de Espanistan","Name of the administration",1,1
+budgetAutoFeature,1,"Auto create budget graphics after csv import",1,1
+currencySymbol,"n €","Currency symbol and collocation",1,1
+databaseDumpMethod,native,"Database backup method",1,1
+emailContactAddress,info@ocax.net,"Contact email address",1,1
+emailNoReply,no-reply@ocax.es,"no-reply email address",1,1
+languages,"es,ca,en","Available languages on this site",1,1
+membership,1,"Does your Observatory encourage membership?",1,1
+observatoryBlog,,"Observatory blog",0,1
+observatoryName1,"Observatorio Ciutadano Municipal#del %s","Observatory name part 1",1,1
+observatoryName2,"My town","Observatory name part 2",0,1
+htmlEditorUseCompressor,1,"Use HTML editor compressor",1,1
+schemaVersion,4,"Database schema version",1,0
+showExport,1,"Show ""Enquiry export"" PDF button",0,1
+siglas,OCM_,"Observatory's initials",1,1
+siteAutoBackup,0,"Automated site backup (experimental)",1,1
+siteAutoBackupEmailAlert,1,"Send email reports to admin(s)",1,1
+siteColor,a1a150,"The colour of your site eg: #a1a150",1,1
+siteConfigStatus,0,"Site configuration complete",1,1
+siteConfigStatusEmail,0,"Site email configuration status",1,1
+siteConfigStatusEmailTemplates,0,"Have all templates been personalized?",1,1
+siteConfigStatusLanguage,0,"Site language configuration status",1,1
+siteConfigStatusInitials,0,"Obseratory initials configuration status",1,1
+siteConfigStatusObservatoryName,0,"Obseratory name configuration status",1,1
+siteConfigStatusZipFileUpdated,1,"Zip file containing csv is up to date",1,1
+siteConfigStatusUptodate,0,"OCAx version is up to date",1,1
+smtpMethod,0,"Email server",1,1
+smtpAuth,1,"SMTP Auth",1,1
+socialActivateNonFree,0,"Twitter and Facebook widgets",1,1
+socialActivateMeneame,0,"Meneame: Spanish social news website",1,1
+vaultDefaultCapacity,3,"Default vault capacity",1,1
+year,2015,"Default Year. Most recent published year",1,1

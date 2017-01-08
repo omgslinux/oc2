@@ -1,0 +1,9 @@
+id,state,description
+1,ENQUIRY_PENDING_VALIDATION,"Pending validation by the %s"
+2,ENQUIRY_ASSIGNED,"Enquiry assigned to team member"
+3,ENQUIRY_REJECTED,"Enquiry rejected by the %s"
+4,ENQUIRY_ACCEPTED,"Enquiry accepted by the %s"
+5,ENQUIRY_AWAITING_REPLY,"Awaiting reply from the %s"
+6,ENQUIRY_REPLY_PENDING_ASSESSMENT,"Reply pending assessment"
+7,ENQUIRY_REPLY_SATISFACTORY,"Reply considered satisfactory"
+8,ENQUIRY_REPLY_INSATISFACTORY,"Reply considered insatisfactory"

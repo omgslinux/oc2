@@ -1,0 +1,9 @@
+id,enquirystate_id,body,updated
+1,1,"<p>{% trans %}Hello{% endtrans %} {{ user.name }},</p><p>{{ enquiry.state }}</p>",0
+2,2,"<p>{% trans %}Hello, team member{% endtrans %},</p><p>{% trans %}This is an internal email.{% endtrans %}<br />{{ enquiry.state }}</p><p>{{ link }}</p>",0
+3,3,"<p>{% trans %}Hello{% endtrans %},</p><p>{{ enquiry.state }}</p>",0
+4,4,"<p>Hola,</p><p>ENQUIRY_ACCEPTED</p><p>Link<br />%link%</p><p>Cordiales Saludos,</p>",0
+5,5,"<p>Hola,</p><p>ENQUIRY_AWAITING_REPLY</p><p>Link<br />%link%</p><p>Cordiales Saludos,</p>",0
+6,6,"<p>Hola,</p><p>ENQUIRY_REPLY_PENDING_ASSESSMENT</p><p>Link<br />%link%</p><p>Cordiales Saludos,</p>",0
+7,7,"<p>Hola,</p><p>ENQUIRY_REPLY_SATISFACTORY</p><p>Link<br />%link%</p><p>Cordiales Saludos,</p>",0
+8,8,"<p>Hola,</p><p>ENQUIRY_REPLY_INSATISFACTORY</p><p>Link<br />%link%</p><p>Cordiales Saludos,</p>",0

@@ -6,6 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Doctrine\Common\Collections\ArrayCollection;
 use OCAX\Common\Entity\User;
+use OCAX\Budget\Entity\BudgetToken;
 
 /**
  * Enquiry
@@ -74,13 +75,6 @@ class Enquiry
     private $registrynumber;
 
     /**
-     * @var File
-     *
-     * @ORM\ManyToOne(targetEntity="File")
-     */
-    private $file;
-
-    /**
      * generic=0, budgetary=1
      *
      * @var boolean
@@ -94,7 +88,7 @@ class Enquiry
      *
      * @var boolean
      *
-     * @ORM\Column(type="string", length=45, nullable=false)
+     * @ORM\Column(type="boolean")
      */
     private $addressedto;
 
@@ -120,9 +114,16 @@ class Enquiry
     private $body;
 
     /**
+     * @var BudgetToken
+     *
+     * @ORM\ManyToOne(targetEntity="OCAX\Budget\Entity\BudgetToken", inversedBy="enquiries")
+     */
+    private $budget;
+
+    /**
      * @var ArrayCollection
      *
-     * @ORM\OneToMany(targetEntity="Email", mappedBy="enquiry")
+     * @ORM\OneToMany(targetEntity="EnquiryEmail", mappedBy="enquiry")
      */
     private $emails;
 
@@ -132,6 +133,13 @@ class Enquiry
      * @ORM\OneToMany(targetEntity="EnquirySubscribe", mappedBy="enquiry")
      */
     private $subscriptions;
+
+    /**
+     * @var ArrayCollection
+     *
+     * @ORM\OneToMany(targetEntity="EnquiryText", mappedBy="enquiry")
+     */
+    private $texts;
 
 
 
@@ -362,6 +370,30 @@ class Enquiry
     }
 
     /**
+     * Set addressedto
+     *
+     * @param boolean $addressedto
+     *
+     * @return Enquiry
+     */
+    public function setAddressedTo($addressedto)
+    {
+        $this->addressedto = $addressedto;
+
+        return $this;
+    }
+
+    /**
+     * Get addressedto
+     *
+     * @return boolean
+     */
+    public function isAddressedTo()
+    {
+        return $this->addressedto;
+    }
+
+    /**
      * Set state
      *
      * @param EnquiryState $state
@@ -451,6 +483,16 @@ class Enquiry
     public function getSubscriptions()
     {
         return $this->subscriptions;
+    }
+
+    /**
+     * Get texts
+     *
+     * @return ArrayCollection
+     */
+    public function getTexts()
+    {
+        return $this->texts;
     }
 
 

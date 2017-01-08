@@ -18,15 +18,16 @@
  */
 #}
 
-
+{% if budgetactive is not defined %}{% set budgetactive = false %}{% endif %}
+{% if enquiryactive is not defined %}{% set enquiryactive = false %}{% endif %}
 {% block mainmenu %}
 	<!-- <div id="mainmenu"> -->
 	<div id="mainMbMenu">
         <div id="nav-container">
             <div id="nav-bar">
                 <ul id="nav">
-                    <li class="{{ budgetactive }}"><a href="{{ path('budget') }}"><span>{% trans %}Budgets{% endtrans %}</span></a></li>
-                    <li class="{{ enquiryactive }}"><a href="{{ path('enquiry') }}"><span>{% trans %}Enquiries{% endtrans %}</span></a></li>
+                    <li class="{{ budgetactive }}"><a href="{{ path('budget_index') }}"><span>{% trans %}Budgets{% endtrans %}</span></a></li>
+                    <li class="{{ enquiryactive }}"><a href="{{ path('enquiry_index') }}"><span>{% trans %}Enquiries{% endtrans %}</span></a></li>
                 </ul>
             </div>
         </div>

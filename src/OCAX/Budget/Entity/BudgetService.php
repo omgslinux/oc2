@@ -1,10 +1,9 @@
 <?php
 
-namespace Budget\Entity;
+namespace OCAX\Budget\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
-use OCAXCommon\Entity\Message;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
@@ -37,7 +36,7 @@ class BudgetService
     /**
      * @var BudgetDate
      *
-     * @ORM\ManyToOne(targetEntity="BudgetDate", inversedBy="servicedates")
+     * @ORM\ManyToOne(targetEntity="BudgetDate", inversedBy="services")
      */
     private $date;
 
@@ -51,16 +50,23 @@ class BudgetService
     /**
      * @var integer
      *
-     * @ORM\Column(type="tinyint")
+     * @ORM\Column(type="smallint")
      */
     private $level;
 
     /**
      * @var ArrayCollection
      *
-     * @ORM\ManyToOne(targetEntity="Message", inversedBy="servicetokens")
+     * @ORM\OneToMany(targetEntity="OCAX\Common\Entity\Message")
      */
-    private $message;
+/*    private $message;
+*/
+    /**
+     * @var ArrayCollection
+     *
+     * @ORM\OneToMany(targetEntity="BudgetToken", mappedBy="service")
+     */
+    private $tokens;
 
 
 

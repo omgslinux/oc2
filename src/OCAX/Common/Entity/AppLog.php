@@ -41,14 +41,14 @@ class AppLog
      *
      * @ORM\Column(type="string", length=255)
      */
-    private $prefix;
+    private $entity;
 
     /**
      * @var integer
      *
-     * @ORM\Column(type="integer")
+     * @ORM\Column(name="entity_id", type="integer")
      */
-    private $model;
+    private $entityId;
 
     /**
      * @var string
@@ -59,6 +59,10 @@ class AppLog
 
 
 
+    public function __construct()
+    {
+        $this->creationdate=new \DateTime();
+    }
 
     /**
      * Get id
@@ -75,7 +79,7 @@ class AppLog
      *
      * @param User $user
      *
-     * @return Log
+     * @return AppLog
      */
     public function setUser($user)
     {
@@ -99,7 +103,7 @@ class AppLog
      *
      * @param \DateTime $creationdate
      *
-     * @return Log
+     * @return AppLog
      */
     public function setCreationDate($creationdate)
     {
@@ -119,51 +123,51 @@ class AppLog
     }
 
     /**
-     * Set prefix
+     * Set entity
      *
-     * @param string $prefix
+     * @param string $entity
      *
-     * @return Log
+     * @return AppLog
      */
-    public function setPrefix($prefix)
+    public function setEntity($entity)
     {
-        $this->prefix = $prefix;
+        $this->entity = $entity;
 
         return $this;
     }
 
     /**
-     * Get prefix
+     * Get entity
      *
      * @return string
      */
-    public function getPrefix()
+    public function getEntity()
     {
-        return $this->prefix;
+        return $this->entity;
     }
 
     /**
-     * Set model
+     * Set entityId
      *
-     * @param Model $model
+     * @param integer $entityId
      *
-     * @return Log
+     * @return AppLog
      */
-    public function setModel(Model $model)
+    public function setEntityId($id)
     {
-        $this->model = $model;
+        $this->$entityId = $id;
 
         return $this;
     }
 
     /**
-     * Get model
+     * Get entityId
      *
-     * @return Model
+     * @return integer
      */
-    public function getModel()
+    public function getEntityId()
     {
-        return $this->model;
+        return $this->entityId;
     }
 
     /**
@@ -171,7 +175,7 @@ class AppLog
      *
      * @param string $message
      *
-     * @return Log
+     * @return AppLog
      */
     public function setMessage($message)
     {
@@ -183,7 +187,7 @@ class AppLog
     /**
      * Get message
      *
-     * @return string
+     * @return text
      */
     public function getMessage()
     {

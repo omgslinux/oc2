@@ -1,10 +1,10 @@
 <?php
 
-namespace Budget\Entity;
+namespace OCAX\Budget\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
-use Common\Entity\Message;
+use OCAX\Common\Entity\Message;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
@@ -51,16 +51,24 @@ class BudgetEconomic
     /**
      * @var integer
      *
-     * @ORM\Column(type="tinyint")
+     * @ORM\Column(type="smallint")
      */
     private $level;
 
     /**
      * @var Message
      *
-     * @ORM\ManyToOne(targetEntity="Message", inversedBy="economictokens")
+     * @ORM\ManyToOne(targetEntity="OCAX\Common\Entity\Message")
      */
     private $message;
+
+    /**
+     * @var ArrayCollection
+     *
+     * @ORM\OneToMany(targetEntity="BudgetToken", mappedBy="economic")
+     */
+    private $tokens;
+
 
 
 

@@ -1,0 +1,89 @@
+{% extends 'base.html.twig' %}
+{#
+
+/**
+ * OCAX -- Citizen driven Observatory software
+ * Copyright (C) 2014 OCAX Contributors. See AUTHORS.
+
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/* @var $this EnquiryController */
+/* @var $model Enquiry */
+
+#}
+{% block body %}
+<style>
+	.outer{width:100%; padding: 0px; float: left;}
+	.left{width: 65%; float: left;  margin: 0px;}
+	.right{width: 33%; float: left; margin: 0px;}
+	.clear{clear:both;}
+</style>
+
+{% if enquiry is defined %}
+{% if enquiry.budgetary %}
+	<span id="nueva_consulta" style="margin-top:-20px;cursor:auto;"></span>
+	<h1 style="margin-top:-10px;">{% trans %}Formulate a{% endtrans %} {% trans %}budgetary enquiry{% endtrans %}</h1>
+{% endif %}
+{% else %}	<span id="nueva_consulta" style="margin-top:-10px;cursor:auto;"></span>';
+	<h1 style="margin-top:-10px;">{% trans %}Formulate a{% endtrans %} {% trans %}generic enquiry{% endtrans %}</h1>
+
+	<p style="margin:5px 0 15px 0;">
+			{% trans %}If you wish to formulate a budgetary enquiry, you must first find the corresponding{% endtrans %}
+			<a href="{{ path('budget_index') }}">{% trans %}Budget{% endtrans %}</a>.
+		 </p>
+{% endif %}
+
+<div class="outer">
+<div class="left">
+	{# }<?php echo $this->renderPartial('_form', array('model'=>$model)); ?> #}
+    {# }{% include 'enquiry/_form.html.twig' %} #}
+</div>
+
+<div class="right">
+	<div class="sub_title" style="margin-top:40px;margin-bottom:30px;">{% trans %}Enquiry steps{% endtrans %}</div>
+	{% trans %}ENQUIRIES_STEP_MSG{% endtrans %}
+</div>
+</div>
+<div style="clear:both"></div>
+
+{#
+if($model->related_to){
+#}
+{% if enquiry is defined %}
+	<div class="horizontalRule"></div>
+	<div class="sub_title">{% trans %}The original enquiry{% endtrans %}</div>
+	$related_enquiry=Enquiry::model()->findByPk($model->related_to);
+	if ($related_enquiry===null){
+		throw new CHttpException(404,'The requested Enquiry does not exist.');
+	}
+	echo $this->renderPartial('_teamView', array('model'=>$related_enquiry));
+}
+{% endif %}
+
+{% for type, messages in app.session.flashbag %}
+{% for message in messages %}{% if type == 'notice' and message == 'prompt_year' %}
+    <div class="flash-notice">
+		<?php echo Yii::app()->user->getFlash('prompt_year');?><br />
+		<?php
+		$year = Config::model()->findByPk('year')->value;
+		$url=Yii::app()->request->baseUrl.'/budget?year='.$year;
+		?>
+		<button onclick="$('.flash-notice').slideUp('fast')">{% trans %}Yes{% endtrans %}</button>&nbsp;&nbsp;&nbsp;
+		<button onclick="js:window.location='<?php echo $url?>';">{% trans %}No, take me to{% endtrans %}$year</button>
+    </div>
+    {% endif %}
+    {% endfor %}
+{% endfor %}
+{% endblock %}
