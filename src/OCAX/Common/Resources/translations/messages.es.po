@@ -385,6 +385,9 @@ msgstr "Valor"
 msgid "Remember me"
 msgstr "Recuérdame"
 
+msgid "Log in"
+msgstr "Iniciar sesión"
+
 #: protected/models/Log.php:79 protected/models/Email.php:99
 #: protected/models/Enquiry.php:226 protected/models/Vault.php:178
 #: protected/views/enquiry/_detailsForCitizen.php:63

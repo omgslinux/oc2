@@ -16,7 +16,7 @@ use OCAX\OCM\Entity\Enquiry;
  * @ORM\Table(name="user")
  * @ORM\Entity(repositoryClass="OCAX\Common\Repository\UserRepository")
  */
-class User implements UserInterface
+class User implements UserInterface, \Serializable
 {
     /**
      * @var integer
@@ -662,7 +662,7 @@ class User implements UserInterface
 
     public function getRoles()
     {
-        return;
+        return 'ROLE_USER';
     }
 
     /**

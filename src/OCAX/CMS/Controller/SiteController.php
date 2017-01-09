@@ -37,6 +37,11 @@ class SiteController extends Controller
         if ($authChecker->isGranted('IS_FULLY_AUTHENTICATED')) {
             $this->redirectToRoute('user_panel');
         }
+
+        $user = new User;
+        $form = $this->createForm('OCAX\Common\Form\UserType', $user);
+        $form->handleRequest($request);
+
         $authenticationUtils = $this->get('security.authentication_utils');
 
         // get the login error if there is one
@@ -49,6 +54,7 @@ class SiteController extends Controller
             'last_username' => $lastUsername,
             'error'         => $error,
             'withCaptcha' => false,
+            'form' => $form->createView()
         ));
 
 /*

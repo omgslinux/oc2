@@ -4,6 +4,7 @@ namespace OCAX\Common\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use OCAX\Common\CommonBundle;
 
 class SecurityController extends Controller
@@ -32,11 +33,9 @@ class SecurityController extends Controller
      */
     public function logoutAction(Request $request)
     {
-        $this->get('security.context')->setToken(null);
-        $this->get('request')->getSession()->invalidate();
+        $this->get('security.token_storage')->setToken(null);
+        //$this->get('request')->getSession()->invalidate();
 
-        $response = new RedirectResponse($this->generateUrl('dn_send_me_the_bundle_confirm', array(
-                    'token' => $token
-                    )));
+        return new RedirectResponse($this->generateUrl('homepage'));
     }
 }

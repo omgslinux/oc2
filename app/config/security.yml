@@ -19,6 +19,8 @@ security:
 
         main:
             anonymous: ~
+            http_basic: ~
+            provider: ocax_provider
             # activate different ways to authenticate
 
             # http_basic: ~

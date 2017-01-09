@@ -44,6 +44,7 @@ class UserType extends AbstractType
             ->add('disabled')
             ->add('member')
             ->add('descriptioneditor')
+            ->add('teamMember')
             ->add('manager')
             ->add('admin')
         ;
