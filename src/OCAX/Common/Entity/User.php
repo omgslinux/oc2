@@ -218,15 +218,17 @@ class User implements UserInterface, \Serializable
 
     public function __construct()
     {
-        $this->active = true;
-        $this->teammember = false;
-        $this->joined=new \DateTime();
-        $this->member = false;
-        $this->admin = false;
-        $this->disabled = false;
-        $this->descriptioneditor = false;
-        $this->manager = false;
-        $this->editor = false;
+      $now=new \DateTime();
+
+      $this->active = true;
+      $this->teammember = false;
+      $this->joined=$now;
+      $this->member = false;
+      $this->admin = false;
+      $this->disabled = false;
+      $this->descriptioneditor = false;
+      $this->manager = false;
+      $this->editor = false;
     }
 
 
@@ -622,7 +624,7 @@ class User implements UserInterface, \Serializable
      */
     public function isAdmin()
     {
-        return $this->active;
+        return $this->admin;
     }
 
     public function eraseCredentials()
@@ -662,7 +664,22 @@ class User implements UserInterface, \Serializable
 
     public function getRoles()
     {
-        return 'ROLE_USER';
+        if ($this->isDisabled()) {
+          $roles=false;
+        } else {
+          $roles=array('IS_FULLY_AUTHENTICATED');
+          if ($this->isAdmin()) {
+            $roles[]='ROLE_ADMIN';
+          }
+          if ($this->isManager()) {
+            $roles[]='ROLE_TEAMMANAGER';
+          }
+          if ($this->isTeamMember()) {
+            $roles[]='ROLE_TEAMMEMBER';
+          }
+        }
+
+        return $roles;
     }
 
     /**

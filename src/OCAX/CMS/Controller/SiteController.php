@@ -38,10 +38,6 @@ class SiteController extends Controller
             $this->redirectToRoute('user_panel');
         }
 
-        $user = new User;
-        $form = $this->createForm('OCAX\Common\Form\UserType', $user);
-        $form->handleRequest($request);
-
         $authenticationUtils = $this->get('security.authentication_utils');
 
         // get the login error if there is one
@@ -54,7 +50,6 @@ class SiteController extends Controller
             'last_username' => $lastUsername,
             'error'         => $error,
             'withCaptcha' => false,
-            'form' => $form->createView()
         ));
 
 /*
@@ -95,6 +90,7 @@ class SiteController extends Controller
             $encoder = $this->get('security.password_encoder');
             $encodedPassword = $encoder->encodePassword($user, $user->getPlainpassword());
             $user->setPassword($encodedPassword);
+            $user->setJoined(new \DateTime());
             // First user will be admin
             if (count($users) < 1) {
                 $user->setAdmin(true);

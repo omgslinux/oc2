@@ -71,23 +71,23 @@ function requestNewPasswd(){
 <h1>{% trans %}Login{% endtrans %}<i class="icon-user-female"></i></h1>
 
 <div class="form">
-{{ form_start(form) }}{{ form_row(form._token) }}
-	<div class="row">
-		<label for="LoginForm_username" class="required">{% trans %}Username{% endtrans %}<span class="required">*</span></label>
-        <input name="LoginForm[username]" id="LoginForm_username" type="text">
-        <div class="errorMessage" id="LoginForm_username_em_" style="display:none"></div>
+<form action="{{ path('site_login') }}" method="post">
+<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+<input type="hidden" name="_target_path" value="user_panel" />
+<div class="row">
+		<label for="user_username" class="required">{% trans %}Username{% endtrans %}<span class="required">*</span></label>
+        <input name="_username" id="user" type="text" value="{{ last_username }}">
+        <div class="errorMessage" id="user_username_em_" style="display:none"></div>
     </div>
-
 	<div class="row">
-		<label for="LoginForm_password" class="required">{% trans%}Password{% endtrans %}<span class="required">*</span></label>
-        <input name="LoginForm[password]" id="LoginForm_password" type="password">
-		<div class="errorMessage" id="LoginForm_password_em_" style="display:none"></div>
+		<label for="user_password" class="required">{% trans%}Password{% endtrans %}<span class="required">*</span></label>
+        <input name="_password" id="user_password" type="password">
+		<div class="errorMessage" id="user_password_em_" style="display:none"></div>
     </div>
-
 	<div class="row rememberMe">
-		<input id="ytLoginForm_rememberMe" value="0" name="LoginForm[rememberMe]" type="hidden"><input name="LoginForm[rememberMe]" id="LoginForm_rememberMe" value="1" type="checkbox">
-        <label for="LoginForm_rememberMe">{% trans %}Remember me{% endtrans %}</label>
-        <div class="errorMessage" id="LoginForm_rememberMe_em_" style="display:none"></div>
+		<input id="user_rememberMe" value="0" name="user[rememberMe]" type="hidden"><input name="user[rememberMe]" id="user_rememberMe" value="1" type="checkbox">
+        <label for="user_rememberMe">{% trans %}Remember me{% endtrans %}</label>
+        <div class="errorMessage" id="user_rememberMe_em_" style="display:none"></div>
     </div>
 
 
