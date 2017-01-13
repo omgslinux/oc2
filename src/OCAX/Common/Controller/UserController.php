@@ -6,6 +6,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use OCAX\Common\Entity\User;
 
 /**
  * @Route("/user", name="user")
@@ -28,9 +29,12 @@ class UserController extends Controller
      */
     public function panelAction(Request $request)
     {
-        // replace this example code with whatever you need
+        $user=$this->getUser();
+        $em = $this->getDoctrine()->getManager();
+        $enquirys=$em->getRepository('OCMBundle:Enquiry')->findBy(array('user' => $user));
         return $this->render('user/panel.html.twig', [
-            'locale' => $request->getLocale(),
+            'user' => $user,
+            'enquirys' => $enquirys,
         ]);
     }
 

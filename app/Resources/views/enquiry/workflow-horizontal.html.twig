@@ -25,14 +25,18 @@
 $model = new Enquiry;
 $stats = $model->getStatistics();
 #}
-
+{% set siglas = config.findParameter('siglas') %}
 <div id="workflow_diagram" style="position:absolute; margin-left:-10px; width: 930px; height:120px;">
 
     <div class="workflowState" style="top:0px;left:0px;">
     	<img src="{{ asset('/images/workflow/pending.png') }}" />
     	<div class="workflowStateText" style="">
             {% set id = enquiriescount['ENQUIRY_PENDING_VALIDATION'] %}
-            {{ id.description|trans }}<br />
+            {{ id.description|trans(
+            {
+                '%s': 'observatory'|trans
+            }
+            ) }}<br />
             <strong>{{ id.count }} {% trans %}enquiries{% endtrans %}</strong>
     	</div>
     </div>
@@ -42,7 +46,11 @@ $stats = $model->getStatistics();
     <div class="workflowState workflowFilter" style="top:0px;left:190px;" state="{{ id.id }}">
     	<img src="{{ asset('/images/workflow/accepted.png') }}" />
     	<div class="workflowStateText" style="color:#a4c30b; border-color:#a4c30b;">
-            {{ id.description|trans }}<br />
+            {{ id.description|trans(
+            {
+                '%s': siglas
+            }
+            ) }}<br />
             <strong>{{ id.count }} {% trans %}enquiries{% endtrans %}</strong>
     	</div>
     </div>
@@ -52,7 +60,11 @@ $stats = $model->getStatistics();
     <div class="workflowState" style="top:60px;left:190px;">
     	<img src="{{ asset('/images/workflow/rejected.png') }}" />
     	<div class="workflowStateText red" style="color:#e0081d; border-color:#e0081d;">
-            {{ id.description|trans }}<br />
+            {{ id.description|trans(
+            {
+                '%s': siglas
+            }
+            ) }}<br />
             <strong>{{ id.count }} {% trans %}enquiries{% endtrans %}</strong>
     	</div>
     </div>
@@ -62,7 +74,11 @@ $stats = $model->getStatistics();
     <div class="workflowState workflowFilter" style="top:0px;left:380px;" state="{{ id.id }}">
     	<img src="{{ asset('/images/workflow/waiting.png') }}" />
     	<div class="workflowStateText" style="">
-            {{ id.description|trans }}<br />
+            {{ id.description|trans(
+            {
+                '%s': siglas
+            }
+            ) }}<br />
             <strong>{{ id.count }} {% trans %}enquiries{% endtrans %}</strong>
     	</div>
     </div>

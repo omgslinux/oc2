@@ -14,9 +14,32 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        // replace this example code with whatever you need
-        return $this->render('layouts/main.html.twig', [
+        $em = $this->getDoctrine()->getManager();
+        if ($wallpapers = $em->getRepository('OCMBundle:File')->findBy(array('entity'=>'wallpaper'))) {
+            $images=array();
+            foreach ($wallpapers as $wallpaper) {
+                $images[]=$wallpaper->getPath();
+            }
+        } else {
+            $files=array();
+            $images=array();
+            $dir = $this->getParameter('kernel.root_dir').'/../web/themes/default/wallpaper/';
+            $files = glob($dir.'*.jpg', (real)GLOB_BRACE);
+
+            foreach ($files as $image) {
+                $images[] = '/themes/default/wallpaper/'.basename($image);
+            }
+            dump($dir);
+        }
+        shuffle($images);
+
+        $page=$em->getRepository('CMSBundle:IntroPage')->findBy(array('published' => '1'));
+
+        return $this->render('site/index.html.twig', [
             'locale' => $request->getLocale(),
+            'images' => $images,
+            'wallpapers' => json_encode($images),
+            'page' => $page,
             'budgetactive' => false,
             'enquiryactive' => false,
             'fbURL' => false,

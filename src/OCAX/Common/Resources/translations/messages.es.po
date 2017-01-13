@@ -550,6 +550,9 @@ msgstr "Manager"
 msgid "Formulated"
 msgstr "Formulada"
 
+msgid "Creation date"
+msgstr "Fecha de creación"
+
 #: protected/models/Enquiry.php:222
 msgid "Assigned"
 msgstr "Asignada"
@@ -2248,8 +2251,8 @@ msgstr "Otros"
 
 #: protected/views/config/observatory.php:26
 #: protected/views/config/index.php:108
-msgid "Observatory"
-msgstr "El observatorio"
+msgid "observatory"
+msgstr "observatorio"
 
 #: protected/views/config/pendingConfiguration.php:27
 msgid "Admin tasks"

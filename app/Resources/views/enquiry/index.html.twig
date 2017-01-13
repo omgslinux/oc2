@@ -160,15 +160,14 @@ function resetForm(){
         {% include 'enquiry/_searchPublic.html.twig' %}
 	</div>
 	<div id="workflowFilterOptions" style="display:inline-block">
-		{#<?php $this->renderPartial('//enquiry/workflow-horizontal'); ?> #}
         {% include 'enquiry/workflow-horizontal.html.twig' %}
 	</div>
 </div>	<!-- filter options end -->
 <div class="horizontalRule"></div>
 
 <div id="enquiryDisplayTypeIcons">
-<i class="icon-th-large" onclick="js:location.href='{{ asset('/enquiry?display=list') }}'"></i>
-<i class="icon-th-list" onclick="js:location.href='{{ asset('/enquiry?display=grid') }}'"></i>
+<i class="icon-th-large" onclick="js:location.href='{{ path('enquiry_index') }}?display=list'"></i>
+<i class="icon-th-list" onclick="js:location.href='{{ path('enquiry_index') }}?display=grid'"></i>
 </div>
 
 <div id="enquiryList" style="position:relative">
@@ -202,17 +201,17 @@ $template = '<div style="height:20px;">'.
     		'template' => $template,
     		'columns'=>array(
     		array(
-    			'header'=>__('Enquiries'),
+    			'header'=>{{ 'Enquiries'|trans }},
     			'name'=>'title',
     			'value'=>'$data[\'title\']',
     		),
     		array(
-    			'header'=>__('Formulated'),
+    			'header'=>{{ 'Formulated'|trans }},
     			'name'=>'created',
     			'value'=>'format_date($data[\'created\'])',
     		),
     		array(
-    			'header'=>__('State'),
+    			'header'=>{{ 'State'|trans }},
     			'name'=>'state',
     			'type' => 'raw',
     			'value'=>'$data->getHumanStates($data[\'state\'])'
@@ -222,7 +221,13 @@ $template = '<div style="height:20px;">'.
         <div class="pgrid-view pgrid-cursor-pointer" id="enquiry-grid">
             <div style="height:20px;">
                 <div style="float:left; position:absolute; top: -20px; left: 60px;">
-                    <div class="summary">Desplegando 1-4 de 4 resultados.</div>
+                    <div class="summary">{{ 'Showing %start%-%end% out of %total% results.'|trans(
+					{
+						'%start%': 1,
+						'%end%': enquiries|length,
+						'%total%': enquiries|length
+					}
+				) }}</div>
                 </div>
                 <div style="float:right; position:absolute; top: -20px; right:5px; "></div>
                 <div class="clear"></div>
@@ -230,26 +235,30 @@ $template = '<div style="height:20px;">'.
             <table class="items">
                 <thead>
                     <tr>
-                        <th id="enquiry-grid_c0"><a class="sort-link" href="/enquiry/index?display=grid&amp;Enquiry_sort=title">Consultas</a></th>
-                        <th id="enquiry-grid_c1"><a class="sort-link" href="/enquiry/index?display=grid&amp;Enquiry_sort=created">Formulada</a></th>
-                        <th id="enquiry-grid_c2"><a class="sort-link" href="/enquiry/index?display=grid&amp;Enquiry_sort=state">Estado</a></th>
+                        <th id="enquiry-grid_c0"><a class="sort-link" href="{{ path('enquiry_index') }}?display=grid&amp;sort=subject">{{ 'Subject'|trans }}</a></th>
+                        <th id="enquiry-grid_c1"><a class="sort-link" href="{{ path('enquiry_index') }}?display=grid&amp;sort=creationdate">{{ 'Creation date'|trans }}</a></th>
+                        <th id="enquiry-grid_c2"><a class="sort-link" href="{{ path('enquiry_index') }}?display=grid&amp;sort=state">{{ 'State'|trans }}</a></th>
                         <th style="display:none" id="enquiry-grid_c3">&nbsp;</th>
                     </tr>
                 </thead>
-                {% set class='odd' %}
                 <tbody>
-                    <tr class="{{ class }}">
+				{% set class='odd' %}{% for enquiry in enquiries %}{% if enquiry.addressedto %}{% set addressedto = 'observatory'|trans %}{% else %}{% set addressedto = config.findParameter('administrationName') %}{% endif %}
+
+					<tr class="{{ class }}">
                         <td>{{ enquiry.subject }}</td>
-                        <td>{{ enquiry.creationdate|format('d-m-Y') }}</td>
-                        <td>{{ enquiry.state }}</td>
+                        <td>{{ enquiry.creationdate|date('d-m-Y') }}</td>
+                        <td>{{ enquiry.state|trans(
+							{
+								'%s': addressedto
+							}
+						) }}</td>
                         <td style="display:none" class="p_parameter">{{ enquiry.id }}</td>
-                    </tr>
-                    {% if class=='odd' %}{% set class='even' %}{% else %}{% set class='odd' %}{% endif %}
+                    </tr>{% if class=='odd' %}{% set class='even' %}{% else %}{% set class='odd' %}{% endif %}{% endfor %}
                 </tbody>
             </table>
             <!-- end grid view -->
     {% else %}
-    {#}	$this->widget('zii.widgets.CListView', array(
+    {#	$this->widget('zii.widgets.CListView', array(
     		'id'=>'enquiry-list',
     		'dataProvider'=>$dataProvider,
     		'afterAjaxUpdate'=>'function(){
@@ -258,7 +267,7 @@ $template = '<div style="height:20px;">'.
     		'itemView'=>'_preview',
     		'emptyText'=>'<div class="sub_title" style="margin-bottom:60px;">'.{% trans %}No enquiries here{% endtrans %}.'</div>',
     		'template' => $template,
-    	));#}
+    	)); #}
 {#    $template = '<div style="height:20px;">'.
     			'<div style="float:left; position:absolute; top: -20px; left: 60px;">{summary}</div>'.
     			'<div style="float:right; position:absolute; top: -20px; right:5px; ">{pager}</div><div class="clear">'.
@@ -269,7 +278,13 @@ $template = '<div style="height:20px;">'.
         <div id="enquiry-list" class="list-view">
         <div style="height:20px;">
             <div style="float:left; position:absolute; top: -20px; left: 60px;">
-                <div class="summary">{% trans %}Showing %start%-%end% out of %total% results.{% endtrans %}</div>
+                <div class="summary">{{ 'Showing %start%-%end% out of %total% results.'|trans(
+					{
+						'%start%': 1,
+						'%end%': enquiries|length,
+						'%total%': enquiries|length
+					}
+				) }}</div>
             </div>
             <div style="float:right; position:absolute; top: -20px; right:5px; "></div>
             <div class="clear"></div>
@@ -277,8 +292,8 @@ $template = '<div style="height:20px;">'.
         <!-- items preview start -->
         <div class="items">
             {% for enquiry in enquiries %}
-            <div id="preview_{{ enquiry.id }}" class="enquiryPreview" >
-            	<div class="created">{{ enquiry.creationdate|format(d-m-Y) }}</div>
+            <div id="preview_{{ enquiry.id }}" class="enquiryPreview">
+            	<div class="created">{{ enquiry.creationdate|date('d-m-Y') }}</div>
             	<span id="subscribe-icon_{{ enquiry.id }}" class="email-subscribe subscribe-icon_{{ enquiry.id }}" onclick="js:showSubscriptionNotice(this, {{ enquiry.id }})">
                     <i class="icon-mail"></i></span>	<span class="loading"></span>
             	<div class="alert subscription_notice"></div>

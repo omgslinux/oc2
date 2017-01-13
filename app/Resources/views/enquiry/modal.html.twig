@@ -28,7 +28,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 <script>
 function showEnquiry(enquiry_id){
 	$.ajax({
-		url: '{{ path('enquiry_index') }}/'+enquiry_id,
+		url: '/enquiry/show/'+enquiry_id,
 		type: 'GET',
 		dataType: 'json',
 		beforeSend: function(){

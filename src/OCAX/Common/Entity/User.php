@@ -218,17 +218,17 @@ class User implements UserInterface, \Serializable
 
     public function __construct()
     {
-      $now=new \DateTime();
+        $now=new \DateTime();
 
-      $this->active = true;
-      $this->teammember = false;
-      $this->joined=$now;
-      $this->member = false;
-      $this->admin = false;
-      $this->disabled = false;
-      $this->descriptioneditor = false;
-      $this->manager = false;
-      $this->editor = false;
+        $this->active = true;
+        $this->teammember = false;
+        $this->joined=$now;
+        $this->member = false;
+        $this->admin = false;
+        $this->disabled = false;
+        $this->descriptioneditor = false;
+        $this->manager = false;
+        $this->editor = false;
     }
 
 
@@ -665,18 +665,24 @@ class User implements UserInterface, \Serializable
     public function getRoles()
     {
         if ($this->isDisabled()) {
-          $roles=false;
+            $roles=false;
         } else {
-          $roles=array('IS_FULLY_AUTHENTICATED');
-          if ($this->isAdmin()) {
-            $roles[]='ROLE_ADMIN';
-          }
-          if ($this->isManager()) {
-            $roles[]='ROLE_TEAMMANAGER';
-          }
-          if ($this->isTeamMember()) {
-            $roles[]='ROLE_TEAMMEMBER';
-          }
+            $roles=array('IS_FULLY_AUTHENTICATED');
+            if ($this->isAdmin()) {
+                $roles[]='ROLE_ADMIN';
+            }
+            if ($this->isManager()) {
+                $roles[]='ROLE_TEAMMANAGER';
+            }
+            if ($this->isTeamMember()) {
+                $roles[]='ROLE_TEAMMEMBER';
+            }
+            if ($this->isEditor()) {
+                $role[]='ROLE_EDITOR';
+            }
+            if ($this->isDescriptionEditor()) {
+                $role[]='ROLE_DESCRIPTIONEDITOR';
+            }
         }
 
         return $roles;

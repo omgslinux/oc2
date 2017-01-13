@@ -258,13 +258,37 @@ class EnquiryEmail
     }
 
     /**
+     * Set subject
+     *
+     * @param string $subject
+     *
+     * @return Enquiry
+     */
+    public function setSubject($subject)
+    {
+        $this->subject = $subject;
+
+        return $this;
+    }
+
+    /**
+     * Get subject
+     *
+     * @return string
+     */
+    public function getSubject()
+    {
+        return $this->subject;
+    }
+
+    /**
      * Set body
      *
      * @param string $body
      *
      * @return Enquiry
      */
-    public function setSubject($body)
+    public function setBody($body)
     {
         $this->body = $body;
 

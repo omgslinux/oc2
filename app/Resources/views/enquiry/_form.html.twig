@@ -35,18 +35,19 @@ if(!$user->is_active)
 #}
 <script src="{{ asset('/scripts/jquery.bpopup-0.9.4.min.js') }}"></script>
 <script>
+{% dump form %}
 $(document).ready(function() {
 	if(1 != {{ user.active }}){
-		$('#enquiry-form').find(':input:not(:disabled)').prop('disabled',true);
-		$('#enquiry-form').find('textarea').width('100%');
-		$('#enquiry-form').find('textarea').height(300);
-		$('#enquiry-form').find(':textarea:not(:disabled)').prop('disabled',true);
+		$('{{ form.vars.name }}').find(':input:not(:disabled)').prop('disabled',true);
+		$('{{ form.vars.name }}').find('textarea').width('100%');
+		$('{{ form.vars.name }}').find('textarea').height(300);
+		$('{{ form.vars.name }}').find(':textarea:not(:disabled)').prop('disabled',true);
 	}
 });
 function submitForm(){
 	$('.loading_gif').show();
 	$('input[type=button]').prop("disabled",true);
-	document.forms['enquiry-form'].submit();
+	document.forms['{{ form.vars.name }}'].submit();
 }
 </script>
 
@@ -55,7 +56,7 @@ if ($model->team_member == Yii::app()->user->getUserID()) {
 	echo $this->renderPartial('_validationOptions');
 }
 #}
-{% if user.team_member %}
+{% if user.teamMember %}
     {% include 'enquiry/_validationOptions.html.twig' %}
 {% endif %}
 
@@ -65,7 +66,7 @@ if ($model->team_member == Yii::app()->user->getUserID()) {
 	'id'=>'enquiry-form',
 	'enableAjaxValidation'=>false,
 )); ?> #}
-{{ form_start(form) }}
+{{ form_start(form) }}{{ form_row(form._token) }}
 	<div class="title">
         {% if enquiry is defined %}
             {% if enquiry.parent %}{% trans %}New reformulated enquiry{% endtrans %}
@@ -94,8 +95,8 @@ if ($model->team_member == Yii::app()->user->getUserID()) {
 
 	<div class="row">
 		{{ form_row(form.body) }}{#}<?php echo $form->labelEx($model,'body'); ?>#}
-
-<?php
+{{ form_row(form.subject) }}
+{#}<?php
 $settings=array('convert_urls'=>true,
 				'relative_urls'=>false,
 				'remove_script_host'=>false,
@@ -127,36 +128,32 @@ if(!Config::model()->findByPk('htmlEditorUseCompressor')->value)
 
 $this->widget('ext.tinymce.TinyMce', $init);
 echo $form->error($model,'body');
-?>
+?> #}
 	</div>
 
-	<?php if ($model->team_member == Yii::app()->user->getUserID()) {
-		echo '<div style="font-size:16px;">'.__('Who will reply to this enquiry?').'</div>';
-		echo $form->radioButtonList($model,'addressed_to',
+	{#}<?php if ($model->team_member == Yii::app()->user->getUserID()) { #}
+	{% if user.teamMember %}
+		<div style="font-size:16px;">{% trans %}Who will reply to this enquiry?{% endtrans %}</div>
+		{#echo $form->radioButtonList($model,'addressed_to',
 			$model->getHumanAddressedTo(),
 			array('labelOptions'=>array('style'=>'display:inline'))
-		);
-		echo '<p></p>';
-	} ?>
+		); #}
+		<p></p>{{ form_row(form.addressed_to) }}
+	{% endif %}
 
 	<div class="row buttons">
-		<?php $buttonText = $model->isNewRecord ? __('Send') : __('Update') ?>
-		<input type="button" onclick="submitForm()" value="<?php echo $buttonText; ?>">
 
-		<?php	if (!$model->id)
-					$cancelURL='/user/panel';
-				elseif ($model->team_member == $user_id)	// remember: a team_memebr can edit a enquiry
-					$cancelURL='/enquiry/teamView/'.$model->id;
-				else
-					$cancelURL='/enquiry/'.$model->id;
-		?>
+		<input type="submit" onclick="submitForm()"
+		value="{% if create is defined %}{% trans %}Send{% endtrans %}{% else %}{% trans %}Update{% endtrans %}{% endif %}">
+
 		<input	type="button"
 				style="margin-left:15px;"
-				value="<?php echo __('Cancel')?>"
-				onclick="js:window.location='<?php echo Yii::app()->request->baseUrl?><?php echo $cancelURL?>';" />
-		<img style="vertical-align:middle;display:none" class="loading_gif" src="<?php echo Yii::app()->request->baseUrl;?>/images/loading.gif" />
+				value="{% trans %}Cancel{% endtrans %}"
+				onclick="js:window.location='{% if create is defined %}{{ path('user_panel')}}{% else %}
+				{% if user.teamMember %}{{ path('enquiry_teamview', { 'id': id }) }}{% else %}{{ path('enquiry_show', { 'id': id }) }}{% endif %}
+				{% endif %}';" />
+		<img style="vertical-align:middle;display:none" class="loading_gif" src="{{ asset('/images/loading.gif') }}" />
 	</div>
 
-<?php $this->endWidget(); ?>
-
 </div><!-- form -->
+</form>

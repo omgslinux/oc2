@@ -21,7 +21,7 @@ class SiteController extends Controller
     public function indexAction(Request $request)
     {
         // replace this example code with whatever you need
-        return $this->render('default/index.html.twig', [
+        return $this->render('site/index.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
         ]);
     }
@@ -54,7 +54,8 @@ class SiteController extends Controller
 
 /*
 		$model=new LoginForm;
-        if (Yii::app()->user->getState('attempts-login') > 3) { //make the captcha required if the unsuccessful attemps are more of thee
+        if (Yii::app()->user->getState('attempts-login') > 3) {
+        //make the captcha required if the unsuccessful attemps are more of thee
             $model->scenario = 'withCaptcha';
         }
 		// if it is ajax validation request

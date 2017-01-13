@@ -155,7 +155,7 @@ class AppLog
      */
     public function setEntityId($id)
     {
-        $this->$entityId = $id;
+        $this->entityId = $id;
 
         return $this;
     }

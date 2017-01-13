@@ -4,6 +4,7 @@ namespace OCAX\Budget\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
+use OCAX\Common\Entity\Message;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**

@@ -7,6 +7,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 use Doctrine\Common\Collections\ArrayCollection;
 use OCAX\Common\Entity\User;
 use OCAX\Budget\Entity\BudgetToken;
+use OCAX\OCM\Entity\Enquiry;
 
 /**
  * Enquiry
@@ -70,7 +71,7 @@ class Enquiry
     /**
      * @var string
      *
-     * @ORM\Column(type="string", length=32)
+     * @ORM\Column(type="string", length=32, nullable=true)
      */
     private $registrynumber;
 
@@ -142,6 +143,11 @@ class Enquiry
     private $texts;
 
 
+    public function __construct()
+    {
+        $this->setBudgetary(false);
+        $this->registrynumber='_';
+    }
 
     /**
      * Get id
@@ -355,6 +361,11 @@ class Enquiry
     public function setBudgetary($active)
     {
         $this->budgetary = $active;
+        if ($active===false) {
+            $this->setAddressedTo(true);
+        } else {
+            $this->setAddressedTo(false);
+        }
 
         return $this;
     }
@@ -463,6 +474,30 @@ class Enquiry
     public function getBody()
     {
         return $this->body;
+    }
+
+    /**
+     * Set budget
+     *
+     * @param BudgetToken $budget
+     *
+     * @return Enquiry
+     */
+    public function setBudget(BudgetToken $token)
+    {
+        $this->budget = $token;
+
+        return $this;
+    }
+
+    /**
+     * Get budget
+     *
+     * @return Enquiry
+     */
+    public function getBudget()
+    {
+        return $this->budget;
     }
 
     /**

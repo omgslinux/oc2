@@ -19,6 +19,7 @@
   </head>
 
   <body>
+      <script type="text/javascript" src="{{ asset('/assets/90792776/jquery.min.js') }}"></script>
     <div style="position:relative;">
       <div id="header_bar">
         <ul>
@@ -28,16 +29,12 @@
         		{% endfor %}
         		</span>
           </li>
-          <li>
-            {% if is_granted('ROLE_USER') %}
-            <a href="{{ path('logout') }}"><i class="icon-logout header-icons"></i>{% trans %}Logout{% endtrans %} ({{ app.user.username }})</a>
-        	</li>
-          <li><a href="{{ path('user_panel') }}"><i class="icon-home header-icons"></i>{% trans %}My page{% endtrans %}</a>
-        	</li>
-        		{% else %}
-              <a href="{{ path('site_login') }}"><i class="icon-user-female header-icons"></i>{% trans %}Login{% endtrans %}</a>
-            {% endif %}
-        	</li>
+          {% if is_granted('ROLE_USER') %}
+            <li><a href="{{ path('logout') }}"><i class="icon-logout header-icons"></i>{% trans %}Logout{% endtrans %} ({{ app.user.username }})</a></li>
+            <li><a href="{{ path('user_panel') }}"><i class="icon-home header-icons"></i>{% trans %}My page{% endtrans %}</a></li>
+          {% else %}
+            <li><a href="{{ path('site_login') }}"><i class="icon-user-female header-icons"></i>{% trans %}Login{% endtrans %}</a></li>
+          {% endif %}
             {% if config.findParameter('socialActivateNonFree') == '1' %}
       		<li>
       			{% if config.findParameter('socialFacebookURL') %}
