@@ -356,17 +356,22 @@ class EnquiryController extends Controller
     * @Route("/show/citizen/{id}", name="enquiry_show_citizen")
     * @Method({"GET", "POST"})
     */
-    public function citizenDetailsAction(Budget $budget=null)
+    public function citizenDetailsAction(Enquiry $enquiry)
     {
         $attribs = array();
+        $t=$this->get('translator');
+        $user=$this->getUser();
+        $em = $this->getDoctrine()->getManager();
+        $enquirystates=$em->getRepository('OCMBundle:EnquiryState')->findAll();
 
         if (!isset($hideLinks)) {
             $attribs[] = array(
-                'label'=>__('Formulated'),
+                'label'=> $t->trans('Formulated'),
                 'type' => 'raw',
-                'value'=>($model->user0->username == Yii::app()->user->id || $model->user0->is_disabled == 1) ?
-                format_date($model->created).' '.__('by').' '.$model->user0->fullname :
-                format_date($model->created).' '.__('by').' '.CHtml::link(
+                'value'=> $enquiry->getCreationDate()->format('d/m/Y').' '. $t->trans('by') .
+                    ($enquiry->getUser() == $user || $user->isEnabled()) ?
+                        $enquiry->getUser()->getFullname() :
+                        CHtml::link(
                     CHtml::encode($model->user0->fullname),
                     '#!',
                     array('onclick'=>'js:getContactForm('.$model->user.');return false;')
@@ -374,31 +379,38 @@ class EnquiryController extends Controller
             );
         } else {
             $attribs[] = array(
-            'label'=>__('Formulated'),
+            'label'=> $t->trans('Formulated'),
             'type' => 'raw',
-            'value'=>(format_date($model->created).' '.__('by').' '.$model->user0->fullname),
+            'value'=> $enquiry->getCreationDate()->format('d-m-Y').' '.$t->trans('by').' '.$enquiry->getUser()->getFullname(),
             );
         }
         $attribs[] = array(
-        'label'=>__('State'),
+        'label'=> $t->trans('State'),
         'type' => 'raw',
-        'value'=> CHtml::encode($model->getHumanStates($model->state, $model->addressed_to)),
+        'value'=> urlencode(
+            printf(
+                $enquiry->getState()->getDescription(),
+                ($enquiry->getAddressedTo()?'observatory':$this->get('ocax.config')->findParameter('administrationName'))
+            )
+        )
+        //CHtml::encode($model->getHumanStates($model->state, $model->addressed_to)),
         );
 
-        if ($model->state >= ENQUIRY_AWAITING_REPLY) {
-            $submitted_info=format_date($model->submitted).', '.__('Registry number').': '.$model->registry_number;
+        $enquirystate = $em->getRepository('OCMBundle:EnquiryState')->findOneBy(array('state' => 'ENQUIRY_AWAITING_REPLY'));
+        if ($enquiry->getState()->getId() >= $enquirystate->getId()) {
+            $submitted_info=$enquiry->getSubmissionDate()->format('d-m-Y').', '.$t->trans('Registry number').': '.$enquiry->getRegistryNumber();
             if ($model->documentation && !isset($hideLinks)) {
                 $submitted_info = '<a href="'.$model->documentation0->getWebPath().'" target="_new">'.$submitted_info.'</a>';
             }
             $attribs[] = array(
-                'label'=>__('Submitted'),
+                'label'=> $t->trans('Submitted'),
                 'type'=>'raw',
                 'value'=>$submitted_info,
             );
         }
         $attribs[] = array(
-            'label'=>__('Type'),
-            'value'=>($model->related_to) ? $model->getHumanTypes($model->type).' ('.__('reformulated').')' : $model->getHumanTypes($model->type),
+            'label'=>$t->trans('Type'),
+            'value'=>($model->related_to) ? $model->getHumanTypes($model->type).' ('.$t->trans('reformulated').')' : $model->getHumanTypes($model->type),
         );
         $this->widget('zii.widgets.CDetailView', array(
             'id' => 'e_details',
@@ -407,13 +419,39 @@ class EnquiryController extends Controller
             'attributes'=>$attribs,
         ));
 
+        if ($user->isTeamMember() || $user->isManager()) {
+            $enquiry_count = count($enquiry);
+        } else {
+            if ($user_id=Yii::app()->user->getUserID()) {
+                $criteria = new CDbCriteria;
+                $criteria->condition = 'budget = :budget AND user = :user';
+                $criteria->params[':budget'] = $model->id;
+                $criteria->params[':user'] = $user_id;
+                $enquiry_count = count(Enquiry::model()->findAll($criteria));
+
+                $criteria = new CDbCriteria;
+                $criteria->condition = 'budget = :budget AND state >= :state AND NOT user = :user';
+                $criteria->params[':budget'] = $model->id;
+                $criteria->params[':state'] = ENQUIRY_ACCEPTED;
+                $criteria->params[':user'] = $user_id;
+                $enquiry_count = $enquiry_count + count(Enquiry::model()->findAll($criteria));
+            } else {
+                $criteria = new CDbCriteria;
+                $criteria->condition = 'budget = :budget AND state >= :state';
+                $criteria->params[':budget'] = $model->id;
+                $criteria->params[':state'] = ENQUIRY_ACCEPTED;
+                $enquiry_count = count(Enquiry::model()->findAll($criteria));
+            }
+        }
+
+
         if (!isset($hideBudgetDetails)) {
-            if ($model->budget) {
-                $this->renderPartial('_budgetDetails', array(
-                    'model'=>$model->budget0,
+            if (!is_null($budget)) {
+                return $this->renderPartial('_budgetDetails', array(
+                    'budget'=>$budget,
                     'showLinks'=>1,
                     'showEnquiriesMadeLink'=>1,
-                    'enquiry'=>$model,
+                    'enquiry'=> $budget->getEnquiry(),
                 ));
             }
         }

@@ -41,6 +41,20 @@ class Enquiry
     private $user;
 
     /**
+     * @var integer
+     *
+     * @ORM\Column(type="integer")
+     */
+    private $teamMember;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(type="integer")
+     */
+    private $teamManager;
+
+    /**
      * @var \DateTime
      *
      * @ORM\Column(type="datetime")
@@ -74,6 +88,14 @@ class Enquiry
      * @ORM\Column(type="string", length=32, nullable=true)
      */
     private $registrynumber;
+
+    /**
+     *
+     * @var integer
+     *
+     * @ORM\ManyToOne(targetEntity="File")
+     */
+    private $file;
 
     /**
      * generic=0, budgetary=1
@@ -147,6 +169,9 @@ class Enquiry
     {
         $this->setBudgetary(false);
         $this->registrynumber='_';
+        $this->teamMember=0;
+        $this->teamManager=0;
+        $this->file=0;
     }
 
     /**
@@ -181,6 +206,54 @@ class Enquiry
     public function getUser()
     {
         return $this->user;
+    }
+
+    /**
+     * Set teamMember
+     *
+     * @param integer $teamMember
+     *
+     * @return Enquiry
+     */
+    public function setTeamMember($user)
+    {
+        $this->teamMember = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get teamMember
+     *
+     * @return integer
+     */
+    public function getTeamMember()
+    {
+        return $this->teamMember;
+    }
+
+    /**
+     * Set teamManager
+     *
+     * @param integer $teamManager
+     *
+     * @return Enquiry
+     */
+    public function setTeamManager($user)
+    {
+        $this->teamManager = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get teamManager
+     *
+     * @return integer
+     */
+    public function getTeamManager()
+    {
+        return $this->teamManager;
     }
 
     /**
@@ -528,6 +601,15 @@ class Enquiry
     public function getTexts()
     {
         return $this->texts;
+    }
+
+    public function getHumanType()
+    {
+        if ($this->isAddressedTo()) {
+            return 'observatory';
+        } else {
+            return false;
+        }
     }
 
 
