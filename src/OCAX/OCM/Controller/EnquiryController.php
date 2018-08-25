@@ -2,12 +2,12 @@
 
 namespace OCAX\OCM\Controller;
 
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Cookie;
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use OCAX\Budget\Entity\BudgetToken as Budget;
 use OCAX\OCM\Entity\Enquiry;
@@ -17,12 +17,12 @@ use OCAX\OCM\Entity\EnquirySubscribe;
 use OCAX\Common\Entity\AppLog;
 
 /**
- * @Route("/enquiry", name="enquiry")
+ * @Route("/enquiry", name="enquiry_")
  */
 class EnquiryController extends Controller
 {
     /**
-     * @Route("/", name="enquiry_index")
+     * @Route("/", name="index")
      * @Method({"GET", "POST"})
      */
     public function indexAction(Request $request)
@@ -89,7 +89,7 @@ class EnquiryController extends Controller
      * Creates a new model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      *
-     * @Route("/create", name="enquiry_create")
+     * @Route("/create", name="create")
      * @Method({"GET", "POST"})
      */
     public function createAction(Request $request, Budget $budget = null)
@@ -302,7 +302,7 @@ class EnquiryController extends Controller
     }
 
     /**
-     * @Route("/", name="enquiry_subscribe")
+     * @Route("/", name="subscribe")
      * @Method({"GET", "POST"})
      */
     public function subscribeAction(Request $request)
@@ -353,7 +353,7 @@ class EnquiryController extends Controller
 
     /**
     * Displays enquiry details for citizen
-    * @Route("/show/citizen/{id}", name="enquiry_show_citizen")
+    * @Route("/show/citizen/{id}", name="_show_citizen")
     * @Method({"GET", "POST"})
     */
     public function citizenDetailsAction(Enquiry $enquiry)
@@ -459,7 +459,7 @@ class EnquiryController extends Controller
 
     /**
     * Displays a particular model.
-    * @Route("/show/{id}", name="enquiry_show")
+    * @Route("/show/{id}", name="show")
     * @Method({"GET", "POST"})
     */
     public function showAction(Enquiry $enquiry)

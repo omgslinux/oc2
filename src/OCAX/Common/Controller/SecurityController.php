@@ -3,9 +3,9 @@ namespace OCAX\Common\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use OCAX\Common\CommonBundle;
+use Symfony\Component\Routing\Annotation\Route;
 
 class SecurityController extends Controller
 {

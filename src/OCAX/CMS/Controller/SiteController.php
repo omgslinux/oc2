@@ -2,13 +2,13 @@
 
 namespace OCAX\CMS\Controller;
 
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
 use OCAX\Common\Entity\User;
 use OCAX\Common\Entity\AppLog;
+use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * @Route("/site")
